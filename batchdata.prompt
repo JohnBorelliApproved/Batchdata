@@ -1,0 +1,28 @@
+Project overview:
+
+Using High Level agency account we want to implement a way for the client to use Batchdata to run searches for listings (especially 'for sale by owner' listings) using Batchdata then port them into the agency sub-account.  From there a second form will allow the user to select all listings (stored as contact records), to port them to sub-accounts that are managed by the agency.
+
+The first form that initiates the Batchdata search will allow for entering search criteria such as zip codes and location, which will initiate the search in Batchdata and then, after the search is ready (so polling Batchdata to check when it's completed will be necessary), updating the agency sub-accounts contact records with the resulting listings.  Once the updates are completed, the second form will allow selecting the sub-account to update by entering the 'Location Id' from that sub-account and selecting a tag from a drop down list, thus initiating a copying of those listings that have the selected tag to be copied to the sub-account identified by the location id.
+
+The two forms will be setup in High Level using custom menus.  Therefor the workflow will be:
+
+1) initiate the search by entering a location or list of zip codes.
+2) a background task will poll every five minutes to check when the search is completed.
+3) a notification will be sent to the agency owner when it's ready.
+4) the agency owner will then search their listings list to segment the new listings and apply a tag to indicate they are the listings to transfer to another sub-account.
+5) having the tag applied, the agency owner will then use the second form to enter the location id of the sub-account to transfer to and use the drop down to select the tag they applied to that same list.
+6) finally, those listings (contact records) that have that tag applied will then be copied from the agency sub-account to the recipient sub-account identified by the location id.
+
+This will require endpoints to facilitate working with batchdata and for the forms to trigger these actions to happen.  It will require both the Batchdata api and the High Level api.
+
+Batchdata api documentation can be reviewed here:
+https://developer.batchdata.com/docs/batchdata/batchdata-v1
+The property sub-pages will have the relevant information
+
+High Level api documentation can be reviewed here:
+https://marketplace.gohighlevel.com/docs/ghl/contacts/contacts
+This is the contact api which will represent listings from batchdata
+
+The forms will be also stored on the clients server and then iframed into the high level menu items I'll setup.
+
+Please develope a project development path with step by step stages to work on.  Ask any additional questions to get clarification on anything that's not obvious and consider any additional features and suggestions to ask me about.
