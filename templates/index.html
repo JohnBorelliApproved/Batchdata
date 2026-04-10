@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zillow GHL Integration</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zillow GHL Integration</h1>
+        
+        <div class="form-container">
+            <h2>Step 1: Search for Properties</h2>
+            <form id="search-form">
+                <p>Search by Zip Code(s) or City/State.</p>
+                <input type="text" id="zip_codes" placeholder="Enter zip codes (comma-separated)">
+                <input type="text" id="city" placeholder="Enter city">
+                <input type="text" id="state" placeholder="Enter state">
+                <button type="submit">Start Search</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Step 2: Distribute Contacts to Sub-Account</h2>
+            <form id="distribute-form">
+                <p>Enter the destination Location ID and the tag for the contacts to be moved.</p>
+                <input type="text" id="source_location_id" placeholder="Source Location ID (Agency)" required>
+                <input type="text" id="location_id" placeholder="Destination Location ID" required>
+                <input type="text" id="tag" placeholder="Tag to distribute" required>
+                <button type="submit">Distribute Contacts</button>
+            </form>
+        </div>
+
+        <div id="response-container"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
