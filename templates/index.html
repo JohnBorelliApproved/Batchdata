@@ -24,10 +24,12 @@
         <div class="form-container">
             <h2>Step 2: Distribute Contacts to Sub-Account</h2>
             <form id="distribute-form">
-                <p>Enter the destination Location ID and the tag for the contacts to be moved.</p>
-                <input type="text" id="source_location_id" placeholder="Source Location ID (Agency)" required>
+                <p>Enter the destination Location ID, sub-account API key, and the tag for the contacts to be moved.</p>
                 <input type="text" id="location_id" placeholder="Destination Location ID" required>
-                <input type="text" id="tag" placeholder="Tag to distribute" required>
+                <input type="password" id="sub_account_api_key" placeholder="Sub-account API Key" required>
+                <select id="tag" required>
+                    <option value="">Loading tags...</option>
+                </select>
                 <button type="submit">Distribute Contacts</button>
             </form>
         </div>

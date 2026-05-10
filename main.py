@@ -1,12 +1,21 @@
 from flask import Flask, request, jsonify, render_template
 from batchdata_api import search_properties
-from ghl_api import get_contacts_by_tag, upsert_contact
+from ghl_api import get_contacts_by_tag, upsert_contact, get_tags
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/get-tags', methods=['GET'])
+def get_tags_endpoint():
+    try:
+        tags = get_tags()
+        return jsonify({"tags": tags})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 @app.route('/start-search', methods=['POST'])
 def start_search():
@@ -29,12 +38,14 @@ def distribute_contacts():
     data = request.json
     location_id = data.get('location_id')
     tag = data.get('tag')
-    source_location_id = data.get('source_location_id') # The agency's location id
+    source_location_id = data.get('source_location_id')
+    sub_account_api_key = data.get('sub_account_api_key')
 
-    if not (location_id and tag and source_location_id):
-        return jsonify({"error": "Please provide location_id, source_location_id, and tag."}), 400
+    if not (location_id and tag and source_location_id and sub_account_api_key):
+        return jsonify({"error": "Please provide location_id, source_location_id, tag, and sub_account_api_key."}), 400
 
     try:
+        # Get contacts from the source location using the agency's main API key
         contacts = get_contacts_by_tag(tag, source_location_id)
         
         for contact in contacts:
@@ -47,7 +58,8 @@ def distribute_contacts():
             # Set the new location id
             contact['locationId'] = location_id
 
-            upsert_contact(contact)
+            # Upsert contact to the destination location using the provided sub-account API key
+            upsert_contact(contact, api_key=sub_account_api_key)
 
         return jsonify({"message": f"{len(contacts)} contacts distributed successfully."})
     except Exception as e:
