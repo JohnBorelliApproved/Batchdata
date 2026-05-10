@@ -3,6 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const distributeForm = document.getElementById('distribute-form');
     const responseContainer = document.getElementById('response-container');
 
+    const zipInput = document.getElementById('zip_codes');
+    const cityInput = document.getElementById('city');
+    const stateInput = document.getElementById('state');
+
+    zipInput.onchange = () => {
+        const hasZip = zipInput.value.trim().length > 0;
+        cityInput.disabled = hasZip;
+        stateInput.disabled = hasZip;
+        if (hasZip) {
+            cityInput.value = '';
+            stateInput.value = '';
+        }
+    };
+
     searchForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const zip_codes = document.getElementById('zip_codes').value.split(',').map(z => z.trim()).filter(z => z);
