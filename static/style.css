@@ -27,12 +27,17 @@ h1, h2 {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select {
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    display: block;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
 }
 
 .input-wrapper {
