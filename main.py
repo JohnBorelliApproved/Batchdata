@@ -1,6 +1,15 @@
+import json
+import os
+import logging
 from flask import Flask, request, jsonify, render_template
 from batchdata_api import search_properties
 from ghl_api import get_contacts_by_tag, upsert_contact, get_tags
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+WEBHOOK_LOG_DIR = os.path.join(os.path.dirname(__file__), 'webhook_logs')
+os.makedirs(WEBHOOK_LOG_DIR, exist_ok=True)
 
 app = Flask(__name__)
 
@@ -28,8 +37,9 @@ def start_search():
         return jsonify({"error": "Please provide either zip_codes or city and state."}), 400
 
     try:
-        result = search_properties(zip_codes=zip_codes, city=city, state=state)
-        return jsonify(result)
+        job_id = search_properties(zip_codes=zip_codes, city=city, state=state)
+        logger.info(f"BatchData search initiated. job_id={job_id}")
+        return jsonify({"job_id": job_id, "status": "pending", "message": "Search initiated. Results will be processed when BatchData completes."})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -65,15 +75,29 @@ def distribute_contacts():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route('/batchdata-webhook', methods=['POST'])
-def batchdata_webhook():
+@app.route('/batchdata-webhook/<job_id>', methods=['POST'])
+def batchdata_webhook(job_id):
     data = request.json
-    # Process the data from Batchdata's Smart Search
-    # This is where you'll get new listings and add them to GHL
-    print("Received data from Batchdata:", data)
+    logger.info(f"BatchData webhook received. job_id={job_id}")
 
-    # Here you would extract the property data and call
-    # ghl_api.upsert_contact to add it to your agency sub-account.
+    # Log the raw payload to disk so we can inspect the data shape
+    log_path = os.path.join(WEBHOOK_LOG_DIR, f"webhook_{job_id}.json")
+    with open(log_path, 'w') as f:
+        json.dump(data, f, indent=2)
+    logger.info(f"Webhook payload saved to {log_path}")
+
+    # TODO: parse results, create GHL contacts, notify owner
+    return jsonify({"status": "received"})
+
+
+@app.route('/batchdata-webhook-error/<job_id>', methods=['POST'])
+def batchdata_webhook_error(job_id):
+    data = request.json
+    logger.error(f"BatchData error webhook received. job_id={job_id} data={data}")
+
+    log_path = os.path.join(WEBHOOK_LOG_DIR, f"webhook_error_{job_id}.json")
+    with open(log_path, 'w') as f:
+        json.dump(data, f, indent=2)
 
     return jsonify({"status": "received"})
 

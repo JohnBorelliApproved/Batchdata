@@ -1,12 +1,17 @@
+import uuid
 import requests
-from config import BATCHDATA_API_KEY
+from config import BATCHDATA_API_KEY, APP_BASE_URL
 
 BATCHDATA_API_URL = "https://api.batchdata.com/api/v1"
 
 def search_properties(zip_codes=None, city=None, state=None, listing_type='For Sale By Owner'):
     """
-    Initiates a property search in Batchdata.
+    Initiates an async property search in BatchData.
+    Generates a UUID job ID, embeds it in the webhook URLs, and returns it.
+    BatchData will POST results to /batchdata-webhook/<job_id> when complete.
     """
+    job_id = str(uuid.uuid4())
+
     headers = {
         "Authorization": f"Bearer {BATCHDATA_API_KEY}",
         "Content-Type": "application/json"
@@ -22,28 +27,20 @@ def search_properties(zip_codes=None, city=None, state=None, listing_type='For S
         ]
     }
 
+    # Clean up empty dicts
+    search_criteria['or'] = [i for i in search_criteria['or'] if i]
+    if not search_criteria['or']:
+        del search_criteria['or']
+
     payload = {
         "searchCriteria": search_criteria,
-        "listingType": listing_type
+        "listingType": listing_type,
+        "options": {
+            "webhookUrl": f"{APP_BASE_URL}/batchdata-webhook/{job_id}",
+            "errorWebhookUrl": f"{APP_BASE_URL}/batchdata-webhook-error/{job_id}"
+        }
     }
 
-    # Clean up empty dicts from the payload
-    payload['searchCriteria']['or'] = [i for i in payload['searchCriteria']['or'] if i]
-    if not payload['searchCriteria']['or']:
-        del payload['searchCriteria']['or']
-
-
-    response = requests.post(f"{BATCHDATA_API_URL}/property/search", json=payload, headers=headers)
+    response = requests.post(f"{BATCHDATA_API_URL}/property/search/async", json=payload, headers=headers)
     response.raise_for_status()
-    return response.json()
-
-def get_search_status(job_id):
-    """
-    Gets the status of a Batchdata search job.
-    """
-    headers = {
-        "Authorization": f"Bearer {BATCHDATA_API_KEY}"
-    }
-    response = requests.get(f"{BATCHDATA_API_URL}/jobs/{job_id}", headers=headers)
-    response.raise_for_status()
-    return response.json()
+    return job_id
