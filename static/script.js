@@ -43,6 +43,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    function pollJobStatus(job_id) {
+        const POLL_INTERVAL_MS = 30000;
+        const intervalId = setInterval(async () => {
+            try {
+                const resp = await fetch(`/job-status/${job_id}`);
+                const result = await resp.json();
+                if (result.status === 'complete') {
+                    clearInterval(intervalId);
+                    responseContainer.textContent = `Search complete — ${result.created} contacts imported, ${result.errors} errors.`;
+                } else if (result.status === 'error') {
+                    clearInterval(intervalId);
+                    responseContainer.textContent = `Search failed. Check server logs for job ${job_id}.`;
+                }
+            } catch (err) {
+                console.error('Polling error:', err);
+            }
+        }, POLL_INTERVAL_MS);
+    }
+
     searchForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const zip_codes = document.getElementById('zip_codes').value.split(',').map(z => z.trim()).filter(z => z);
@@ -61,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(body)
             });
             const result = await response.json();
-            responseContainer.textContent = JSON.stringify(result, null, 2);
+            responseContainer.textContent = `Search initiated (job ID: ${result.job_id}). Waiting for results...`;
+            if (result.job_id) pollJobStatus(result.job_id);
         } catch (error) {
             responseContainer.textContent = `Error: ${error.message}`;
         }

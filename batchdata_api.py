@@ -1,10 +1,13 @@
 import uuid
 import requests
-from config import BATCHDATA_API_KEY, APP_BASE_URL
+from config import BATCHDATA_SANDBOX_API_KEY, BATCHDATA_API_KEY, APP_BASE_URL
+
+# Use sandbox key for testing; fall back to legacy key if not set
+_ACTIVE_KEY = BATCHDATA_SANDBOX_API_KEY or BATCHDATA_API_KEY
 
 BATCHDATA_API_URL = "https://api.batchdata.com/api/v1"
 
-def search_properties(zip_codes=None, city=None, state=None, listing_type='For Sale By Owner'):
+def search_properties(zip_codes=None, city=None, state=None):
     """
     Initiates an async property search in BatchData.
     Generates a UUID job ID, embeds it in the webhook URLs, and returns it.
@@ -13,29 +16,22 @@ def search_properties(zip_codes=None, city=None, state=None, listing_type='For S
     job_id = str(uuid.uuid4())
 
     headers = {
-        "Authorization": f"Bearer {BATCHDATA_API_KEY}",
+        "Authorization": f"Bearer {_ACTIVE_KEY}",
         "Content-Type": "application/json"
     }
 
-    search_criteria = {
-        "or": [
-            {"in": {"property.location.zipCode": zip_codes}} if zip_codes else {},
-            {"and": [
-                {"eq": {"property.location.city": city}},
-                {"eq": {"property.location.state": state}}
-            ]} if city and state else {}
-        ]
-    }
-
-    # Clean up empty dicts
-    search_criteria['or'] = [i for i in search_criteria['or'] if i]
-    if not search_criteria['or']:
-        del search_criteria['or']
+    if zip_codes:
+        query = ", ".join(zip_codes)
+    else:
+        query = f"{city}, {state}"
 
     payload = {
-        "searchCriteria": search_criteria,
-        "listingType": listing_type,
+        "searchCriteria": {
+            "query": query
+        },
         "options": {
+            "skip": 0,
+            "take": 25,
             "webhookUrl": f"{APP_BASE_URL}/batchdata-webhook/{job_id}",
             "errorWebhookUrl": f"{APP_BASE_URL}/batchdata-webhook-error/{job_id}"
         }
@@ -43,4 +39,6 @@ def search_properties(zip_codes=None, city=None, state=None, listing_type='For S
 
     response = requests.post(f"{BATCHDATA_API_URL}/property/search/async", json=payload, headers=headers)
     response.raise_for_status()
-    return job_id
+    result = response.json()
+    batchdata_request_id = result.get('requestId')
+    return job_id, batchdata_request_id
