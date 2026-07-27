@@ -1,0 +1,3 @@
+- Test every api endpoint that can be tested from this local computer until working as designed
+- Identify what api endpoints must be tested from our remote production server
+- Lay out a step by step instruction on testing the remote api endpoints

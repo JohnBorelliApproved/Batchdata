@@ -1,0 +1,30 @@
+{
+  "results": {
+    "properties": [
+      {
+        "address": {
+          "street": "1 Main",
+          "city": "LA",
+          "state": "CA",
+          "zip": "90001"
+        },
+        "owner": {
+          "names": [
+            {
+              "first": "Jane",
+              "last": "Doe"
+            }
+          ],
+          "emails": [
+            "jane@example.com"
+          ],
+          "phoneNumbers": [
+            {
+              "number": "213-555-0200"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

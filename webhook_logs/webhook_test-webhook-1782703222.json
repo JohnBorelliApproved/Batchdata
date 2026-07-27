@@ -1,0 +1,30 @@
+{
+  "results": {
+    "properties": [
+      {
+        "address": {
+          "street": "123 Test St",
+          "city": "Beverly Hills",
+          "state": "CA",
+          "zip": "90210"
+        },
+        "owner": {
+          "names": [
+            {
+              "first": "John",
+              "last": "TestOwner"
+            }
+          ],
+          "emails": [
+            "john.testowner@example.com"
+          ],
+          "phoneNumbers": [
+            {
+              "number": "310-555-0100"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

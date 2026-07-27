@@ -11,3 +11,4 @@ GOHIGHLEVEL_API_KEY = os.getenv("GOHIGHLEVEL_API_KEY")
 AGENCY_LOCATION_ID = os.getenv("AGENCY_LOCATION_ID")
 AGENCY_API_KEY = os.getenv("AGENCY_API_KEY")
 APP_BASE_URL = os.getenv("APP_BASE_URL", "https://abeapi.com")
+TESTING = True

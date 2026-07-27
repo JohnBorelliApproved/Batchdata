@@ -27,42 +27,43 @@ def upsert_contact(contact_data, api_key=None):
 def get_contacts_by_tag(tag, location_id, api_key=None):
     """
     Retrieves all contacts from GoHighLevel that have a specific tag.
-    Handles pagination automatically — GHL caps each page at 100 results.
+    Uses POST /contacts/search with tag filter; handles cursor pagination.
     """
     key_to_use = api_key if api_key else LEGACY_API_KEY
     headers = {
         "Authorization": f"Bearer {key_to_use}",
         "Version": API_VERSION,
+        "Content-Type": "application/json",
         "Accept": "application/json"
     }
 
-    url = f"{GOHIGHLEVEL_API_URL}contacts/"
+    url = f"{GOHIGHLEVEL_API_URL}contacts/search"
     all_contacts = []
-    params = {
-        "locationId": location_id,
-        "tags": tag,
-        "limit": 100,
-        "startAfter": None,
-        "startAfterId": None,
-    }
+    search_after = None
 
     while True:
-        # Remove None params so they don't get sent as the string "None"
-        active_params = {k: v for k, v in params.items() if v is not None}
-        response = requests.get(url, headers=headers, params=active_params)
+        payload = {
+            "locationId": location_id,
+            "filters": [{"field": "tags", "operator": "contains", "value": tag}],
+            "pageLimit": 100,
+        }
+        if search_after is not None:
+            payload["searchAfter"] = search_after
+
+        response = requests.post(url, json=payload, headers=headers)
         response.raise_for_status()
         body = response.json()
 
         contacts = body.get('contacts', [])
         all_contacts.extend(contacts)
 
-        meta = body.get('meta', {})
-        next_page_url = meta.get('nextPageUrl')
-        if not next_page_url or len(contacts) < 100:
+        if len(contacts) < 100:
             break
 
-        params['startAfter'] = meta.get('startAfter')
-        params['startAfterId'] = meta.get('startAfterId')
+        # Cursor for next page is the searchAfter value on the last contact
+        search_after = contacts[-1].get('searchAfter')
+        if not search_after:
+            break
 
     return all_contacts
 

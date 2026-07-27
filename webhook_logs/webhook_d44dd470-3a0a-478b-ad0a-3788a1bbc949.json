@@ -1,0 +1,5781 @@
+{
+  "results": {
+    "areaPolygon": {
+      "boundingBox": {
+        "nw": {
+          "latitude": 43.452071,
+          "longitude": -94.945312
+        },
+        "se": {
+          "latitude": 30.619187,
+          "longitude": -114.706749
+        }
+      },
+      "coordinates": [
+        [
+          [
+            23.6012,
+            -7.3454
+          ],
+          [
+            -22.5396,
+            12.7277
+          ],
+          [
+            -86.4178,
+            25.4516
+          ],
+          [
+            43.8019,
+            -99.0402
+          ],
+          [
+            -52.2888,
+            -18.0903
+          ]
+        ]
+      ]
+    },
+    "meta": {
+      "apiVersion": "esse culpa",
+      "performance": {
+        "endTime": "1899-08-10T15:21:19.0Z",
+        "startTime": "1911-05-08T21:01:54.0Z",
+        "totalRequestTime": 1349
+      },
+      "requestId": "quis id ex",
+      "results": {
+        "aggComparablesMetrics": {
+          "averagePrice": 39916888,
+          "averagePricePerSqft": -93059513.22853036,
+          "estimatedValue": 11482625
+        },
+        "resultCount": 24,
+        "resultsFound": 47237,
+        "skipTraceErrorCount": 3,
+        "skipTraceMatchCount": 20,
+        "skipTraceNoMatchCount": 3,
+        "skipTraceRequestCount": 49
+      }
+    },
+    "nextPageCursor": "fugiat nulla commodo reprehenderit officia",
+    "options": {
+      "aggComparablesMetrics": true,
+      "aggregateLoanTypes": true,
+      "areaPolygon": false,
+      "boundingBoxNw": {
+        "latitude": 40.871142,
+        "longitude": -113.227604
+      },
+      "boundingBoxSe": {
+        "latitude": 31.40598,
+        "longitude": -118.466321
+      },
+      "customProjection": [
+        "aliqua sunt velit ad Excepteur",
+        "ullamco reprehenderit aliqua dolore",
+        "ullamco laborum",
+        "dolore veniam minim consequat"
+      ],
+      "datasets": [
+        "contact",
+        "image"
+      ],
+      "dateFormat": "iso-date-time",
+      "distanceFeet": 7275.5,
+      "distanceKilometers": 14.8,
+      "distanceMeters": 4106.5,
+      "distanceMiles": 2.9,
+      "distanceYards": 1668.5,
+      "errorWebhookUrl": "http://zealous-gossip.info",
+      "maxAreaPercent": 16,
+      "maxBathrooms": 2,
+      "maxBedrooms": 1,
+      "maxLotSizePercent": 19,
+      "maxStories": 0,
+      "maxYearBuilt": 5,
+      "minAreaPercent": -14,
+      "minBathrooms": 0,
+      "minBedrooms": 0,
+      "minLotSizePercent": -16,
+      "minStories": 0,
+      "minYearBuilt": -12,
+      "pageCursor": "ipsum dolore nostrud eu sit",
+      "projection": "custom",
+      "quicklistCounts": true,
+      "searchSession": {
+        "id": "rqe5k5g3EunVCCrrxov-tCaVWKlDkNarwJzCcBigwq9hMbOu7m80viONylqNYCe-gAdjji",
+        "idempotencyKey": "hMV_65om-E0O1066xBrHX9Pq6kRKY1tbpxs7tcyZK20fQQwJsALOgV0AER79tsVZeMb6k57mJ1dvDsIsM9qIYuwf"
+      },
+      "skip": 65,
+      "skipTrace": true,
+      "sort": {
+        "field": "listingStatus",
+        "sortOrder": "asc"
+      },
+      "take": 32,
+      "useArea": true,
+      "useBathrooms": true,
+      "useBedrooms": true,
+      "useBoundingBox": false,
+      "useCursorPagination": false,
+      "useDistance": false,
+      "useLotSize": false,
+      "useStories": false,
+      "useSubdivision": true,
+      "useYearBuilt": true,
+      "webhookUrl": "https://plastic-pigeon.name"
+    },
+    "previousPageCursor": "quis",
+    "properties": [
+      {
+        "assessment": {
+          "assessedLandValue": 366252,
+          "marketValueYear": 2022,
+          "assessmentYear": 2024,
+          "totalAssessedValue": 671504,
+          "assessedImprovementValue": 234640,
+          "improvementMarketValue": 921937,
+          "landMarketValue": 461370,
+          "totalMarketValue": 1278285
+        },
+        "_id": "consequat Ut minim",
+        "permit": {
+          "latestDate": "1926-07-23",
+          "permitCount": 12,
+          "allTags": [
+            "fireSprinkler",
+            "gas",
+            "addition",
+            "waterHeater",
+            "electrical"
+          ],
+          "earliestDate": "1958-03-08",
+          "totalJobValue": 486107,
+          "tags": {
+            "plumbing": false,
+            "newConstruction": true,
+            "bathroom": false,
+            "gas": false,
+            "evCharger": true,
+            "addition": false,
+            "remodel": true,
+            "grading": false,
+            "demolition": true,
+            "adu": false,
+            "battery": false,
+            "windowDoor": true,
+            "electricMeter": true,
+            "roofing": true,
+            "inspectionPassed": true,
+            "poolAndHotTub": false,
+            "generator": true,
+            "solar": true,
+            "fireSprinkler": false,
+            "heatPump": false,
+            "kitchen": true,
+            "electrical": true,
+            "waterHeater": false,
+            "hvac": true
+          }
+        },
+        "ids": {
+          "addressHash": "elit voluptate deserunt reprehenderit",
+          "oldApn": "ullamco laborum exercitation Lorem",
+          "taxId": "nulla dolor",
+          "fipsCode": "quis voluptate elit irure nulla",
+          "apn": "consectetur",
+          "oldApnCodeDescription": "Alternate APN",
+          "personIds": [
+            "895c7152-40f9-4ad9-b0c7-78536a4d5e3d",
+            "ea90949b-ee36-4649-80ac-1c4cd6c3cba1",
+            "529cd48f-6f30-480b-adef-7d3f332a9a13"
+          ]
+        },
+        "openLien": {
+          "totalOpenLienCount": 1,
+          "juniorLoanTypes": [
+            "Second Mortgage",
+            "Home Equity Loan"
+          ],
+          "lastLoanRecordingDate": "1908-08-04",
+          "firstLoanRecordingDate": "1901-03-01",
+          "mortgages": [
+            {
+              "equityCreditLine": "No",
+              "ltv": 1.69,
+              "balloonRider": true,
+              "adjustableRateIndexCode": "LIBOR",
+              "preforeclosureStatusCode": "laborum proident occaecat tempor irure",
+              "lenderNameBeneficiary": "Von - Renner",
+              "prepaymentRider": true,
+              "interestRate": 11.82,
+              "loanNumber": "et reprehenderit ad in",
+              "preforeclosureFilingDate": "1914-12-13",
+              "lender": "Ledner - Bogan",
+              "purchaseMortgageIndicator": "Purchase",
+              "currentEstimatedBalance": 388247,
+              "lenderName": "Collins and Sons",
+              "preforeclosureCaseTrusteeSaleNumber": "TS-5632-503757",
+              "pudRider": false,
+              "interestRateNotGreaterThan": "in do",
+              "loanTermYears": 24,
+              "assumable": true,
+              "transactionType": "New construction residential transactions",
+              "preforeclosureStatus": "Active",
+              "recordingDate": "1947-02-12",
+              "lenderTypeCode": "I",
+              "lenderType": "Mortgage company",
+              "preforeclosureRecordingDate": "1969-03-19",
+              "rateChangeFrequency": "Annual",
+              "financingTypeCode": "FIX",
+              "contractDate": "1897-08-08",
+              "loanType": "New Conventional",
+              "prepaymentTermPenaltyRider": "dolor",
+              "maximumInterestRate": 12.625,
+              "privateLender": true,
+              "sellerCarryBack": true,
+              "secondHomeRider": false,
+              "loanTermMonths": 224,
+              "adjustableRateRider": false,
+              "purposeOfLoan": "Purchase",
+              "equityFlag": false,
+              "interestOnlyPeriod": true,
+              "preforeclosureAuctionDate": "1948-06-10",
+              "changeIndex": "occaecat sunt elit velit officia",
+              "assignedLenderName": "Marvin, Buckridge and Williamson",
+              "condoRider": true,
+              "standaloneRefi": true,
+              "interestRateNotLessThan": "exercitation nulla velit tempor",
+              "helocFlag": false,
+              "financingType": "Fixed Rate",
+              "dueDate": "1936-01-26",
+              "cashPurchase": true,
+              "constructionLoan": true,
+              "loanTypeCode": "ut ad qui",
+              "transactionTypeCode": "A",
+              "firstChangeDateMonthConversionRider": "Lorem pariatur enim",
+              "estimatedPaymentAmount": 9879,
+              "multiFamilyRider": true,
+              "assignmentDate": "1904-08-25",
+              "subordinateLoanFlag": true,
+              "loanAmount": 690687,
+              "rateChangeFrequencyCode": "anim sunt",
+              "firstChangeDateYearConversionRider": "dolor elit id",
+              "numberOfAssignments": 0,
+              "fixedStepConversionRateRider": "Yes",
+              "titleCompanyName": "Waelchi, Wisoky and Sawayn"
+            },
+            {
+              "numberOfAssignments": 1,
+              "prepaymentTermPenaltyRider": "ut incididunt irure aliqua",
+              "cashPurchase": false,
+              "interestRateNotLessThan": "exercitation minim aliqua commodo",
+              "currentEstimatedBalance": 275860,
+              "preforeclosureRecordingDate": "1965-01-07",
+              "purposeOfLoan": "Purchase",
+              "lender": "Schulist, Kris and Sipes",
+              "constructionLoan": true,
+              "interestOnlyPeriod": true,
+              "assignmentDate": "1902-11-11",
+              "recordingDate": "1940-10-01",
+              "rateChangeFrequency": "Annual",
+              "pudRider": false,
+              "standaloneRefi": true,
+              "preforeclosureStatus": "Active",
+              "equityCreditLine": "No",
+              "ltv": 3.07,
+              "preforeclosureCaseTrusteeSaleNumber": "TS-1234-678901",
+              "preforeclosureAuctionDate": "1923-01-03",
+              "adjustableRateRider": true,
+              "estimatedPaymentAmount": 7245,
+              "loanAmount": 249515,
+              "firstChangeDateMonthConversionRider": "consequat dolor ipsum reprehenderit",
+              "lenderName": "Smith, Renner and Kuhn",
+              "firstChangeDateYearConversionRider": "commodo irure Excepteur dolore",
+              "multiFamilyRider": false,
+              "prepaymentRider": false,
+              "contractDate": "1902-07-07",
+              "fixedStepConversionRateRider": "Yes",
+              "purchaseMortgageIndicator": "Purchase",
+              "privateLender": true,
+              "rateChangeFrequencyCode": "commodo aliquip laboris occaecat consequat",
+              "lenderType": "Mortgage company",
+              "preforeclosureStatusCode": "irure mollit in labore in",
+              "financingTypeCode": "FIX",
+              "interestRateNotGreaterThan": "eiusmod quis",
+              "lenderTypeCode": "I",
+              "transactionType": "New construction residential transactions",
+              "assignedLenderName": "Satterfield LLC",
+              "loanTermMonths": 325,
+              "sellerCarryBack": true,
+              "dueDate": "1898-12-03",
+              "subordinateLoanFlag": false,
+              "lenderNameBeneficiary": "Anderson, Lindgren and Ankunding",
+              "equityFlag": true,
+              "financingType": "Fixed Rate",
+              "interestRate": 11.09,
+              "condoRider": false,
+              "loanTermYears": 15,
+              "changeIndex": "id mollit",
+              "titleCompanyName": "Yundt Inc",
+              "secondHomeRider": true,
+              "balloonRider": false,
+              "adjustableRateIndexCode": "LIBOR",
+              "loanNumber": "dolore enim velit",
+              "helocFlag": true,
+              "maximumInterestRate": 11,
+              "loanType": "New Conventional",
+              "loanTypeCode": "Ut",
+              "preforeclosureFilingDate": "1895-03-29",
+              "transactionTypeCode": "A",
+              "assumable": false
+            }
+          ],
+          "allLoanTypes": [
+            "FHA",
+            "VA",
+            "USDA"
+          ],
+          "totalOpenLienBalance": 61183
+        },
+        "general": {
+          "mobileHome": false,
+          "daylightSavingsTime": true,
+          "propertyTypeDetail": "Townhouse",
+          "utcOffset": -5,
+          "carrierRoute": "R706",
+          "congressionalDistrict": "veniam ex laborum eu",
+          "mailingAddressVacant": false,
+          "standardizedLandUseCode": "R50",
+          "primaryParcel": false,
+          "vacant": false,
+          "parcelCount": 4,
+          "censusTract": "adipisicing elit dolore sunt Ut",
+          "vacantDate": "1912-08-08",
+          "timeZone": "Pacific",
+          "propertyTypeCategory": "Agricultural",
+          "schoolDistrict": "Charlotte-Mecklenburg Schools"
+        },
+        "owner": {
+          "names": [
+            {
+              "last": "Anderson",
+              "first": "Brain",
+              "middle": "Laisha",
+              "full": "Joan Gislason IV"
+            },
+            {
+              "last": "Larson",
+              "first": "Saul",
+              "middle": "Elmore",
+              "full": "Julian Vandervort MD"
+            }
+          ],
+          "involuntaryLien": {
+            "judgement": true,
+            "lien": false
+          },
+          "ownerStatusType": "LLC",
+          "fullName": "Flora Klocko DDS",
+          "mailingOptOut": false,
+          "enrichedEmails": [
+            {
+              "email": "Rebecca.Von67@yahoo.com",
+              "tested": false
+            },
+            {
+              "email": "Rafael_Heathcote13@hotmail.com",
+              "tested": true
+            }
+          ],
+          "lengthOfResidenceYears": 25,
+          "ownershipStartDate": "1933-01-09",
+          "emails": [
+            "Connor.Kuhlman@yahoo.com",
+            "Adam_Wuckert@hotmail.com"
+          ],
+          "ownershipRightsCode": "JT",
+          "hasLandline": true,
+          "mailingAddress": {
+            "dpvMatchCode": "D",
+            "dpvFootnotes": "AAN1",
+            "formattedStreet": "Pearline Ville",
+            "addressValidity": "Partial",
+            "streetNoUnit": "8150 Ernser Cliff",
+            "zip": "do enim",
+            "hash": "non Excepteur eiusmod",
+            "county": "incididunt ipsum ad non",
+            "unitType": "STE",
+            "unitNumber": "Lorem aliquip voluptate velit",
+            "zipPlus4": "velit voluptate labore Duis",
+            "street": "1417 Janae Lock",
+            "state": "SC",
+            "deliveryPointCode": "cupidatat laborum nulla aliquip eiusmod",
+            "oldHashes": [
+              "in",
+              "anim ad",
+              "incididunt cupidatat",
+              "ea magna"
+            ],
+            "houseNumber": "Duis",
+            "city": "Marcusberg"
+          },
+          "litigator": true,
+          "bankruptcy": {
+            "filingDate": "1942-08-22T19:02:46.0Z",
+            "bankruptcy": true
+          },
+          "dnc": {
+            "tcpa": false
+          },
+          "death": {
+            "dateOfDeath": "1906-11-30",
+            "deceased": true
+          },
+          "ownerStatusTypeCode": "30",
+          "lengthOfResidenceMonths": 47,
+          "ownerOccupied": false,
+          "ownershipRights": "Joint Tenants",
+          "phoneNumbers": [
+            {
+              "lastReportedDate": "1905-04-26T11:53:28.0Z",
+              "type": "Mobile",
+              "tested": false,
+              "number": "laborum est ex culpa",
+              "dnc": false,
+              "reachable": false,
+              "tcpa": true,
+              "score": 82,
+              "carrier": "proident"
+            },
+            {
+              "tcpa": false,
+              "score": 54,
+              "carrier": "commodo culpa",
+              "lastReportedDate": "1936-04-20T16:49:03.0Z",
+              "type": "Land Line",
+              "dnc": true,
+              "number": "velit",
+              "reachable": false,
+              "tested": true
+            },
+            {
+              "dnc": false,
+              "lastReportedDate": "1903-08-17T02:47:14.0Z",
+              "type": "Mobile",
+              "reachable": true,
+              "number": "ut culpa dolor dolor",
+              "tcpa": true,
+              "carrier": "in",
+              "score": 38,
+              "tested": false
+            }
+          ]
+        },
+        "propertyOwnerProfile": {
+          "totalPurchasePrice": 466127,
+          "mortgagesCount": 17,
+          "averageYearBuilt": 1978,
+          "propertiesCount": 42,
+          "mortgagesTotalBalance": 752358,
+          "averagePurchasePrice": 203806,
+          "mortgagesAverageBalance": 319944,
+          "averageAssessedValue": 647358,
+          "propertiesTotalEstimatedValue": 7064381,
+          "propertiesTotalEquity": 332251
+        },
+        "building": {
+          "style": "Colonial",
+          "bathFixtureCount": 10,
+          "heatSourceCode": "N",
+          "airConditioningSourceCode": "W",
+          "heatSource": "Central",
+          "partialBathroomCount": 3,
+          "exteriorWallsCode": "VN",
+          "buildingQuality": "Fair",
+          "buildingType": "Individual Unit",
+          "unitCount": 14,
+          "calculatedBathroomCount": 3.5,
+          "airConditioningSource": "Yes",
+          "buildingConditionCode": "P",
+          "atticSquareFeet": 294,
+          "drivewayCode": "A",
+          "interiorWalls": "Gypsum Board",
+          "buildingQualityCode": "C",
+          "atticFinishedSquareFeet": 688,
+          "constructionType": "Steel",
+          "porch": "Porch - Screened",
+          "porchCode": "O",
+          "buildingCondition": "Poor",
+          "garage": "Built-in Garage",
+          "floorCoverCode": "L",
+          "patioCode": "D",
+          "atticUnfinishedSquareFeet": 589,
+          "bedroomCount": 6,
+          "waterService": "Municipal",
+          "roofCoverCode": "S",
+          "basementSquareFeet": 2438,
+          "effectiveYearBuilt": 1961,
+          "basementType": "Full Basement",
+          "interiorWallsCode": "G",
+          "bathroomCount": 4,
+          "roofCover": "Wood Shake",
+          "roofTypeCode": "H",
+          "groundFloorAreaSquareFeet": 3583,
+          "pool": "Pool",
+          "roomCount": 10,
+          "garageParkingSpaceCount": 6,
+          "constructionTypeCode": "M",
+          "grossBuildingAreaSquareFeet": 8737,
+          "exteriorWalls": "Brick",
+          "buildingClassCode": "C",
+          "residentialUnitCount": 18,
+          "commercialUnitCount": 3,
+          "storyCount": 1.5,
+          "foundationCode": "C",
+          "elevatorCount": 2,
+          "otherRooms": "Office",
+          "garageSquareFeet": 979,
+          "basementFinishedSquareFeet": 542,
+          "waterServiceCode": "A",
+          "poolCode": "B",
+          "features": [
+            "Garage",
+            "Fireplace",
+            "Basketball Court"
+          ],
+          "buildingClass": "Fire-resistive construction",
+          "garageUnfinishedSquareFeet": 308,
+          "garageFinishedSquareFeet": 24,
+          "foundation": "Slab",
+          "basementUnfinishedSquareFeet": 269,
+          "fullBathroomCount": 2,
+          "patio": "Covered Patio",
+          "livingAreaSquareFeet": 4268,
+          "driveway": "Gravel",
+          "floorCover": "Tile",
+          "totalBuildingAreaSquareFeet": 9300,
+          "yearBuilt": 1944,
+          "sewer": "Municipal",
+          "roofType": "Gambrel",
+          "totalBuildingAreaCode": "A",
+          "garageCode": "A",
+          "basementTypeCode": "F",
+          "styleCode": "ME",
+          "buildingCount": 1,
+          "totalBuildingAreaCodeDescription": "Gross Area",
+          "adjustedBuildingAreaSquareFeet": 7092,
+          "heatingFuelTypeCode": "O",
+          "otherRoomsCode": "F",
+          "fireplaceCount": 0,
+          "sewerCode": "C",
+          "heatingFuelType": "Propane"
+        },
+        "deedHistory": [
+          {
+            "resale": false,
+            "mailingAddress": {
+              "city": "South Blaise",
+              "hash": "a9658551-e217-41f8-86ee-c4ec32e0d9f3",
+              "zip": "68548-2991",
+              "state": "NJ",
+              "street": "2424 Ruth Fall"
+            },
+            "partialInterestTypeCode": "quis",
+            "salePrice": 1007555,
+            "recordingDate": "1908-05-06",
+            "saleDate": "1921-09-17",
+            "documentType": "Stand Alone Mortgage",
+            "buyers": [
+              "Gerald Yundt DVM",
+              "Elvira Smitham"
+            ],
+            "reoSale": true,
+            "recordingBook": "dolor esse laborum aliquip",
+            "multipleOwners": false,
+            "transactionType": "New construction residential transactions",
+            "transferTax": 20082,
+            "documentNumber": "elit in",
+            "foreclosure": true,
+            "ownerRelationshipType": "elit consectetur exercitation voluptate veniam",
+            "transactionId": 866431934,
+            "transactionTypeCode": "A",
+            "documentDate": "1933-03-23",
+            "partialInterestType": "Unclear Actual Percentage",
+            "salePriceCode": "esse Duis",
+            "newConstruction": false,
+            "recordingPage": "dolore ex Excepteur adipisicing",
+            "documentTypeCode": "consequat ea tempor minim occaecat",
+            "sellers": [
+              "Vernon Casper",
+              "Ms. Lewis Hodkiewicz"
+            ],
+            "interFamily": false
+          },
+          {
+            "recordingBook": "reprehenderit enim Duis mollit",
+            "saleDate": "1968-03-21",
+            "transactionId": 203436226,
+            "salePrice": 356163,
+            "interFamily": false,
+            "recordingPage": "ipsum cillum labore sunt",
+            "documentTypeCode": "ad veniam",
+            "transferTax": 20371,
+            "resale": false,
+            "ownerRelationshipType": "deserunt pariatur",
+            "transactionType": "New construction residential transactions",
+            "documentNumber": "dolore ad",
+            "buyers": [
+              "Chelsea Langosh",
+              "Nicolas West"
+            ],
+            "documentType": "Stand Alone Mortgage",
+            "sellers": [
+              "Verna Treutel Jr.",
+              "Karl Kunde"
+            ],
+            "partialInterestType": "Unclear Actual Percentage",
+            "transactionTypeCode": "A",
+            "partialInterestTypeCode": "dolor eiusmod incididunt do",
+            "recordingDate": "1968-07-11",
+            "documentDate": "1961-07-22",
+            "foreclosure": true,
+            "mailingAddress": {
+              "state": "KY",
+              "city": "Chandler",
+              "zip": "57000-6203",
+              "hash": "30c6d93c-cd70-44ab-9a94-56bc97c61f70",
+              "street": "331 Predovic Neck"
+            },
+            "multipleOwners": true,
+            "newConstruction": false,
+            "reoSale": true,
+            "salePriceCode": "cillum"
+          }
+        ],
+        "lot": {
+          "zoningCode": "in ipsum sunt",
+          "topographyCode": "E",
+          "lotSizeSquareFeet": 33339,
+          "siteInfluenceCode": "S",
+          "lotFrontageFeet": 174,
+          "lotSizeAcres": 6.82,
+          "topography": "Level grade",
+          "lotDepthFeet": 279,
+          "siteInfluence": "Major Street"
+        },
+        "intel": {
+          "salePropensity": 15,
+          "salePropensityCategory": "Low",
+          "lastSoldDate": "1961-03-16",
+          "lastSoldPrice": 127879,
+          "salePropensityStatus": "To be Determined"
+        },
+        "tax": {
+          "taxRateCodeArea": "voluptate reprehenderit in in sunt",
+          "taxExemptions": "Agricultural",
+          "taxDelinquentYear": 2019,
+          "taxYear": 2024,
+          "schoolTaxDistrictCodes": [
+            "SD-658",
+            "SD-218",
+            "SD-218"
+          ],
+          "taxAmount": 2196
+        },
+        "legal": {
+          "sectionTownshipRangeMeridian": "S36 T33N R01W",
+          "cityTownshipMunicipality": "South Priscilla",
+          "phaseNumber": "Phase 3",
+          "assessorsMapReference": "MAP-0115-EG",
+          "block": "minim sit proident ipsum aliquip",
+          "legalUnit": "Unit 204",
+          "lotCode": "M",
+          "tractNumber": "TR-12045",
+          "landLot": "LL-102",
+          "section": "SEC 76",
+          "legalDescription": "LOT 81 BLK 6 UNIT 37",
+          "lotNumber": "culpa sint est",
+          "subdivisionName": "Cedar Hills",
+          "district": "District 13"
+        },
+        "involuntaryLien": {
+          "liens": [
+            {
+              "attorneyCompanyName": "Leuschke, Purdy and Hayes",
+              "bookNumber": "do officia",
+              "lienAmount": 86156,
+              "parties": [
+                {
+                  "fullName": "Christopher Lakin II",
+                  "roleType": "Debtor"
+                },
+                {
+                  "roleType": "Debtor",
+                  "fullName": "Tommie Rowe"
+                },
+                {
+                  "roleType": "Debtor",
+                  "fullName": "Krista Miller PhD"
+                }
+              ],
+              "filingDate": "1922-06-11T03:58:11.0Z",
+              "documentTypeCode": "sunt minim",
+              "documentNumber": "quis Lorem",
+              "attorneyPhoneNumber": "consequat in exercitation Lorem sunt",
+              "taxPeriodEndDate": "1941-04-29T01:51:10.0Z",
+              "recordingDate": "1937-12-19T04:22:49.0Z",
+              "lienType": "veniam adipisicing dolor aute",
+              "lienTypeCode": "pariatur sint velit amet",
+              "documentType": "exercitation quis",
+              "judgementAmount": 101566,
+              "pageNumber": "eiusmod eu"
+            },
+            {
+              "pageNumber": "ex",
+              "documentType": "ipsum",
+              "parties": [
+                {
+                  "roleType": "Creditor",
+                  "fullName": "Julian Hermann"
+                },
+                {
+                  "roleType": "Lienholder",
+                  "fullName": "Lorena Stoltenberg II"
+                },
+                {
+                  "fullName": "Nora Kozey",
+                  "roleType": "Lienholder"
+                }
+              ],
+              "taxPeriodEndDate": "1925-07-19T10:57:18.0Z",
+              "bookNumber": "deserunt",
+              "lienType": "sit",
+              "filingDate": "1941-01-30T05:17:29.0Z",
+              "lienAmount": 2546,
+              "lienTypeCode": "in enim ullamco sit",
+              "judgementAmount": 213860,
+              "attorneyCompanyName": "Prohaska - Haag",
+              "documentNumber": "incididunt",
+              "attorneyPhoneNumber": "ad",
+              "documentTypeCode": "sint est culpa cillum",
+              "recordingDate": "1895-03-05T15:15:21.0Z"
+            },
+            {
+              "judgementAmount": 211254,
+              "bookNumber": "velit eu commodo",
+              "documentTypeCode": "esse in",
+              "parties": [
+                {
+                  "roleType": "Defendant",
+                  "fullName": "Jacqueline Glover"
+                },
+                {
+                  "roleType": "Lienholder",
+                  "fullName": "Rhonda Grady"
+                },
+                {
+                  "roleType": "Defendant",
+                  "fullName": "Mr. Andre Dickinson"
+                }
+              ],
+              "lienAmount": 44205,
+              "documentType": "consectetur aute velit anim",
+              "taxPeriodEndDate": "1957-09-26T07:09:54.0Z",
+              "filingDate": "1943-09-08T05:32:27.0Z",
+              "attorneyCompanyName": "Erdman - Russel",
+              "pageNumber": "tempor cillum cupidatat deserunt",
+              "recordingDate": "1913-03-23T23:30:25.0Z",
+              "lienType": "proident",
+              "attorneyPhoneNumber": "ea id aliqua Excepteur",
+              "lienTypeCode": "laboris nulla sint",
+              "documentNumber": "ex in"
+            },
+            {
+              "lienType": "Lorem velit",
+              "pageNumber": "commodo voluptate nulla minim",
+              "judgementAmount": 182912,
+              "recordingDate": "1928-11-20T01:12:50.0Z",
+              "parties": [
+                {
+                  "roleType": "Lienholder",
+                  "fullName": "Shawn Keebler"
+                },
+                {
+                  "roleType": "Debtor",
+                  "fullName": "Chester Little"
+                },
+                {
+                  "fullName": "Melanie Stark",
+                  "roleType": "Creditor"
+                }
+              ],
+              "attorneyCompanyName": "Kuhn, Franecki and Langosh",
+              "filingDate": "1915-12-29T03:09:36.0Z",
+              "lienAmount": 21840,
+              "documentType": "incididunt dolor eiusmod dolore adipisicing",
+              "documentNumber": "qui dolore",
+              "bookNumber": "Duis",
+              "taxPeriodEndDate": "1955-04-14T23:44:21.0Z",
+              "documentTypeCode": "reprehenderit veniam aute enim",
+              "attorneyPhoneNumber": "tempor",
+              "lienTypeCode": "irure aute dolor Duis qui"
+            }
+          ]
+        },
+        "demographics": {
+          "homeownerRenterCode": "O",
+          "religiousAffiliationCode": "M",
+          "individualOccupation": "Administrative",
+          "emailDomain": "Lorem occaecat aliqua Duis",
+          "religiousAffiliation": "Protestant",
+          "individualOccupationCode": "in",
+          "maritalStatusCode": "M",
+          "businessOwnerCode": "A",
+          "netWorth": 361895,
+          "maritalStatus": "Married",
+          "gender": "Unknown",
+          "hasChildren": true,
+          "homeownerRenter": "Renter",
+          "millionaire": true,
+          "businessOwner": "Technology",
+          "singleParent": true,
+          "religious": true,
+          "genderCode": "M",
+          "individualEducation": "Attended College",
+          "recentlyMoved": false,
+          "age": 73,
+          "investments": [
+            "Real Estate",
+            "Real Estate",
+            "Real Estate"
+          ],
+          "childCount": 4,
+          "recentlyMovedMonth": 7,
+          "individualEducationCode": "SC",
+          "petOwner": false,
+          "householdSize": 4,
+          "smoker": false,
+          "recentlyMovedYear": 2024,
+          "income": 315281,
+          "recentlyDivorced": true,
+          "discretionaryIncome": 151098
+        },
+        "valuation": {
+          "standardDeviation": 17,
+          "estimatedValue": 655842,
+          "priceRangeMin": 836175,
+          "equityCurrentEstimatedBalance": 516854,
+          "asOfDate": "1916-07-07",
+          "ltv": 0.59,
+          "confidenceScore": 21,
+          "equityPercent": 40.25,
+          "priceRangeMax": 441171
+        },
+        "mortgageHistory": [
+          {
+            "interestRateTypeCode": "FIX",
+            "lenderName": "Rippin - Hayes",
+            "transactionType": "New construction residential transactions",
+            "loanAmount": 1097213,
+            "loanTypeCode": "elit fugiat",
+            "loanType": "New Conventional",
+            "interestRateType": "Fixed Rate",
+            "borrowers": [
+              "Lynda Beatty",
+              "Hannah Runolfsdottir"
+            ],
+            "loanTermMonths": 225,
+            "recordingDate": "1901-06-07",
+            "transactionTypeCode": "A",
+            "dueDate": "1965-02-18",
+            "lenderType": "Mortgage company",
+            "documentDate": "1938-03-07",
+            "lenderTypeCode": "I",
+            "interestRate": "Lorem",
+            "saleDate": "1900-03-23"
+          },
+          {
+            "documentDate": "1894-06-21",
+            "interestRate": "ullamco veniam in irure",
+            "saleDate": "1906-04-09",
+            "transactionTypeCode": "A",
+            "loanTermMonths": 186,
+            "interestRateTypeCode": "FIX",
+            "loanType": "New Conventional",
+            "recordingDate": "1909-09-28",
+            "lenderName": "O'Keefe Group",
+            "lenderType": "Mortgage company",
+            "borrowers": [
+              "Henry Goodwin",
+              "Lola Barrows"
+            ],
+            "interestRateType": "Fixed Rate",
+            "lenderTypeCode": "I",
+            "loanTypeCode": "et dolor fugiat non minim",
+            "transactionType": "New construction residential transactions",
+            "dueDate": "1890-10-18",
+            "loanAmount": 1335723
+          }
+        ],
+        "meta": {
+          "requestId": "occaecat Duis enim sit",
+          "propertyDateModified": "1948-01-27"
+        },
+        "dateModified": "1901-11-11",
+        "foreclosure": {
+          "auctionMinimumBidAmount": 465038,
+          "pageNumber": "sint aliquip cupidatat",
+          "documentTypeCode": "ut",
+          "borrowerName": "Casey Sanford I",
+          "dueDate": "1913-10-15",
+          "bookNumber": "nulla dolore",
+          "flag": "Y",
+          "auctionCity": "North Aracelytown",
+          "trusteeCareOfName": "Ms. Douglas Sauer",
+          "loanNumber": "consequat sint in",
+          "trusteeSaleNumber": "TS-3148-221053",
+          "caseNumber": "CV-2024-001234",
+          "auctionDate": "1915-06-07",
+          "trusteeAddress": "55316 Zula Fields",
+          "documentType": "Notice of Lis Pendens",
+          "pastDueAmount": 31150,
+          "defaultDate": "1956-06-05",
+          "trusteeName": "Koelpin - Bauch",
+          "originalLoanAmount": 153887,
+          "recordingDate": "1922-04-01",
+          "trusteePhone": "in voluptate",
+          "auctionTime": "in",
+          "releaseDate": "1919-03-18",
+          "documentNumber": "laboris",
+          "currentLenderName": "Johnson, Quigley and McClure",
+          "unpaidBalance": 785803,
+          "auctionContactName": "Ramona Harvey",
+          "status": "Notice of Default and Lis Pendens",
+          "auctionLocation": "024 Cartwright Stravenue",
+          "filingDate": "1920-01-29",
+          "statusCode": "LP"
+        },
+        "listing": {
+          "heatingTypes": [
+            "OTHER",
+            "OTHER",
+            "OTHER"
+          ],
+          "bathroomCount": 6,
+          "appliances": [
+            "Water Heater",
+            "Dryer",
+            "Washer"
+          ],
+          "listingNumber": "MLS-05494033",
+          "listingCategory": "Purchase",
+          "coolingTypes": [
+            "ELECTRIC",
+            "ELECTRIC",
+            "ELECTRIC"
+          ],
+          "minListPriceDate": "1941-10-10",
+          "status": "Expired",
+          "brokerage": {
+            "address": "7469 Kattie Lake",
+            "name": "Stokes Group",
+            "phoneNumber": "in dolor ut",
+            "websiteUrl": "https://parched-gelatin.com",
+            "email": "Dereck.Blanda62@gmail.com"
+          },
+          "statusSubtype": "Cancel/Withdrawn",
+          "schools": {
+            "name": "aad 1fe School",
+            "district": "Los Angeles Unified School District",
+            "category": "Middle"
+          },
+          "oneQuarterBathroomCount": 2,
+          "partialBathroomCount": 3,
+          "statusCategory": "Failed",
+          "roofTypes": [
+            "Asphalt",
+            "Asphalt",
+            "Asphalt"
+          ],
+          "neighborhood": "East Side",
+          "floorCount": 2,
+          "soldPrice": 1732519,
+          "propertySubtype": "id mollit deserunt",
+          "price": 2066184,
+          "maxListPrice": 656096,
+          "failedListingDate": "1914-03-23",
+          "subDivision": "Pine Valley",
+          "agents": {
+            "licenseNumber": "RE-07160278",
+            "email": "Rosalyn_Anderson87@gmail.com",
+            "key": "32bc9512-4ecd-4f58-9431-c9099bdb1f94",
+            "roles": [
+              "Listing Agent"
+            ],
+            "websiteUrl": "https://cooked-fishnet.com",
+            "officePhoneNumber": "reprehenderit est anim",
+            "primaryPhoneNumber": "Ut ut labore voluptate cillum",
+            "name": "Geoffrey McCullough"
+          },
+          "parkingSpaceCount": 6,
+          "rentalPrice": 6312,
+          "architecturalStyle": "sunt tempor voluptate eiusmod",
+          "longitude": -102.925648,
+          "latitude": 28.599399,
+          "listingUrl": "http://curvy-blueberry.info",
+          "halfBathroomCount": 1,
+          "taxes": [
+            {
+              "description": "County Tax",
+              "amount": 3543.94,
+              "year": 2024
+            },
+            {
+              "year": 2023,
+              "amount": 6291.6,
+              "description": "Special Assessment"
+            }
+          ],
+          "heatingFuelTypes": [
+            "GAS",
+            "GAS",
+            "GAS"
+          ],
+          "bedroomCount": 6,
+          "salePriceIsEstimated": true,
+          "lotSizeSquareFeet": 61657,
+          "hasFireplace": true,
+          "originalListingDate": "1935-07-09",
+          "rental": false,
+          "directions": "ipsum reprehenderit laborum nulla tempor",
+          "exteriorConstruction": "BLOCK",
+          "yearBuilt": 1946,
+          "newConstruction": true,
+          "maxListPriceDate": "1967-12-03",
+          "livingArea": 4624,
+          "agentOffices": {
+            "officePhoneNumber": "ea occaecat",
+            "fax": "ipsum aute",
+            "officeCorporateName": "Donnelly - Waelchi",
+            "name": "Ms. Stanley Greenfelder",
+            "websiteUrl": "https://alive-vegetation.info",
+            "officeEmail": "Glennie.Heidenreich52@hotmail.com",
+            "agentId": "53cee0f6-38d5-4861-831f-bee25952e400",
+            "mainOfficeId": "951c5071-206e-45ff-93a1-2afaa8d08c9e",
+            "phoneNumber": "Duis deserunt ut",
+            "agentCodeId": "45fa6ad3-afb2-4dc6-8a9b-e675f7d761cf",
+            "key": "b2e96300-560d-4c25-9e54-e89b5ff36851",
+            "officeAddress": "87288 O'Reilly Forge"
+          },
+          "daysOnMarket": 352,
+          "totalBuildingAreaSquareFeet": 9772,
+          "soldDate": "1948-02-13",
+          "listingProviderId": "LP-4886",
+          "listingProviderName": "Gottlieb - Abbott",
+          "fullBathroomCount": 2,
+          "minListPrice": 1633227,
+          "statusUpdatedAt": "1947-08-18",
+          "propertyType": "RESIDENTIAL LOT",
+          "patio": true
+        },
+        "address": {
+          "city": "Alejandrafort",
+          "oldHashes": [
+            "nulla consectetur tempor",
+            "sit tempor elit"
+          ],
+          "zip": "dolore",
+          "geoStatus": "5-digit ZIP code centroid",
+          "unitType": "APT",
+          "localities": [
+            "Simi Valley",
+            "Shawnee"
+          ],
+          "formattedStreet": "Huel Land",
+          "addressValidity": "Valid",
+          "geoStatusCode": "C",
+          "unitNumber": "aute",
+          "hash": "mollit",
+          "county": "Excepteur consequat commodo aute",
+          "latitude": 25.602031,
+          "zipPlus4": "Excepteur mollit occaecat nulla ut",
+          "dpvMatchCode": "N",
+          "cityAliases": [
+            "Adamsside",
+            "Lake Rasheed"
+          ],
+          "longitude": -100.023943,
+          "state": "IN",
+          "dpvFootnotes": "AA",
+          "normalized": true,
+          "houseNumber": "laboris",
+          "street": "97382 Torp Mall",
+          "streetNoUnit": "8125 Zulauf Roads",
+          "countyFipsCode": "laboris",
+          "deliveryPointCode": "ullamco consectetur id deserunt labore"
+        },
+        "sale": {
+          "flipLengthCategory": "Medium (90-180 days)",
+          "lastTransfer": {
+            "distressedSaleFlag": false,
+            "priceCodeDescription": "aliquip eu sed ad laborum",
+            "documentTypeCode": "voluptate qui nostrud eu sunt",
+            "pageNumber": 385,
+            "saleDate": "1950-03-26",
+            "documentNumber": "reprehenderit aliquip minim",
+            "bookNumber": 1690,
+            "transactionTypeCode": "A",
+            "recordingDate": "1921-09-11",
+            "priceCode": "ullamco dolore elit",
+            "transactionType": "New construction residential transactions",
+            "pricePerSquareFoot": 160,
+            "documentType": "Grant Deed",
+            "price": 386239,
+            "salePriceIsEstimated": true
+          },
+          "flipLength": 363,
+          "lastSale": {
+            "transactionTypeCode": "A",
+            "documentType": "Quit Claim Deed",
+            "documentTypeCode": "enim proident cupidatat ex",
+            "price": 890212,
+            "transactionType": "New construction residential transactions",
+            "distressedSaleFlag": true,
+            "bookNumber": 2190,
+            "saleDate": "1925-11-09",
+            "pageNumber": 678,
+            "priceCode": "magna aute ut Duis",
+            "pricePerSquareFoot": 219,
+            "priceCodeDescription": "cupidatat in",
+            "salePriceIsEstimated": false,
+            "documentNumber": "et cillum deserunt quis consequat",
+            "mortgages": [
+              {
+                "dueDate": null,
+                "interestRate": 9.375,
+                "loanTypeCode": null,
+                "loanType": "New Conventional",
+                "lenderName": "Jenkins Inc",
+                "bookNumber": null,
+                "financingTypeCode": "ADJ",
+                "lenderTypeCode": "I",
+                "lenderType": "Mortgage company",
+                "financingType": "Adjustable Rate",
+                "loanAmount": 27761,
+                "pageNumber": null,
+                "loanTerm": "dolore qui eu sunt dolor",
+                "recordingDate": "1942-08-14"
+              },
+              {
+                "pageNumber": "in sit in et nostrud",
+                "lenderName": "Crona Inc",
+                "financingType": "Adjustable Rate",
+                "dueDate": "1952-11-16",
+                "financingTypeCode": "ADJ",
+                "recordingDate": "1914-08-23",
+                "loanType": "New Conventional",
+                "loanAmount": 399555,
+                "loanTerm": "Lorem qui reprehenderit sint",
+                "interestRate": 5.125,
+                "lenderType": "Mortgage company",
+                "bookNumber": null,
+                "loanTypeCode": "in aliqua tempor",
+                "lenderTypeCode": "I"
+              }
+            ]
+          },
+          "priorTransfer": {
+            "documentNumber": "esse est",
+            "priceCode": "in aliquip sed nulla consequat",
+            "salePriceIsEstimated": true,
+            "priceCodeDescription": "elit cupidatat",
+            "documentTypeCode": "quis sunt nostrud",
+            "pageNumber": 578,
+            "price": 1992633,
+            "documentType": "Quit Claim Deed",
+            "bookNumber": 1678
+          },
+          "priorSale": {
+            "documentNumber": "anim",
+            "mortgages": [
+              {
+                "dueDate": "1911-06-24",
+                "bookNumber": null,
+                "financingType": "Adjustable Rate",
+                "pageNumber": "esse consequat eiusmod",
+                "loanTerm": "ea enim",
+                "interestRate": 6.125,
+                "lenderName": "Graham Group",
+                "lenderType": "Mortgage company",
+                "financingTypeCode": "ADJ",
+                "loanAmount": 236441,
+                "loanTypeCode": "in qui irure",
+                "lenderTypeCode": "I",
+                "recordingDate": "1894-08-13",
+                "loanType": "New Conventional"
+              },
+              {
+                "loanTerm": "qui laborum id",
+                "recordingDate": null,
+                "lenderName": "McCullough - Klocko",
+                "lenderTypeCode": "I",
+                "bookNumber": null,
+                "loanAmount": 303575,
+                "dueDate": "1924-04-12",
+                "lenderType": "Mortgage company",
+                "pageNumber": null,
+                "loanTypeCode": null,
+                "interestRate": 6.25,
+                "financingTypeCode": "ADJ",
+                "loanType": "New Conventional",
+                "financingType": "Adjustable Rate"
+              }
+            ],
+            "saleDate": "1895-03-02",
+            "documentType": "Special Warranty Deed",
+            "bookNumber": 1110,
+            "transactionType": "New construction residential transactions",
+            "transactionTypeCode": "A",
+            "salePriceIsEstimated": true,
+            "documentTypeCode": "pariatur adipisicing Ut",
+            "pageNumber": 923,
+            "pricePerSquareFoot": 558,
+            "priceCode": "ipsum",
+            "priceCodeDescription": "id consectetur est irure eiusmod",
+            "distressedSaleFlag": false,
+            "price": 1568024
+          },
+          "flipProfit": 187193
+        },
+        "quickLists": {
+          "absenteeOwnerOutOfState": true,
+          "outOfStateOwner": true,
+          "onMarket": false,
+          "tiredLandlord": false,
+          "vacantLot": false,
+          "noticeOfSale": false,
+          "activeListing": true,
+          "ownerOccupied": false,
+          "taxDefault": false,
+          "canceledListing": false,
+          "seniorOwner": true,
+          "failedListing": false,
+          "unknownEquity": true,
+          "pendingListing": true,
+          "samePropertyAndMailingAddress": false,
+          "noticeOfDefault": false,
+          "activeAuction": true,
+          "lowEquity": true,
+          "hasHoa": true,
+          "noticeOfLisPendens": true,
+          "highEquity": true,
+          "vacant": false,
+          "recentlySold": false,
+          "freeAndClear": false,
+          "mailingAddressVacant": true,
+          "cashBuyer": true,
+          "expiredListing": true,
+          "fixAndFlip": false,
+          "trustOwned": true,
+          "absenteeOwnerInState": false,
+          "forSaleByOwner": false,
+          "preforeclosure": false,
+          "corporateOwned": false,
+          "absenteeOwner": false,
+          "involuntaryLien": false,
+          "inherited": true,
+          "hasHoaFees": true,
+          "listedBelowMarketPrice": true
+        }
+      },
+      {
+        "involuntaryLien": {
+          "liens": [
+            {
+              "taxPeriodEndDate": "1897-07-24T15:56:29.0Z",
+              "documentType": "proident reprehenderit eiusmod",
+              "lienTypeCode": "occaecat incididunt minim",
+              "filingDate": "1965-07-22T03:53:03.0Z",
+              "documentTypeCode": "sunt Lorem",
+              "lienType": "sint Lorem tempor deserunt",
+              "pageNumber": "cillum",
+              "recordingDate": "1900-06-12T09:14:38.0Z",
+              "lienAmount": 96636,
+              "documentNumber": "laborum ea commodo",
+              "attorneyCompanyName": "Nienow, Emard and Fahey",
+              "judgementAmount": 74616,
+              "bookNumber": "sunt pariatur dolore velit minim",
+              "parties": [
+                {
+                  "fullName": "Owen Schulist",
+                  "roleType": "Defendant"
+                },
+                {
+                  "fullName": "Audrey Jones",
+                  "roleType": "Creditor"
+                },
+                {
+                  "fullName": "Lee DuBuque",
+                  "roleType": "Plaintiff"
+                }
+              ],
+              "attorneyPhoneNumber": "anim pariatur sint"
+            }
+          ]
+        },
+        "building": {
+          "buildingCondition": "Excellent",
+          "buildingQualityCode": "A",
+          "heatingFuelTypeCode": "O",
+          "driveway": "Concrete",
+          "drivewayCode": "N",
+          "exteriorWalls": "Brick",
+          "porchCode": "S",
+          "airConditioningSourceCode": "Y",
+          "garage": "Built-in Garage",
+          "buildingClass": "Wood frame construction",
+          "features": [
+            "Fence",
+            "Fence",
+            "Deck"
+          ],
+          "garageCode": "D",
+          "basementType": "Partial Basement",
+          "groundFloorAreaSquareFeet": 630,
+          "constructionTypeCode": "C",
+          "waterServiceCode": "A",
+          "garageParkingSpaceCount": 6,
+          "totalBuildingAreaCodeDescription": "Gross Area",
+          "patio": "Deck",
+          "partialBathroomCount": 1,
+          "heatingFuelType": "Oil",
+          "foundation": "Pier",
+          "heatSourceCode": "R",
+          "atticFinishedSquareFeet": 146,
+          "buildingClassCode": "A",
+          "elevatorCount": 2,
+          "basementSquareFeet": 1548,
+          "residentialUnitCount": 4,
+          "buildingConditionCode": "P",
+          "basementTypeCode": "F",
+          "style": "Contemporary",
+          "atticUnfinishedSquareFeet": 959,
+          "bathroomCount": 1,
+          "roofTypeCode": "D",
+          "styleCode": "MD",
+          "totalBuildingAreaSquareFeet": 9346,
+          "floorCover": "Laminate",
+          "pool": "Spa or Hot Tub (only)",
+          "unitCount": 22,
+          "effectiveYearBuilt": 1983,
+          "totalBuildingAreaCode": "L",
+          "poolCode": "N",
+          "calculatedBathroomCount": 1,
+          "commercialUnitCount": 6,
+          "roofCover": "Wood Shake",
+          "bathFixtureCount": 22,
+          "garageFinishedSquareFeet": 475,
+          "basementUnfinishedSquareFeet": 328,
+          "otherRooms": "Library",
+          "roomCount": 9,
+          "buildingCount": 5,
+          "storyCount": 3.5,
+          "livingAreaSquareFeet": 719,
+          "fireplaceCount": 4,
+          "garageUnfinishedSquareFeet": 64,
+          "otherRoomsCode": "F",
+          "buildingType": "Single Family",
+          "porch": "Porch - Open",
+          "patioCode": "C",
+          "airConditioningSource": "None",
+          "sewerCode": "B",
+          "waterService": "Well",
+          "roofType": "Flat",
+          "yearBuilt": 1956,
+          "grossBuildingAreaSquareFeet": 8359,
+          "sewer": "Cesspool",
+          "fullBathroomCount": 1,
+          "basementFinishedSquareFeet": 214,
+          "atticSquareFeet": 1526,
+          "buildingQuality": "Poor",
+          "roofCoverCode": "M",
+          "adjustedBuildingAreaSquareFeet": 8213,
+          "foundationCode": "S",
+          "bedroomCount": 3,
+          "garageSquareFeet": 868,
+          "heatSource": "Central",
+          "exteriorWallsCode": "CC",
+          "interiorWalls": "Wood Paneling",
+          "interiorWallsCode": "C",
+          "constructionType": "Masonry",
+          "floorCoverCode": "C"
+        },
+        "intel": {
+          "lastSoldPrice": 959767,
+          "lastSoldDate": "1934-07-11",
+          "salePropensityCategory": "Low",
+          "salePropensity": 51,
+          "salePropensityStatus": "Not Applicable"
+        },
+        "meta": {
+          "propertyDateModified": "1902-10-24",
+          "requestId": "nisi do et cupidatat anim"
+        },
+        "openLien": {
+          "allLoanTypes": [
+            "USDA",
+            "USDA",
+            "USDA"
+          ],
+          "totalOpenLienBalance": 95669,
+          "totalOpenLienCount": 2,
+          "juniorLoanTypes": [
+            "Home Equity Loan",
+            "HELOC"
+          ],
+          "firstLoanRecordingDate": "1914-05-14",
+          "mortgages": [
+            {
+              "interestRateNotGreaterThan": "Lorem pariatur sint dolor ipsum",
+              "lenderType": "Mortgage company",
+              "loanAmount": 1120974,
+              "multiFamilyRider": false,
+              "contractDate": "1926-12-03",
+              "loanTermMonths": 218,
+              "changeIndex": "aliqua dolor adipisicing exercitation",
+              "purposeOfLoan": "Purchase",
+              "interestRateNotLessThan": "magna irure reprehenderit",
+              "numberOfAssignments": 4,
+              "lenderNameBeneficiary": "Hoeger, Grimes and Pollich",
+              "equityCreditLine": "No",
+              "titleCompanyName": "Schamberger - Greenholt",
+              "assignmentDate": "1909-03-19",
+              "preforeclosureRecordingDate": "1958-10-14",
+              "loanTermYears": 26,
+              "lender": "Feil Inc",
+              "balloonRider": false,
+              "adjustableRateRider": false,
+              "prepaymentRider": false,
+              "subordinateLoanFlag": false,
+              "interestOnlyPeriod": false,
+              "condoRider": true,
+              "loanType": "New Conventional",
+              "assignedLenderName": "Reichel, Reilly and Casper",
+              "preforeclosureFilingDate": "1947-08-02",
+              "fixedStepConversionRateRider": "No",
+              "transactionType": "New construction residential transactions",
+              "preforeclosureCaseTrusteeSaleNumber": "TS-5632-503757",
+              "equityFlag": true,
+              "rateChangeFrequency": "Annual",
+              "preforeclosureAuctionDate": "1967-04-26",
+              "constructionLoan": true,
+              "preforeclosureStatus": "Active",
+              "adjustableRateIndexCode": "LIBOR",
+              "pudRider": true,
+              "privateLender": true,
+              "firstChangeDateYearConversionRider": "tempor amet id laborum cillum",
+              "loanNumber": "labore nostrud",
+              "standaloneRefi": false,
+              "cashPurchase": false,
+              "financingTypeCode": "FIX",
+              "rateChangeFrequencyCode": "irure",
+              "maximumInterestRate": 9.375,
+              "loanTypeCode": "ut",
+              "dueDate": "1923-05-31",
+              "transactionTypeCode": "A",
+              "helocFlag": false,
+              "currentEstimatedBalance": 800760,
+              "estimatedPaymentAmount": 5317,
+              "interestRate": 4.21,
+              "sellerCarryBack": true,
+              "recordingDate": "1895-12-07",
+              "ltv": 91.27,
+              "assumable": true,
+              "lenderTypeCode": "I",
+              "lenderName": "Botsford LLC",
+              "preforeclosureStatusCode": "nulla laboris",
+              "prepaymentTermPenaltyRider": "ut veniam voluptate laborum do",
+              "purchaseMortgageIndicator": "Purchase",
+              "firstChangeDateMonthConversionRider": "exercitation in adipisicing magna sunt",
+              "secondHomeRider": true,
+              "financingType": "Fixed Rate"
+            },
+            {
+              "rateChangeFrequency": "Annual",
+              "transactionType": "New construction residential transactions",
+              "condoRider": true,
+              "lenderType": "Mortgage company",
+              "numberOfAssignments": 0,
+              "equityCreditLine": "No",
+              "assumable": false,
+              "titleCompanyName": "Cole - Bogisich",
+              "rateChangeFrequencyCode": "nisi cillum dolor",
+              "constructionLoan": false,
+              "pudRider": true,
+              "maximumInterestRate": 10.5,
+              "purchaseMortgageIndicator": "Purchase",
+              "financingTypeCode": "FIX",
+              "preforeclosureFilingDate": "1968-10-15",
+              "adjustableRateIndexCode": "LIBOR",
+              "currentEstimatedBalance": 582024,
+              "lender": "Frami - Gaylord",
+              "lenderName": "Bernhard - Mertz",
+              "assignedLenderName": "Hegmann - Collier",
+              "interestRateNotGreaterThan": "quis cupidatat magna laborum sint",
+              "lenderTypeCode": "I",
+              "changeIndex": "exercitation ullamco dolore",
+              "standaloneRefi": false,
+              "helocFlag": true,
+              "dueDate": "1905-05-20",
+              "subordinateLoanFlag": true,
+              "fixedStepConversionRateRider": "Yes",
+              "financingType": "Fixed Rate",
+              "adjustableRateRider": false,
+              "preforeclosureStatus": "Active",
+              "assignmentDate": "1911-03-19",
+              "preforeclosureAuctionDate": "1925-08-10",
+              "prepaymentTermPenaltyRider": "aliqua",
+              "loanType": "New Conventional",
+              "preforeclosureCaseTrusteeSaleNumber": "TS-1234-678901",
+              "secondHomeRider": true,
+              "firstChangeDateMonthConversionRider": "dolor magna ex veniam",
+              "interestRateNotLessThan": "cupidatat ea",
+              "loanNumber": "sit consequat sunt",
+              "interestOnlyPeriod": true,
+              "recordingDate": "1939-09-05",
+              "preforeclosureRecordingDate": "1960-07-01",
+              "cashPurchase": true,
+              "interestRate": 3.88,
+              "loanAmount": 674184,
+              "loanTypeCode": "tempor sit",
+              "loanTermYears": 23,
+              "purposeOfLoan": "Purchase",
+              "multiFamilyRider": true,
+              "preforeclosureStatusCode": "reprehenderit consectetur",
+              "contractDate": "1953-06-27",
+              "lenderNameBeneficiary": "Hoeger, Weimann and DuBuque",
+              "equityFlag": false,
+              "ltv": 89.41,
+              "sellerCarryBack": true,
+              "loanTermMonths": 341,
+              "privateLender": true,
+              "firstChangeDateYearConversionRider": "laborum amet do",
+              "balloonRider": false,
+              "transactionTypeCode": "A",
+              "estimatedPaymentAmount": 7510,
+              "prepaymentRider": true
+            }
+          ],
+          "lastLoanRecordingDate": "1909-01-29"
+        },
+        "owner": {
+          "mailingAddress": {
+            "unitType": "APT",
+            "street": "8564 Rowe Light",
+            "addressValidity": "Valid",
+            "houseNumber": "cillum veniam dolore",
+            "zip": "tempor magna",
+            "streetNoUnit": "23648 Batz Gardens",
+            "state": "MN",
+            "unitNumber": "culpa Duis est",
+            "deliveryPointCode": "laboris magna id",
+            "zipPlus4": "dolor esse voluptate anim dolor",
+            "formattedStreet": "Stracke Creek",
+            "city": "Port Destineefort",
+            "hash": "sunt labore voluptate",
+            "oldHashes": [
+              "consequat velit",
+              "aliqua dolor proident",
+              "consectetur non minim esse in",
+              "Lorem dolore qui",
+              "mollit aliquip"
+            ],
+            "dpvFootnotes": "AABB,R1",
+            "dpvMatchCode": "D",
+            "county": "est pariatur"
+          },
+          "lengthOfResidenceMonths": 260,
+          "ownershipRights": "Fee Simple",
+          "mailingOptOut": false,
+          "death": {
+            "deceased": false,
+            "dateOfDeath": "1925-02-19"
+          },
+          "ownerStatusTypeCode": "10",
+          "involuntaryLien": {
+            "lien": false,
+            "judgement": false
+          },
+          "names": [
+            {
+              "first": "Elta",
+              "full": "Miss Anita Kessler",
+              "middle": "Dandre",
+              "last": "Leannon"
+            },
+            {
+              "last": "Cremin",
+              "first": "Sister",
+              "full": "Arnold Weber",
+              "middle": "Ludwig"
+            }
+          ],
+          "emails": [
+            "Marcelina35@gmail.com",
+            "Kacey.Luettgen51@hotmail.com"
+          ],
+          "fullName": "Lori Reichel",
+          "ownerStatusType": "Corporation",
+          "phoneNumbers": [
+            {
+              "carrier": "id in",
+              "score": 99,
+              "tested": false,
+              "tcpa": false,
+              "lastReportedDate": "1967-04-06T12:53:40.0Z",
+              "dnc": true,
+              "number": "Excepteur eiusmod",
+              "reachable": false,
+              "type": "VoIP"
+            },
+            {
+              "number": "tempor consectetur dolor Ut nostrud",
+              "type": "Land Line",
+              "dnc": false,
+              "tested": false,
+              "carrier": "fugiat anim voluptate laborum",
+              "score": 38,
+              "lastReportedDate": "1920-10-12T01:20:12.0Z",
+              "reachable": true,
+              "tcpa": false
+            },
+            {
+              "carrier": "cillum Lorem",
+              "dnc": false,
+              "lastReportedDate": "1908-05-08T16:14:29.0Z",
+              "type": "VoIP",
+              "reachable": false,
+              "tcpa": false,
+              "score": 100,
+              "number": "aliqua nulla in dolor minim",
+              "tested": true
+            }
+          ],
+          "dnc": {
+            "tcpa": false
+          },
+          "ownershipRightsCode": "FS",
+          "bankruptcy": {
+            "bankruptcy": true,
+            "filingDate": "1964-08-24T16:14:12.0Z"
+          },
+          "litigator": false,
+          "ownershipStartDate": "1947-04-05",
+          "enrichedEmails": [
+            {
+              "tested": false,
+              "email": "Dovie88@hotmail.com"
+            },
+            {
+              "email": "Macie_Hartmann@hotmail.com",
+              "tested": false
+            }
+          ],
+          "lengthOfResidenceYears": 6,
+          "hasLandline": true,
+          "ownerOccupied": true
+        },
+        "general": {
+          "carrierRoute": "R840",
+          "vacant": false,
+          "mailingAddressVacant": false,
+          "parcelCount": 3,
+          "vacantDate": "1964-04-26",
+          "schoolDistrict": "Los Angeles Unified School District",
+          "mobileHome": false,
+          "propertyTypeDetail": "Mobile Home",
+          "timeZone": "Mountain",
+          "utcOffset": -6,
+          "congressionalDistrict": "in",
+          "censusTract": "consequat irure labore",
+          "standardizedLandUseCode": "C10",
+          "primaryParcel": true,
+          "propertyTypeCategory": "Residential",
+          "daylightSavingsTime": false
+        },
+        "listing": {
+          "heatingTypes": [
+            "OTHER",
+            "OTHER",
+            "OTHER"
+          ],
+          "listingProviderName": "Sporer, Batz and Hagenes",
+          "longitude": -100.204008,
+          "bathroomCount": 4,
+          "parkingSpaceCount": 5,
+          "soldPrice": 2089377,
+          "listingProviderId": "LP-7383",
+          "price": 1123839,
+          "rental": true,
+          "propertyType": "RESIDENTIAL LOT",
+          "directions": "in amet enim sed",
+          "lotSizeSquareFeet": 60037,
+          "listingUrl": "http://rowdy-detector.org",
+          "maxListPrice": 1267564,
+          "taxes": [
+            {
+              "description": "City Tax",
+              "amount": 18776.14,
+              "year": 2023
+            },
+            {
+              "description": "Property Tax",
+              "amount": 10792.27,
+              "year": 2020
+            }
+          ],
+          "halfBathroomCount": 0,
+          "maxListPriceDate": "1890-11-10",
+          "salePriceIsEstimated": false,
+          "roofTypes": [
+            "Asphalt",
+            "Asphalt",
+            "Asphalt"
+          ],
+          "minListPrice": 1468632,
+          "fullBathroomCount": 5,
+          "oneQuarterBathroomCount": 1,
+          "minListPriceDate": "1890-05-12",
+          "newConstruction": false,
+          "brokerage": {
+            "phoneNumber": "nostrud qui consectetur",
+            "address": "838 Satterfield Mill",
+            "email": "Mable76@yahoo.com",
+            "websiteUrl": "https://frizzy-removal.com",
+            "name": "D'Amore, Towne and Trantow"
+          },
+          "originalListingDate": "1955-11-28",
+          "architecturalStyle": "ipsum qui ad",
+          "appliances": [
+            "Microwave",
+            "Ice Maker",
+            "Refrigerator"
+          ],
+          "statusSubtype": "Cancel/Withdrawn",
+          "statusUpdatedAt": "1953-06-24",
+          "subDivision": "Spring Hill",
+          "totalBuildingAreaSquareFeet": 8395,
+          "soldDate": "1936-02-02",
+          "failedListingDate": "1948-11-23",
+          "schools": {
+            "name": "a1d d26 School",
+            "district": "Austin Independent School District",
+            "category": "Charter"
+          },
+          "bedroomCount": 7,
+          "hasFireplace": true,
+          "exteriorConstruction": "BLOCK",
+          "propertySubtype": "ut nostrud exercitation occaecat",
+          "statusCategory": "Failed",
+          "agents": {
+            "email": "Buster_MacGyver@gmail.com",
+            "licenseNumber": "RE-28161873",
+            "name": "Della Renner",
+            "primaryPhoneNumber": "eu ipsum",
+            "websiteUrl": "https://pleasing-budget.com",
+            "officePhoneNumber": "dolore elit exercitation",
+            "roles": [
+              "Selling Agent",
+              "Selling Agent"
+            ],
+            "key": "cd32ec0f-df10-4bb1-8b62-505a6b44eb02"
+          },
+          "yearBuilt": 1992,
+          "latitude": 37.448292,
+          "heatingFuelTypes": [
+            "GAS",
+            "GAS",
+            "GAS"
+          ],
+          "rentalPrice": 1592,
+          "floorCount": 1,
+          "partialBathroomCount": 0,
+          "daysOnMarket": 73,
+          "patio": true,
+          "neighborhood": "Highland Park",
+          "coolingTypes": [
+            "ELECTRIC",
+            "ELECTRIC",
+            "ELECTRIC"
+          ],
+          "listingNumber": "MLS-05494033",
+          "listingCategory": "Purchase",
+          "livingArea": 7481,
+          "agentOffices": {
+            "agentId": "22f75b37-c8bb-4942-8045-bb561d86ca2c",
+            "mainOfficeId": "a8cb6b48-44c6-444c-8305-c9a610293c2b",
+            "agentCodeId": "6283ba7d-5427-4db0-9f09-f1abfa3c74e8",
+            "officeCorporateName": "Dietrich - Gutkowski",
+            "phoneNumber": "ea ipsum Duis adipisicing",
+            "websiteUrl": "https://front-pitch.info",
+            "officeEmail": "Marley13@yahoo.com",
+            "fax": "ullamco velit Ut",
+            "officePhoneNumber": "in laborum magna dolore sint",
+            "officeAddress": "7680 Wiza Fords",
+            "key": "da46ace4-24a4-4af7-8d7d-a3d1124ee2d0",
+            "name": "Ms. Sherman Goyette"
+          },
+          "status": "Off Market"
+        },
+        "deedHistory": [
+          {
+            "transferTax": 23366,
+            "recordingBook": "voluptate culpa Duis",
+            "buyers": [
+              "Jennie Ziemann",
+              "Ms. Mathew Ledner"
+            ],
+            "sellers": [
+              "Cesar Lang Jr.",
+              "Glenn Cassin Jr."
+            ],
+            "saleDate": "1969-01-06",
+            "salePrice": 284976,
+            "multipleOwners": true,
+            "recordingPage": "consequat officia cillum",
+            "documentNumber": "enim in",
+            "documentType": "Stand Alone Mortgage",
+            "documentDate": "1907-06-06",
+            "salePriceCode": "dolor Lorem",
+            "newConstruction": false,
+            "interFamily": true,
+            "ownerRelationshipType": "esse dolor ad commodo",
+            "partialInterestType": "Unclear Actual Percentage",
+            "foreclosure": true,
+            "mailingAddress": {
+              "state": "KS",
+              "hash": "e679913a-0404-4dc9-ac8b-e830ef672f54",
+              "city": "Richland",
+              "zip": "30280",
+              "street": "9345 Tromp Locks"
+            },
+            "transactionType": "New construction residential transactions",
+            "resale": true,
+            "transactionId": 901154718,
+            "documentTypeCode": "occaecat non magna",
+            "recordingDate": "1932-02-20",
+            "reoSale": false,
+            "partialInterestTypeCode": "Lorem nulla incididunt",
+            "transactionTypeCode": "A"
+          },
+          {
+            "newConstruction": false,
+            "transactionTypeCode": "A",
+            "documentDate": "1952-08-28",
+            "partialInterestTypeCode": "non Lorem",
+            "salePrice": 1110584,
+            "interFamily": true,
+            "sellers": [
+              "Darrel Kunze",
+              "Lee Reilly"
+            ],
+            "buyers": [
+              "Mrs. Lola Schneider",
+              "Lindsey O'Kon"
+            ],
+            "partialInterestType": "Unclear Actual Percentage",
+            "transactionId": 861053411,
+            "documentTypeCode": "elit ipsum",
+            "resale": false,
+            "transactionType": "New construction residential transactions",
+            "mailingAddress": {
+              "street": "8864 Kris Skyway",
+              "city": "South Christopbury",
+              "zip": "54841-1068",
+              "state": "LA",
+              "hash": "b5b60d82-c775-4f91-8b87-23dd880a4026"
+            },
+            "ownerRelationshipType": "ut",
+            "foreclosure": true,
+            "recordingBook": "magna exercitation commodo",
+            "saleDate": "1935-07-23",
+            "recordingDate": "1947-07-10",
+            "multipleOwners": true,
+            "salePriceCode": "ad officia dolor",
+            "reoSale": false,
+            "transferTax": 11767,
+            "documentType": "Stand Alone Mortgage",
+            "documentNumber": "culpa",
+            "recordingPage": "amet"
+          }
+        ],
+        "demographics": {
+          "petOwner": true,
+          "individualOccupationCode": "laboris incididunt",
+          "childCount": 5,
+          "businessOwnerCode": "A",
+          "emailDomain": "est ex in",
+          "singleParent": true,
+          "religious": true,
+          "income": 318261,
+          "religiousAffiliation": "Catholic",
+          "investments": [
+            "Real Estate",
+            "Personal",
+            "Personal"
+          ],
+          "businessOwner": "Healthcare",
+          "genderCode": "F",
+          "homeownerRenterCode": "R",
+          "maritalStatusCode": "D",
+          "recentlyMoved": false,
+          "discretionaryIncome": 197306,
+          "recentlyDivorced": false,
+          "recentlyMovedYear": 2020,
+          "recentlyMovedMonth": 1,
+          "smoker": true,
+          "hasChildren": false,
+          "individualEducation": "High School",
+          "millionaire": true,
+          "householdSize": 7,
+          "religiousAffiliationCode": "O",
+          "gender": "Unknown",
+          "age": 58,
+          "homeownerRenter": "Home Owner",
+          "individualEducationCode": "MA",
+          "individualOccupation": "Technical",
+          "maritalStatus": "Single",
+          "netWorth": 1013117
+        },
+        "foreclosure": {
+          "status": "Notice of Default and Lis Pendens",
+          "auctionCity": "North Katherine",
+          "dueDate": "1935-09-10",
+          "flag": "N",
+          "filingDate": "1894-10-28",
+          "pageNumber": "exercitation voluptate do",
+          "trusteeCareOfName": "Doug Kiehn",
+          "pastDueAmount": 34848,
+          "auctionTime": "in",
+          "trusteeName": "Weissnat - Stanton",
+          "auctionLocation": "8246 Braxton Dam",
+          "bookNumber": "nulla nisi ea",
+          "releaseDate": "1960-03-05",
+          "documentNumber": "ad Duis do",
+          "auctionMinimumBidAmount": 372113,
+          "caseNumber": "CV-2024-001234",
+          "loanNumber": "dolore aliquip irure consequat dolor",
+          "defaultDate": "1937-04-02",
+          "borrowerName": "Henry Dietrich",
+          "documentType": "Notice of Lis Pendens",
+          "statusCode": "LP",
+          "originalLoanAmount": 952796,
+          "trusteePhone": "mollit cillum esse",
+          "trusteeAddress": "25650 Lindgren Course",
+          "currentLenderName": "Waelchi LLC",
+          "unpaidBalance": 419329,
+          "trusteeSaleNumber": "TS-1557-788328",
+          "auctionDate": "1941-11-30",
+          "recordingDate": "1932-08-29",
+          "documentTypeCode": "esse cupidatat dolore",
+          "auctionContactName": "Harold Jacobi"
+        },
+        "mortgageHistory": [
+          {
+            "borrowers": [
+              "Laura Sawayn",
+              "Sherman Koch"
+            ],
+            "lenderName": "Schroeder, Hammes and McLaughlin",
+            "transactionTypeCode": "A",
+            "saleDate": "1940-04-06",
+            "loanTypeCode": "incididunt ut esse nisi",
+            "dueDate": "1903-08-03",
+            "loanType": "New Conventional",
+            "transactionType": "New construction residential transactions",
+            "lenderTypeCode": "I",
+            "loanTermMonths": 64,
+            "lenderType": "Mortgage company",
+            "interestRateTypeCode": "FIX",
+            "documentDate": "1914-02-17",
+            "loanAmount": 233598,
+            "recordingDate": "1964-01-17",
+            "interestRate": "et reprehenderit minim anim",
+            "interestRateType": "Fixed Rate"
+          },
+          {
+            "saleDate": "1953-12-11",
+            "interestRate": "sit",
+            "interestRateType": "Fixed Rate",
+            "loanTypeCode": "Duis est ipsum elit cupidatat",
+            "borrowers": [
+              "Miss Jean Walsh",
+              "Kim Kertzmann"
+            ],
+            "lenderTypeCode": "I",
+            "interestRateTypeCode": "FIX",
+            "recordingDate": "1930-09-23",
+            "dueDate": "1958-01-12",
+            "loanAmount": 675279,
+            "loanTermMonths": 310,
+            "transactionTypeCode": "A",
+            "lenderType": "Mortgage company",
+            "transactionType": "New construction residential transactions",
+            "loanType": "New Conventional",
+            "lenderName": "Wiegand Inc",
+            "documentDate": "1917-02-21"
+          }
+        ],
+        "sale": {
+          "lastSale": {
+            "documentTypeCode": "labore est",
+            "salePriceIsEstimated": true,
+            "pageNumber": 619,
+            "priceCode": "eiusmod",
+            "documentType": "Warranty Deed",
+            "distressedSaleFlag": false,
+            "bookNumber": 2022,
+            "mortgages": [
+              {
+                "loanTypeCode": null,
+                "financingType": "Adjustable Rate",
+                "bookNumber": "culpa occaecat id",
+                "recordingDate": "1969-12-09",
+                "financingTypeCode": "ADJ",
+                "dueDate": null,
+                "loanType": "New Conventional",
+                "lenderType": "Mortgage company",
+                "loanAmount": 425451,
+                "pageNumber": null,
+                "lenderTypeCode": "I",
+                "lenderName": "Kirlin LLC",
+                "loanTerm": "labore do incididunt cupidatat",
+                "interestRate": 3.375
+              },
+              {
+                "lenderType": "Mortgage company",
+                "dueDate": "1926-07-27",
+                "interestRate": 8,
+                "financingType": "Adjustable Rate",
+                "loanType": "New Conventional",
+                "lenderTypeCode": "I",
+                "financingTypeCode": "ADJ",
+                "lenderName": "Rogahn - Marquardt",
+                "bookNumber": null,
+                "pageNumber": null,
+                "recordingDate": "1896-08-31",
+                "loanTerm": "culpa fugiat",
+                "loanAmount": 293669,
+                "loanTypeCode": "laboris ad"
+              }
+            ],
+            "transactionType": "New construction residential transactions",
+            "priceCodeDescription": "aute Ut nostrud",
+            "pricePerSquareFoot": 496,
+            "saleDate": "1964-11-23",
+            "documentNumber": "commodo officia nostrud",
+            "price": 1584646,
+            "transactionTypeCode": "A"
+          },
+          "flipLength": 359,
+          "priorSale": {
+            "distressedSaleFlag": false,
+            "priceCode": "minim id",
+            "transactionTypeCode": "A",
+            "pricePerSquareFoot": 224,
+            "saleDate": "1943-04-29",
+            "price": 749269,
+            "pageNumber": 347,
+            "salePriceIsEstimated": false,
+            "mortgages": [
+              {
+                "pageNumber": null,
+                "recordingDate": "1959-04-27",
+                "bookNumber": null,
+                "interestRate": 4.375,
+                "loanAmount": 281859,
+                "dueDate": null,
+                "loanTerm": "reprehenderit ipsum dolor ut",
+                "loanType": "New Conventional",
+                "loanTypeCode": "cillum dolor",
+                "lenderTypeCode": "I",
+                "lenderType": "Mortgage company",
+                "financingType": "Adjustable Rate",
+                "financingTypeCode": "ADJ",
+                "lenderName": "Reynolds - O'Hara"
+              },
+              {
+                "loanType": "New Conventional",
+                "lenderName": "Dare - Windler",
+                "recordingDate": "1933-07-21",
+                "bookNumber": "laboris minim",
+                "interestRate": 7.5,
+                "financingTypeCode": "ADJ",
+                "loanAmount": 211411,
+                "dueDate": "1966-10-03",
+                "loanTypeCode": "ullamco ut nisi",
+                "pageNumber": null,
+                "financingType": "Adjustable Rate",
+                "lenderTypeCode": "I",
+                "loanTerm": "id voluptate ullamco eiusmod occaecat",
+                "lenderType": "Mortgage company"
+              }
+            ],
+            "priceCodeDescription": "ex anim veniam Lorem adipisicing",
+            "bookNumber": 6256,
+            "transactionType": "New construction residential transactions",
+            "documentTypeCode": "occaecat id laboris Duis",
+            "documentNumber": "Excepteur aliquip Duis officia pariatur",
+            "documentType": "Trust Deed"
+          },
+          "flipProfit": 186357,
+          "lastTransfer": {
+            "priceCodeDescription": "voluptate",
+            "recordingDate": "1953-02-26",
+            "pageNumber": 665,
+            "transactionType": "New construction residential transactions",
+            "salePriceIsEstimated": false,
+            "pricePerSquareFoot": 278,
+            "distressedSaleFlag": false,
+            "price": 1697491,
+            "priceCode": "irure",
+            "documentTypeCode": "enim aliqua ut voluptate",
+            "documentType": "Grant Deed",
+            "bookNumber": 6590,
+            "transactionTypeCode": "A",
+            "documentNumber": "proident cillum dolor",
+            "saleDate": "1906-04-02"
+          },
+          "priorTransfer": {
+            "priceCode": "quis",
+            "documentTypeCode": "ea magna quis deserunt",
+            "salePriceIsEstimated": false,
+            "priceCodeDescription": "ad",
+            "documentNumber": "ea",
+            "bookNumber": 1632,
+            "documentType": "Quit Claim Deed",
+            "price": 1321219,
+            "pageNumber": 933
+          },
+          "flipLengthCategory": "Short (< 90 days)"
+        },
+        "dateModified": "1959-08-30",
+        "address": {
+          "normalized": false,
+          "latitude": 37.026907,
+          "zipPlus4": "voluptate",
+          "formattedStreet": "Frami Rapids",
+          "streetNoUnit": "175 Nikolas Manor",
+          "houseNumber": "laborum ipsum",
+          "geoStatus": "Interpolated Rooftop",
+          "dpvFootnotes": "R1",
+          "geoStatusCode": "A",
+          "dpvMatchCode": "Y",
+          "oldHashes": [
+            "sit minim magna tempor",
+            "et dolor officia quis"
+          ],
+          "hash": "est Lorem dolore",
+          "zip": "ad id quis esse aliquip",
+          "addressValidity": "Invalid",
+          "street": "84091 Misael Parkway",
+          "longitude": -79.083355,
+          "cityAliases": [
+            "Lake Jerryhaven",
+            "East Kristina"
+          ],
+          "countyFipsCode": "id anim in Lorem ex",
+          "localities": [
+            "Koelpinmouth",
+            "Enolamouth"
+          ],
+          "state": "ID",
+          "unitNumber": "consequat eiusmod",
+          "city": "Robertside",
+          "unitType": "UNIT",
+          "county": "Lorem consectetur aliquip ut",
+          "deliveryPointCode": "aliquip dolor non occaecat quis"
+        },
+        "ids": {
+          "fipsCode": "ut",
+          "oldApnCodeDescription": "Alternate APN",
+          "personIds": [
+            "3862a89b-0b32-4dac-826f-7562e7c484df",
+            "b81be35a-7c16-474d-9eb1-7585929e98e9",
+            "f0f65d23-fb3a-4797-b1c3-bad330a2a7d4"
+          ],
+          "taxId": "ullamco aute commodo",
+          "apn": "eiusmod ipsum veniam ut deserunt",
+          "addressHash": "Excepteur dolore",
+          "oldApn": "velit ut reprehenderit exercitation"
+        },
+        "valuation": {
+          "estimatedValue": 979975,
+          "standardDeviation": 9,
+          "confidenceScore": 1,
+          "equityPercent": 78.75,
+          "asOfDate": "1911-05-23",
+          "priceRangeMin": 250550,
+          "equityCurrentEstimatedBalance": 1305642,
+          "ltv": 7.65,
+          "priceRangeMax": 1132141
+        },
+        "lot": {
+          "siteInfluence": "Major Street",
+          "lotSizeSquareFeet": 16476,
+          "lotFrontageFeet": 46,
+          "topography": "Level grade",
+          "topographyCode": "E",
+          "siteInfluenceCode": "S",
+          "lotDepthFeet": 374,
+          "zoningCode": "dolor esse consectetur officia do",
+          "lotSizeAcres": 4.27
+        },
+        "tax": {
+          "taxAmount": 7018,
+          "taxExemptions": "None",
+          "taxYear": 2022,
+          "taxDelinquentYear": 2019,
+          "schoolTaxDistrictCodes": [
+            "SD-218",
+            "SD-545",
+            "SD-476"
+          ],
+          "taxRateCodeArea": "reprehenderit pariatur esse Excepteur Lorem"
+        },
+        "assessment": {
+          "improvementMarketValue": 102455,
+          "totalMarketValue": 1588861,
+          "totalAssessedValue": 592935,
+          "assessedLandValue": 251103,
+          "marketValueYear": 2019,
+          "assessedImprovementValue": 838652,
+          "assessmentYear": 2020,
+          "landMarketValue": 120102
+        },
+        "propertyOwnerProfile": {
+          "propertiesTotalEquity": 4800061,
+          "averagePurchasePrice": 1898489,
+          "averageAssessedValue": 465469,
+          "mortgagesTotalBalance": 361404,
+          "totalPurchasePrice": 4966639,
+          "mortgagesAverageBalance": 317049,
+          "propertiesCount": 30,
+          "averageYearBuilt": 1997,
+          "mortgagesCount": 10,
+          "propertiesTotalEstimatedValue": 9898947
+        },
+        "quickLists": {
+          "absenteeOwner": true,
+          "absenteeOwnerInState": true,
+          "fixAndFlip": true,
+          "hasHoaFees": true,
+          "preforeclosure": true,
+          "vacantLot": false,
+          "absenteeOwnerOutOfState": true,
+          "corporateOwned": false,
+          "listedBelowMarketPrice": false,
+          "inherited": false,
+          "onMarket": true,
+          "hasHoa": false,
+          "failedListing": false,
+          "outOfStateOwner": false,
+          "pendingListing": true,
+          "cashBuyer": true,
+          "recentlySold": false,
+          "lowEquity": false,
+          "trustOwned": true,
+          "tiredLandlord": true,
+          "involuntaryLien": false,
+          "canceledListing": true,
+          "seniorOwner": false,
+          "noticeOfLisPendens": false,
+          "forSaleByOwner": true,
+          "ownerOccupied": false,
+          "freeAndClear": false,
+          "vacant": false,
+          "mailingAddressVacant": false,
+          "highEquity": true,
+          "unknownEquity": false,
+          "noticeOfDefault": false,
+          "noticeOfSale": true,
+          "activeAuction": true,
+          "samePropertyAndMailingAddress": true,
+          "taxDefault": false,
+          "expiredListing": false,
+          "activeListing": false
+        },
+        "legal": {
+          "section": "SEC 21",
+          "district": "District 00",
+          "subdivisionName": "Spring Hill",
+          "cityTownshipMunicipality": "West Yasmin",
+          "lotCode": "M",
+          "assessorsMapReference": "MAP-0234-AB",
+          "legalDescription": "LOT 12 BLK 3",
+          "block": "est commodo",
+          "lotNumber": "magna cillum dolor",
+          "landLot": "LL-789",
+          "legalUnit": "Unit 101",
+          "phaseNumber": "Phase 2",
+          "tractNumber": "TR-30701",
+          "sectionTownshipRangeMeridian": "S12 T15N R04E"
+        },
+        "_id": "minim",
+        "permit": {
+          "tags": {
+            "bathroom": false,
+            "newConstruction": false,
+            "fireSprinkler": false,
+            "roofing": false,
+            "generator": false,
+            "kitchen": false,
+            "grading": true,
+            "waterHeater": false,
+            "inspectionPassed": false,
+            "poolAndHotTub": false,
+            "windowDoor": true,
+            "plumbing": false,
+            "electricMeter": false,
+            "evCharger": false,
+            "electrical": false,
+            "demolition": true,
+            "solar": false,
+            "addition": true,
+            "gas": true,
+            "heatPump": true,
+            "remodel": false,
+            "hvac": false,
+            "adu": true,
+            "battery": false
+          },
+          "earliestDate": "1916-12-18",
+          "totalJobValue": 473672,
+          "permitCount": 7,
+          "latestDate": "1917-07-17",
+          "allTags": [
+            "demolition",
+            "generator",
+            "windowDoor",
+            "adu",
+            "waterHeater"
+          ]
+        }
+      },
+      {
+        "involuntaryLien": {
+          "liens": [
+            {
+              "attorneyPhoneNumber": "eu",
+              "documentTypeCode": "sit veniam sunt enim consequat",
+              "lienType": "enim ipsum deserunt nisi adipisicing",
+              "filingDate": "1963-01-28T13:42:30.0Z",
+              "lienAmount": 81776,
+              "taxPeriodEndDate": "1907-03-23T22:57:17.0Z",
+              "pageNumber": "elit adipisicing et",
+              "attorneyCompanyName": "Goldner Group",
+              "lienTypeCode": "ut in nulla tempor deserunt",
+              "bookNumber": "non",
+              "judgementAmount": 33830,
+              "recordingDate": "1959-10-21T17:32:44.0Z",
+              "documentType": "ipsum in aute",
+              "parties": [
+                {
+                  "fullName": "Tommy Schuster",
+                  "roleType": "Debtor"
+                },
+                {
+                  "fullName": "Pam Schinner DVM",
+                  "roleType": "Creditor"
+                },
+                {
+                  "fullName": "Wendell Crona",
+                  "roleType": "Creditor"
+                }
+              ],
+              "documentNumber": "non commodo ad reprehenderit"
+            },
+            {
+              "parties": [
+                {
+                  "roleType": "Plaintiff",
+                  "fullName": "Noah Toy"
+                },
+                {
+                  "roleType": "Creditor",
+                  "fullName": "Archie Rosenbaum"
+                },
+                {
+                  "fullName": "Jenny Keeling",
+                  "roleType": "Plaintiff"
+                }
+              ],
+              "filingDate": "1908-08-30T10:33:55.0Z",
+              "attorneyPhoneNumber": "adipisicing qui reprehenderit",
+              "documentType": "laborum qui",
+              "attorneyCompanyName": "Padberg - Schowalter",
+              "lienType": "mollit ullamco quis sed",
+              "taxPeriodEndDate": "1929-06-20T06:46:52.0Z",
+              "judgementAmount": 47521,
+              "recordingDate": "1901-08-30T02:41:05.0Z",
+              "lienAmount": 51361,
+              "lienTypeCode": "ut nulla magna",
+              "documentNumber": "culpa dolor consequat sint irure",
+              "documentTypeCode": "esse",
+              "pageNumber": "est et occaecat esse",
+              "bookNumber": "cillum"
+            },
+            {
+              "parties": [
+                {
+                  "roleType": "Lienholder",
+                  "fullName": "Chad Beer"
+                },
+                {
+                  "roleType": "Defendant",
+                  "fullName": "April Mante"
+                },
+                {
+                  "roleType": "Plaintiff",
+                  "fullName": "Malcolm King"
+                }
+              ],
+              "documentNumber": "veniam ut irure ipsum do",
+              "documentTypeCode": "eiusmod eu aliqua dolor nostrud",
+              "pageNumber": "incididunt aliquip",
+              "lienType": "nulla in mollit aliquip",
+              "bookNumber": "cillum Excepteur aliqua in",
+              "taxPeriodEndDate": "1906-03-18T01:57:01.0Z",
+              "judgementAmount": 20139,
+              "documentType": "cupidatat reprehenderit est elit magna",
+              "attorneyCompanyName": "Aufderhar, Kris and Padberg",
+              "recordingDate": "1924-05-20T08:47:25.0Z",
+              "attorneyPhoneNumber": "incididunt",
+              "filingDate": "1900-12-15T06:15:31.0Z",
+              "lienAmount": 23281,
+              "lienTypeCode": "nulla nisi"
+            }
+          ]
+        },
+        "permit": {
+          "tags": {
+            "solar": false,
+            "newConstruction": false,
+            "heatPump": false,
+            "windowDoor": false,
+            "waterHeater": false,
+            "gas": true,
+            "addition": true,
+            "evCharger": true,
+            "demolition": false,
+            "remodel": false,
+            "bathroom": false,
+            "hvac": true,
+            "battery": false,
+            "grading": true,
+            "kitchen": false,
+            "electricMeter": true,
+            "fireSprinkler": false,
+            "adu": true,
+            "plumbing": false,
+            "inspectionPassed": false,
+            "roofing": false,
+            "poolAndHotTub": true,
+            "generator": false,
+            "electrical": true
+          },
+          "permitCount": 20,
+          "totalJobValue": 17322,
+          "latestDate": "1961-03-04",
+          "allTags": [
+            "electricMeter",
+            "electricMeter",
+            "adu",
+            "grading",
+            "adu"
+          ],
+          "earliestDate": "1952-07-29"
+        },
+        "lot": {
+          "lotDepthFeet": 361,
+          "lotSizeSquareFeet": 10837,
+          "lotSizeAcres": 5.25,
+          "siteInfluence": "Major Street",
+          "topographyCode": "E",
+          "zoningCode": "et consectetur dolor velit ut",
+          "lotFrontageFeet": 126,
+          "siteInfluenceCode": "S",
+          "topography": "Level grade"
+        },
+        "dateModified": "1944-04-05",
+        "_id": "magna",
+        "sale": {
+          "lastSale": {
+            "distressedSaleFlag": true,
+            "saleDate": "1940-09-18",
+            "bookNumber": 4637,
+            "salePriceIsEstimated": false,
+            "priceCode": "Duis",
+            "transactionType": "New construction residential transactions",
+            "pageNumber": 410,
+            "priceCodeDescription": "sunt dolore laboris aute",
+            "mortgages": [
+              {
+                "lenderType": "Mortgage company",
+                "pageNumber": "aute esse",
+                "financingType": "Adjustable Rate",
+                "lenderTypeCode": "I",
+                "loanType": "New Conventional",
+                "loanTerm": "eu",
+                "dueDate": "1953-10-10",
+                "bookNumber": null,
+                "financingTypeCode": "ADJ",
+                "lenderName": "Dooley, Hilll and Herzog",
+                "loanAmount": 311104,
+                "interestRate": 2.5,
+                "loanTypeCode": null,
+                "recordingDate": "1951-02-13"
+              },
+              {
+                "loanTerm": "voluptate esse Lorem",
+                "financingType": "Adjustable Rate",
+                "loanTypeCode": "culpa fugiat et elit",
+                "lenderName": "Schumm - Jerde",
+                "recordingDate": "1951-05-11",
+                "bookNumber": "et ea ad",
+                "lenderType": "Mortgage company",
+                "financingTypeCode": "ADJ",
+                "interestRate": 8.375,
+                "loanType": "New Conventional",
+                "loanAmount": 150332,
+                "dueDate": "1895-01-07",
+                "pageNumber": "in veniam amet elit sint",
+                "lenderTypeCode": "I"
+              }
+            ],
+            "pricePerSquareFoot": 781,
+            "documentTypeCode": "magna",
+            "documentType": "Grant Deed",
+            "transactionTypeCode": "A",
+            "documentNumber": "exercitation aliqua in",
+            "price": 394214
+          },
+          "lastTransfer": {
+            "priceCode": "id sunt quis reprehenderit",
+            "pageNumber": 102,
+            "saleDate": "1915-10-15",
+            "price": 901964,
+            "documentTypeCode": "ut",
+            "pricePerSquareFoot": 314,
+            "transactionTypeCode": "A",
+            "recordingDate": "1958-01-04",
+            "documentNumber": "dolor minim nostrud",
+            "distressedSaleFlag": true,
+            "salePriceIsEstimated": false,
+            "priceCodeDescription": "proident aute",
+            "transactionType": "New construction residential transactions",
+            "documentType": "Quit Claim Deed",
+            "bookNumber": 7136
+          },
+          "flipLengthCategory": "Short (< 90 days)",
+          "flipLength": 316,
+          "priorSale": {
+            "priceCode": "dolor cupidatat esse",
+            "priceCodeDescription": "amet proident pariatur sunt",
+            "transactionTypeCode": "A",
+            "transactionType": "New construction residential transactions",
+            "saleDate": "1917-07-21",
+            "documentNumber": "eiusmod laborum anim est aliquip",
+            "salePriceIsEstimated": false,
+            "bookNumber": 6859,
+            "documentType": "Trust Deed",
+            "price": 742803,
+            "distressedSaleFlag": false,
+            "documentTypeCode": "nulla do pariatur Duis",
+            "pricePerSquareFoot": 239,
+            "pageNumber": 278,
+            "mortgages": [
+              {
+                "pageNumber": null,
+                "loanTerm": "nulla ad Ut",
+                "loanType": "New Conventional",
+                "financingTypeCode": "ADJ",
+                "lenderType": "Mortgage company",
+                "bookNumber": "irure",
+                "dueDate": null,
+                "interestRate": 6.875,
+                "lenderName": "Nolan and Sons",
+                "financingType": "Adjustable Rate",
+                "loanAmount": 47876,
+                "lenderTypeCode": "I",
+                "recordingDate": "1951-04-08",
+                "loanTypeCode": "velit consequat sed ex"
+              },
+              {
+                "loanAmount": 116379,
+                "lenderTypeCode": "I",
+                "lenderType": "Mortgage company",
+                "recordingDate": "1930-03-23",
+                "loanTerm": "consectetur velit fugiat ex",
+                "financingTypeCode": "ADJ",
+                "dueDate": null,
+                "pageNumber": null,
+                "lenderName": "Greenholt, Corkery and Carroll",
+                "financingType": "Adjustable Rate",
+                "loanTypeCode": null,
+                "bookNumber": "veniam labore in",
+                "loanType": "New Conventional",
+                "interestRate": 6.75
+              }
+            ]
+          },
+          "priorTransfer": {
+            "salePriceIsEstimated": true,
+            "documentTypeCode": "in do quis est",
+            "priceCode": "aute anim id Excepteur adipisicing",
+            "priceCodeDescription": "nulla nisi sunt aliquip",
+            "pageNumber": 545,
+            "price": 574650,
+            "documentType": "Warranty Deed",
+            "bookNumber": 3697,
+            "documentNumber": "laborum aute mollit"
+          },
+          "flipProfit": 129827
+        },
+        "foreclosure": {
+          "recordingDate": "1962-08-03",
+          "trusteeAddress": "041 Brady Lodge",
+          "caseNumber": "CV-2024-001234",
+          "loanNumber": "labore in tempor",
+          "auctionContactName": "Mr. Marguerite Macejkovic",
+          "dueDate": "1924-08-03",
+          "bookNumber": "nostrud in in voluptate",
+          "pageNumber": "incididunt culpa",
+          "currentLenderName": "Witting - Thiel",
+          "unpaidBalance": 83847,
+          "trusteeSaleNumber": "TS-1557-788328",
+          "releaseDate": "1890-08-24",
+          "filingDate": "1945-09-12",
+          "auctionDate": "1939-02-22",
+          "pastDueAmount": 47762,
+          "borrowerName": "Nancy Hoeger",
+          "trusteeCareOfName": "Harvey Cremin",
+          "trusteeName": "Bode and Sons",
+          "trusteePhone": "dolore non sint et minim",
+          "documentType": "Notice of Lis Pendens",
+          "defaultDate": "1922-02-05",
+          "documentTypeCode": "aliqua",
+          "auctionMinimumBidAmount": 377692,
+          "statusCode": "LP",
+          "auctionTime": "in amet commodo",
+          "flag": "Y",
+          "documentNumber": "quis commodo et eiusmod ut",
+          "auctionCity": "Ondrickaport",
+          "originalLoanAmount": 1279339,
+          "status": "Notice of Default and Lis Pendens",
+          "auctionLocation": "63098 Brown Lodge"
+        },
+        "openLien": {
+          "totalOpenLienBalance": 211717,
+          "allLoanTypes": [
+            "FHA",
+            "Jumbo",
+            "FHA"
+          ],
+          "mortgages": [
+            {
+              "lenderTypeCode": "I",
+              "adjustableRateRider": true,
+              "preforeclosureStatus": "Active",
+              "interestRateNotGreaterThan": "do exercitation",
+              "interestRateNotLessThan": "amet aute consectetur aliquip est",
+              "purposeOfLoan": "Purchase",
+              "pudRider": false,
+              "titleCompanyName": "Turcotte Inc",
+              "preforeclosureFilingDate": "1933-10-30",
+              "preforeclosureAuctionDate": "1968-05-22",
+              "loanTermMonths": 218,
+              "lenderNameBeneficiary": "Abshire Group",
+              "constructionLoan": false,
+              "helocFlag": true,
+              "currentEstimatedBalance": 458587,
+              "balloonRider": false,
+              "interestRate": 10.52,
+              "preforeclosureCaseTrusteeSaleNumber": "TS-5632-503757",
+              "preforeclosureRecordingDate": "1952-12-14",
+              "numberOfAssignments": 2,
+              "secondHomeRider": false,
+              "firstChangeDateYearConversionRider": "sint",
+              "assumable": false,
+              "subordinateLoanFlag": true,
+              "financingTypeCode": "FIX",
+              "financingType": "Fixed Rate",
+              "recordingDate": "1929-02-06",
+              "transactionTypeCode": "A",
+              "prepaymentRider": true,
+              "purchaseMortgageIndicator": "Purchase",
+              "rateChangeFrequency": "Annual",
+              "preforeclosureStatusCode": "in veniam fugiat nulla ipsum",
+              "lenderType": "Mortgage company",
+              "loanTermYears": 23,
+              "condoRider": true,
+              "firstChangeDateMonthConversionRider": "ut sit dolore",
+              "cashPurchase": true,
+              "lender": "Breitenberg and Sons",
+              "interestOnlyPeriod": true,
+              "multiFamilyRider": true,
+              "assignedLenderName": "Gleichner and Sons",
+              "estimatedPaymentAmount": 9766,
+              "loanType": "New Conventional",
+              "assignmentDate": "1905-03-30",
+              "equityCreditLine": "No",
+              "maximumInterestRate": 12.125,
+              "rateChangeFrequencyCode": "dolore pariatur ut velit in",
+              "transactionType": "New construction residential transactions",
+              "sellerCarryBack": true,
+              "changeIndex": "Ut",
+              "lenderName": "Goodwin Inc",
+              "ltv": 23.37,
+              "adjustableRateIndexCode": "LIBOR",
+              "dueDate": "1890-07-17",
+              "contractDate": "1960-09-16",
+              "prepaymentTermPenaltyRider": "dolore minim id tempor",
+              "privateLender": true,
+              "fixedStepConversionRateRider": "No",
+              "loanAmount": 1298872,
+              "equityFlag": false,
+              "loanTypeCode": "reprehenderit",
+              "loanNumber": "labore sit quis culpa",
+              "standaloneRefi": true
+            },
+            {
+              "lenderNameBeneficiary": "Douglas, Homenick and Ebert",
+              "preforeclosureRecordingDate": "1946-09-22",
+              "interestOnlyPeriod": false,
+              "purposeOfLoan": "Purchase",
+              "assignmentDate": "1968-10-12",
+              "cashPurchase": true,
+              "rateChangeFrequency": "Annual",
+              "transactionType": "New construction residential transactions",
+              "subordinateLoanFlag": true,
+              "loanTermYears": 5,
+              "loanTypeCode": "aute incididunt sed",
+              "loanType": "New Conventional",
+              "interestRateNotLessThan": "minim velit",
+              "ltv": 100.78,
+              "balloonRider": true,
+              "assumable": true,
+              "transactionTypeCode": "A",
+              "preforeclosureCaseTrusteeSaleNumber": "TS-5632-503757",
+              "purchaseMortgageIndicator": "Purchase",
+              "contractDate": "1935-12-28",
+              "dueDate": "1902-08-02",
+              "standaloneRefi": false,
+              "constructionLoan": true,
+              "financingTypeCode": "FIX",
+              "lenderType": "Mortgage company",
+              "adjustableRateIndexCode": "LIBOR",
+              "financingType": "Fixed Rate",
+              "equityCreditLine": "No",
+              "pudRider": false,
+              "adjustableRateRider": true,
+              "titleCompanyName": "Jaskolski - Prosacco",
+              "lender": "Romaguera and Sons",
+              "maximumInterestRate": 10.5,
+              "estimatedPaymentAmount": 6854,
+              "changeIndex": "in",
+              "loanAmount": 1274461,
+              "lenderName": "Ferry and Sons",
+              "lenderTypeCode": "I",
+              "loanTermMonths": 238,
+              "currentEstimatedBalance": 1187357,
+              "privateLender": false,
+              "rateChangeFrequencyCode": "aute Excepteur proident dolor",
+              "firstChangeDateMonthConversionRider": "deserunt veniam officia",
+              "loanNumber": "ut elit incididunt",
+              "condoRider": true,
+              "preforeclosureFilingDate": "1953-06-13",
+              "assignedLenderName": "Romaguera - Herman",
+              "interestRateNotGreaterThan": "irure Excepteur ut ea nulla",
+              "numberOfAssignments": 1,
+              "prepaymentTermPenaltyRider": "labore",
+              "sellerCarryBack": false,
+              "secondHomeRider": true,
+              "preforeclosureAuctionDate": "1893-08-25",
+              "preforeclosureStatusCode": "incididunt",
+              "equityFlag": true,
+              "recordingDate": "1899-05-10",
+              "fixedStepConversionRateRider": "No",
+              "prepaymentRider": false,
+              "helocFlag": true,
+              "interestRate": 9.91,
+              "firstChangeDateYearConversionRider": "qui quis nisi",
+              "multiFamilyRider": false,
+              "preforeclosureStatus": "Active"
+            }
+          ],
+          "firstLoanRecordingDate": "1893-11-17",
+          "totalOpenLienCount": 1,
+          "juniorLoanTypes": [
+            "Home Equity Loan",
+            "Home Equity Loan"
+          ],
+          "lastLoanRecordingDate": "1897-04-25"
+        },
+        "tax": {
+          "schoolTaxDistrictCodes": [
+            "SD-476",
+            "SD-218",
+            "SD-218"
+          ],
+          "taxAmount": 12105,
+          "taxRateCodeArea": "eiusmod laborum in",
+          "taxDelinquentYear": 2017,
+          "taxExemptions": "Homestead",
+          "taxYear": 2023
+        },
+        "propertyOwnerProfile": {
+          "propertiesCount": 48,
+          "propertiesTotalEstimatedValue": 5773664,
+          "mortgagesTotalBalance": 3440531,
+          "averagePurchasePrice": 860666,
+          "totalPurchasePrice": 4056017,
+          "averageAssessedValue": 822981,
+          "propertiesTotalEquity": 2717586,
+          "mortgagesAverageBalance": 330620,
+          "averageYearBuilt": 1963,
+          "mortgagesCount": 3
+        },
+        "intel": {
+          "salePropensityStatus": "Not Applicable",
+          "salePropensityCategory": "Low",
+          "salePropensity": 31,
+          "lastSoldPrice": 1992483,
+          "lastSoldDate": "1920-05-15"
+        },
+        "meta": {
+          "requestId": "dolore cupidatat esse elit",
+          "propertyDateModified": "1959-01-10"
+        },
+        "building": {
+          "heatSourceCode": "R",
+          "roofCoverCode": "S",
+          "exteriorWalls": "Brick",
+          "interiorWalls": "Plaster",
+          "airConditioningSourceCode": "E",
+          "buildingQuality": "Fair",
+          "roofTypeCode": "F",
+          "drivewayCode": "N",
+          "bathroomCount": 2,
+          "waterServiceCode": "W",
+          "floorCoverCode": "V",
+          "atticUnfinishedSquareFeet": 531,
+          "foundation": "Slab",
+          "buildingCondition": "Average",
+          "roofCover": "Metal",
+          "effectiveYearBuilt": 1991,
+          "basementTypeCode": "P",
+          "basementUnfinishedSquareFeet": 1923,
+          "totalBuildingAreaCodeDescription": "Gross Area",
+          "buildingConditionCode": "F",
+          "garageUnfinishedSquareFeet": 284,
+          "poolCode": "B",
+          "atticSquareFeet": 1730,
+          "garageCode": "B",
+          "foundationCode": "B",
+          "otherRooms": "Library",
+          "unitCount": 8,
+          "constructionType": "Frame",
+          "basementSquareFeet": 2297,
+          "garageSquareFeet": 336,
+          "heatingFuelType": "Wood",
+          "style": "Tudor",
+          "totalBuildingAreaCode": "B",
+          "basementType": "None",
+          "airConditioningSource": "Evaporative",
+          "pool": "None",
+          "waterService": "None",
+          "storyCount": 2,
+          "garageParkingSpaceCount": 6,
+          "driveway": "Paver",
+          "basementFinishedSquareFeet": 1633,
+          "sewerCode": "A",
+          "yearBuilt": 1909,
+          "atticFinishedSquareFeet": 873,
+          "buildingType": "Individual Unit",
+          "fireplaceCount": 3,
+          "interiorWallsCode": "W",
+          "calculatedBathroomCount": 6,
+          "grossBuildingAreaSquareFeet": 8552,
+          "features": [
+            "Deck",
+            "Workshop",
+            "Deck"
+          ],
+          "porchCode": "S",
+          "heatSource": "Radiant",
+          "groundFloorAreaSquareFeet": 1566,
+          "totalBuildingAreaSquareFeet": 8561,
+          "porch": "Porch - Covered",
+          "heatingFuelTypeCode": "E",
+          "roofType": "Flat",
+          "sewer": "Municipal",
+          "patio": "Covered Patio",
+          "buildingClass": "Wood frame construction",
+          "fullBathroomCount": 2,
+          "garage": "Carport",
+          "otherRoomsCode": "F",
+          "buildingCount": 4,
+          "bedroomCount": 4,
+          "livingAreaSquareFeet": 1760,
+          "bathFixtureCount": 10,
+          "exteriorWallsCode": "ST",
+          "adjustedBuildingAreaSquareFeet": 8799,
+          "patioCode": "P",
+          "garageFinishedSquareFeet": 491,
+          "residentialUnitCount": 5,
+          "elevatorCount": 0,
+          "floorCover": "Carpet",
+          "commercialUnitCount": 5,
+          "buildingQualityCode": "B",
+          "buildingClassCode": "D",
+          "styleCode": "VC",
+          "partialBathroomCount": 0,
+          "roomCount": 15,
+          "constructionTypeCode": "W"
+        },
+        "owner": {
+          "litigator": false,
+          "mailingOptOut": false,
+          "mailingAddress": {
+            "houseNumber": "in sit",
+            "state": "LA",
+            "county": "dolor commodo deserunt",
+            "dpvMatchCode": "S",
+            "unitNumber": "deserunt pariatur",
+            "dpvFootnotes": "A1M1",
+            "addressValidity": "Partial",
+            "unitType": "UNIT",
+            "formattedStreet": "Wehner Ferry",
+            "zipPlus4": "nulla reprehenderit occaecat Lorem",
+            "street": "68615 Dach Forges",
+            "deliveryPointCode": "dolore et Lorem officia",
+            "city": "East Jacklyn",
+            "hash": "dolor aliqua ea proident",
+            "streetNoUnit": "43114 Gaylord Field",
+            "zip": "amet occaecat",
+            "oldHashes": [
+              "voluptate in laboris",
+              "elit ut",
+              "ea ut laboris",
+              "dolor culpa",
+              "labore ullamco in"
+            ]
+          },
+          "fullName": "Alicia Stiedemann PhD",
+          "dnc": {
+            "tcpa": false
+          },
+          "death": {
+            "dateOfDeath": "1938-01-22",
+            "deceased": true
+          },
+          "hasLandline": false,
+          "lengthOfResidenceYears": 22,
+          "ownershipStartDate": "1903-08-07",
+          "involuntaryLien": {
+            "lien": true,
+            "judgement": true
+          },
+          "ownerStatusType": "LLC",
+          "lengthOfResidenceMonths": 144,
+          "emails": [
+            "Glenna_Nicolas24@gmail.com",
+            "Nettie_Hermiston@gmail.com"
+          ],
+          "enrichedEmails": [
+            {
+              "tested": true,
+              "email": "Zelda_Kirlin@gmail.com"
+            },
+            {
+              "email": "Maxie76@yahoo.com",
+              "tested": true
+            }
+          ],
+          "ownerOccupied": false,
+          "ownerStatusTypeCode": "45",
+          "bankruptcy": {
+            "bankruptcy": false,
+            "filingDate": "1936-03-03T14:21:05.0Z"
+          },
+          "ownershipRightsCode": "TC",
+          "ownershipRights": "Fee Simple",
+          "phoneNumbers": [
+            {
+              "type": "VoIP",
+              "lastReportedDate": "1901-10-17T11:40:28.0Z",
+              "tested": false,
+              "dnc": false,
+              "carrier": "qui tempor sunt elit nisi",
+              "tcpa": true,
+              "reachable": true,
+              "score": 74,
+              "number": "Ut laboris"
+            },
+            {
+              "dnc": false,
+              "tested": false,
+              "number": "commodo",
+              "tcpa": false,
+              "type": "Land Line",
+              "reachable": true,
+              "lastReportedDate": "1890-08-14T09:58:48.0Z",
+              "score": 68,
+              "carrier": "aute consectetur non Excepteur eiusmod"
+            },
+            {
+              "dnc": false,
+              "lastReportedDate": "1919-11-07T05:10:30.0Z",
+              "reachable": false,
+              "type": "Land Line",
+              "tested": false,
+              "number": "et sunt mollit Excepteur",
+              "tcpa": true,
+              "score": 61,
+              "carrier": "est esse Excepteur deserunt"
+            }
+          ],
+          "names": [
+            {
+              "first": "Marjolaine",
+              "middle": "Robbie",
+              "last": "Franey",
+              "full": "Derek Lind"
+            },
+            {
+              "full": "Lana Stracke",
+              "first": "Maximilian",
+              "last": "Langworth",
+              "middle": "Dannie"
+            }
+          ]
+        },
+        "mortgageHistory": [
+          {
+            "borrowers": [
+              "Matthew Leffler",
+              "Loren Predovic"
+            ],
+            "loanTermMonths": 159,
+            "transactionTypeCode": "A",
+            "loanType": "New Conventional",
+            "saleDate": "1941-02-13",
+            "loanTypeCode": "consequat",
+            "interestRateType": "Fixed Rate",
+            "loanAmount": 1084150,
+            "dueDate": "1968-03-13",
+            "documentDate": "1912-12-29",
+            "lenderType": "Mortgage company",
+            "transactionType": "New construction residential transactions",
+            "recordingDate": "1899-07-30",
+            "interestRateTypeCode": "FIX",
+            "lenderName": "Bode - Reilly",
+            "interestRate": "anim amet velit",
+            "lenderTypeCode": "I"
+          },
+          {
+            "documentDate": "1927-06-05",
+            "transactionType": "New construction residential transactions",
+            "lenderType": "Mortgage company",
+            "lenderTypeCode": "I",
+            "saleDate": "1948-04-01",
+            "loanTypeCode": "occaecat aliqua",
+            "interestRateType": "Fixed Rate",
+            "dueDate": "1923-02-24",
+            "borrowers": [
+              "Nicole Rolfson",
+              "Eula Tillman IV"
+            ],
+            "lenderName": "Dooley, Mayert and Thiel",
+            "loanAmount": 183301,
+            "loanType": "New Conventional",
+            "interestRateTypeCode": "FIX",
+            "transactionTypeCode": "A",
+            "recordingDate": "1892-01-19",
+            "interestRate": "elit ex",
+            "loanTermMonths": 350
+          }
+        ],
+        "general": {
+          "propertyTypeDetail": "Farm",
+          "censusTract": "in irure aliquip culpa",
+          "timeZone": "Pacific",
+          "parcelCount": 4,
+          "congressionalDistrict": "cupidatat sint ea id",
+          "propertyTypeCategory": "Agricultural",
+          "carrierRoute": "R706",
+          "daylightSavingsTime": true,
+          "mailingAddressVacant": false,
+          "primaryParcel": true,
+          "vacant": false,
+          "vacantDate": "1918-07-09",
+          "schoolDistrict": "Fairfax County Public Schools",
+          "utcOffset": -5,
+          "mobileHome": false,
+          "standardizedLandUseCode": "I10"
+        },
+        "demographics": {
+          "individualOccupation": "Retired",
+          "investments": [
+            "Personal",
+            "Real Estate",
+            "Real Estate"
+          ],
+          "religiousAffiliation": "Muslim",
+          "age": 63,
+          "individualEducationCode": "SC",
+          "businessOwnerCode": "A",
+          "religiousAffiliationCode": "P",
+          "smoker": false,
+          "maritalStatus": "Married",
+          "hasChildren": false,
+          "petOwner": false,
+          "recentlyMovedYear": 2021,
+          "recentlyDivorced": true,
+          "maritalStatusCode": "M",
+          "recentlyMoved": true,
+          "individualOccupationCode": "consequat",
+          "homeownerRenter": "Renter",
+          "recentlyMovedMonth": 7,
+          "discretionaryIncome": 19786,
+          "millionaire": false,
+          "netWorth": 4210300,
+          "gender": "Male",
+          "businessOwner": "Accountant",
+          "emailDomain": "in ut",
+          "genderCode": "F",
+          "income": 41926,
+          "religious": false,
+          "householdSize": 6,
+          "childCount": 6,
+          "homeownerRenterCode": "O",
+          "singleParent": false,
+          "individualEducation": "Attended College"
+        },
+        "assessment": {
+          "assessmentYear": 2020,
+          "marketValueYear": 2018,
+          "totalAssessedValue": 1050323,
+          "landMarketValue": 351648,
+          "improvementMarketValue": 816340,
+          "assessedImprovementValue": 840137,
+          "totalMarketValue": 324631,
+          "assessedLandValue": 67079
+        },
+        "deedHistory": [
+          {
+            "salePriceCode": "ex aute",
+            "resale": false,
+            "reoSale": true,
+            "foreclosure": true,
+            "mailingAddress": {
+              "state": "MO",
+              "city": "Franciscohaven",
+              "street": "694 Clinton Viaduct",
+              "hash": "23823282-73d5-4d3e-8616-d7874450994c",
+              "zip": "67356"
+            },
+            "transactionType": "New construction residential transactions",
+            "recordingDate": "1927-08-08",
+            "ownerRelationshipType": "dolore dolor nulla",
+            "newConstruction": true,
+            "sellers": [
+              "Ms. Alfonso Powlowski",
+              "Susie Swaniawski"
+            ],
+            "multipleOwners": false,
+            "saleDate": "1937-12-02",
+            "partialInterestTypeCode": "est exercitation nisi",
+            "documentTypeCode": "fugiat qui dolor",
+            "recordingPage": "Duis pariatur do ullamco",
+            "documentDate": "1968-10-20",
+            "interFamily": false,
+            "partialInterestType": "Unclear Actual Percentage",
+            "recordingBook": "aute est commodo",
+            "documentType": "Stand Alone Mortgage",
+            "documentNumber": "elit",
+            "transactionId": 691275231,
+            "transferTax": 43886,
+            "transactionTypeCode": "A",
+            "salePrice": 1024120,
+            "buyers": [
+              "Enrique Spencer Jr.",
+              "Tiffany Wiegand MD"
+            ]
+          },
+          {
+            "transactionTypeCode": "A",
+            "transactionType": "New construction residential transactions",
+            "salePriceCode": "aliquip occaecat adipisicing consequat",
+            "transactionId": 495316101,
+            "newConstruction": true,
+            "documentDate": "1944-05-14",
+            "ownerRelationshipType": "ullamco ut voluptate enim",
+            "documentNumber": "laborum veniam culpa",
+            "interFamily": false,
+            "multipleOwners": false,
+            "sellers": [
+              "Wilbert Rodriguez",
+              "Marian Zulauf"
+            ],
+            "documentType": "Stand Alone Mortgage",
+            "partialInterestType": "Unclear Actual Percentage",
+            "documentTypeCode": "nostrud occaecat ad",
+            "mailingAddress": {
+              "street": "954 Hackett Loop",
+              "city": "Port Johnnymouth",
+              "zip": "04292-4766",
+              "state": "KS",
+              "hash": "eba1c5b2-48a5-4c18-9c05-4e4434e20b15"
+            },
+            "partialInterestTypeCode": "dolor",
+            "recordingPage": "deserunt irure",
+            "salePrice": 314439,
+            "recordingBook": "magna laborum est culpa",
+            "transferTax": 6077,
+            "reoSale": true,
+            "foreclosure": false,
+            "buyers": [
+              "Dolores Lubowitz",
+              "Emilio Jast"
+            ],
+            "resale": false,
+            "saleDate": "1930-12-24",
+            "recordingDate": "1933-05-21"
+          }
+        ],
+        "legal": {
+          "legalDescription": "LOT 12 BLK 3",
+          "assessorsMapReference": "MAP-0234-AB",
+          "lotCode": "M",
+          "district": "District 00",
+          "cityTownshipMunicipality": "Barbaraville",
+          "legalUnit": "Unit 204",
+          "section": "SEC 76",
+          "block": "Duis occaecat pariatur",
+          "phaseNumber": "Phase 1",
+          "sectionTownshipRangeMeridian": "S12 T15N R04E",
+          "tractNumber": "TR-12045",
+          "lotNumber": "reprehenderit exercitation",
+          "subdivisionName": "Sunset Ridge",
+          "landLot": "LL-415"
+        },
+        "ids": {
+          "personIds": [
+            "dab1117e-f792-4911-8402-4d514f21afa7",
+            "5b157d96-5978-4312-9b76-8b19b625ea18",
+            "41694bcd-c46d-47d9-8fc5-721d90fbd380"
+          ],
+          "apn": "sed non est",
+          "addressHash": "in enim nostrud pariatur",
+          "oldApn": "nostrud culpa dolore",
+          "taxId": "anim eu culpa ea",
+          "fipsCode": "Ut id non",
+          "oldApnCodeDescription": "Alternate APN"
+        },
+        "address": {
+          "streetNoUnit": "231 Torrey Village",
+          "latitude": 28.203211,
+          "city": "Collintown",
+          "dpvMatchCode": "N",
+          "normalized": false,
+          "geoStatusCode": "E",
+          "street": "863 Little Spring",
+          "unitNumber": "dolore",
+          "formattedStreet": "Goyette Extension",
+          "zipPlus4": "in sint",
+          "hash": "tempor nulla quis qui",
+          "zip": "est",
+          "cityAliases": [
+            "Lillafort",
+            "South Beauview"
+          ],
+          "dpvFootnotes": "CC",
+          "county": "deserunt quis",
+          "localities": [
+            "South Leta",
+            "New Arne"
+          ],
+          "deliveryPointCode": "et ad exercitation elit fugiat",
+          "houseNumber": "dolore reprehenderit",
+          "countyFipsCode": "officia occaecat Ut",
+          "longitude": -85.48742,
+          "addressValidity": "Invalid",
+          "oldHashes": [
+            "dolore cupidatat",
+            "in minim eiusmod"
+          ],
+          "state": "NY",
+          "geoStatus": "ZIP + 2 centroid",
+          "unitType": "STE"
+        },
+        "valuation": {
+          "asOfDate": "1942-07-28",
+          "equityPercent": 23.4,
+          "equityCurrentEstimatedBalance": 761279,
+          "estimatedValue": 1316967,
+          "standardDeviation": 15,
+          "priceRangeMax": 197558,
+          "confidenceScore": 85,
+          "priceRangeMin": 1400151,
+          "ltv": 38.61
+        },
+        "quickLists": {
+          "fixAndFlip": true,
+          "samePropertyAndMailingAddress": false,
+          "onMarket": false,
+          "vacant": false,
+          "hasHoa": true,
+          "outOfStateOwner": false,
+          "trustOwned": false,
+          "cashBuyer": false,
+          "highEquity": false,
+          "noticeOfDefault": false,
+          "corporateOwned": true,
+          "expiredListing": false,
+          "tiredLandlord": true,
+          "noticeOfSale": false,
+          "mailingAddressVacant": true,
+          "ownerOccupied": false,
+          "freeAndClear": false,
+          "vacantLot": true,
+          "pendingListing": false,
+          "preforeclosure": true,
+          "lowEquity": false,
+          "involuntaryLien": true,
+          "recentlySold": true,
+          "unknownEquity": true,
+          "noticeOfLisPendens": false,
+          "inherited": true,
+          "failedListing": false,
+          "canceledListing": true,
+          "hasHoaFees": false,
+          "absenteeOwner": false,
+          "seniorOwner": false,
+          "activeAuction": true,
+          "listedBelowMarketPrice": true,
+          "absenteeOwnerOutOfState": false,
+          "activeListing": true,
+          "forSaleByOwner": false,
+          "absenteeOwnerInState": false,
+          "taxDefault": true
+        },
+        "listing": {
+          "bedroomCount": 2,
+          "salePriceIsEstimated": true,
+          "listingUrl": "http://fatherly-jealousy.net",
+          "coolingTypes": [
+            "ELECTRIC",
+            "ELECTRIC",
+            "ELECTRIC"
+          ],
+          "longitude": -94.253446,
+          "maxListPriceDate": "1946-06-14",
+          "newConstruction": true,
+          "roofTypes": [
+            "Asphalt",
+            "Asphalt",
+            "Asphalt"
+          ],
+          "lotSizeSquareFeet": 3479,
+          "halfBathroomCount": 0,
+          "brokerage": {
+            "name": "Beer Group",
+            "address": "904 Graham Spurs",
+            "websiteUrl": "http://yellow-comeback.info",
+            "email": "Verna11@hotmail.com",
+            "phoneNumber": "in magna"
+          },
+          "fullBathroomCount": 1,
+          "partialBathroomCount": 2,
+          "statusUpdatedAt": "1918-04-19",
+          "subDivision": "Lakeside Manor",
+          "yearBuilt": 2018,
+          "agents": {
+            "email": "Glennie_Effertz79@hotmail.com",
+            "licenseNumber": "RE-37366132",
+            "roles": [
+              "Buyer Agent",
+              "Dual Agent"
+            ],
+            "primaryPhoneNumber": "do enim voluptate aute commodo",
+            "officePhoneNumber": "sit nostrud velit tempor pariatur",
+            "key": "df93bb4a-a7e9-4140-a89c-b56510f35276",
+            "name": "Olivia Littel",
+            "websiteUrl": "http://ripe-aftermath.org"
+          },
+          "failedListingDate": "1907-05-14",
+          "originalListingDate": "1893-05-06",
+          "statusCategory": "Sold",
+          "minListPriceDate": "1917-07-10",
+          "heatingFuelTypes": [
+            "GAS",
+            "GAS",
+            "GAS"
+          ],
+          "listingProviderId": "LP-4886",
+          "taxes": [
+            {
+              "year": 2021,
+              "amount": 14160.2,
+              "description": "Special Assessment"
+            },
+            {
+              "amount": 6291.01,
+              "year": 2021,
+              "description": "Property Tax"
+            }
+          ],
+          "directions": "ex eu deserunt est minim",
+          "listingNumber": "MLS-10422882",
+          "neighborhood": "Lakewood",
+          "propertyType": "RESIDENTIAL LOT",
+          "bathroomCount": 3,
+          "minListPrice": 1967451,
+          "status": "Sold",
+          "soldDate": "1906-04-04",
+          "heatingTypes": [
+            "OTHER",
+            "OTHER",
+            "OTHER"
+          ],
+          "agentOffices": {
+            "mainOfficeId": "912fef3d-af56-44be-a35c-f2a30b2c0f41",
+            "officeAddress": "12276 Goodwin Crest",
+            "officePhoneNumber": "ex aliquip pariatur",
+            "name": "Lynn Sanford",
+            "fax": "in labore",
+            "agentId": "d2c1651c-f1f8-46f4-96e2-9d7bbccdd1b4",
+            "officeEmail": "Enrique_Stroman@gmail.com",
+            "websiteUrl": "http://hard-rose.com",
+            "key": "26c87b77-f636-40f9-af69-1b97068b5985",
+            "officeCorporateName": "Hintz Inc",
+            "agentCodeId": "87e27b6d-c182-4ada-be73-acf6561177b4",
+            "phoneNumber": "amet"
+          },
+          "livingArea": 4582,
+          "oneQuarterBathroomCount": 0,
+          "propertySubtype": "culpa cillum sunt",
+          "exteriorConstruction": "BLOCK",
+          "latitude": 33.190041,
+          "statusSubtype": "Cancel/Withdrawn",
+          "floorCount": 2,
+          "price": 2025319,
+          "rentalPrice": 7590,
+          "architecturalStyle": "ex dolore nulla sit",
+          "totalBuildingAreaSquareFeet": 2303,
+          "maxListPrice": 1576065,
+          "hasFireplace": false,
+          "soldPrice": 680883,
+          "listingCategory": "Purchase",
+          "patio": false,
+          "parkingSpaceCount": 2,
+          "schools": {
+            "category": "Private",
+            "district": "Dallas Independent School District",
+            "name": "aad 1fe School"
+          },
+          "listingProviderName": "Aufderhar, Klocko and Berge",
+          "appliances": [
+            "Ice Maker",
+            "Refrigerator",
+            "Freezer"
+          ],
+          "rental": false,
+          "daysOnMarket": 134
+        }
+      }
+    ],
+    "quicklistCounts": [
+      {
+        "count": 16196,
+        "name": "free-and-clear"
+      },
+      {
+        "name": "recently-sold",
+        "count": 3302
+      },
+      {
+        "name": "absentee-owner",
+        "count": 20818
+      },
+      {
+        "name": "owner-occupied",
+        "count": 5915
+      },
+      {
+        "count": 16785,
+        "name": "preforeclosure"
+      }
+    ],
+    "searchCriteria": {
+      "address": {
+        "addressValidity": {
+          "contains": "sit ut aliqua eiusmod",
+          "endsWith": "ad",
+          "equals": "dolor",
+          "inList": [
+            "sit Ut ea",
+            "amet non",
+            "dolore do esse"
+          ],
+          "matches": [
+            "ipsum aliquip in",
+            "ad adipisicing sit commodo",
+            "ut ea mollit ad"
+          ],
+          "notInList": [
+            "sit tempor",
+            "consequat anim",
+            "magna"
+          ],
+          "startsWith": "consequat Duis"
+        },
+        "cbsaCode": {
+          "contains": "reprehenderit",
+          "endsWith": "esse mollit in eu laborum",
+          "equals": "ullamco ut",
+          "inList": [
+            "eiusmod",
+            "adipisicing",
+            "aute sit mollit dolore non"
+          ],
+          "matches": [
+            "dolor enim exercitation voluptate ad",
+            "nisi laborum",
+            "ea aute sint"
+          ],
+          "notInList": [
+            "veniam esse ut dolore Ut",
+            "veniam",
+            "Lorem cupidatat"
+          ],
+          "startsWith": "exercitation ut aliquip"
+        },
+        "cbsaTitle": {
+          "contains": "anim Duis id qui sunt",
+          "endsWith": "aliquip nostrud voluptate nisi",
+          "equals": "consequat in reprehenderit Ut cillum",
+          "inList": [
+            "et",
+            "ut ipsum cillum ex aliquip",
+            "velit reprehenderit in amet"
+          ],
+          "matches": [
+            "esse",
+            "minim",
+            "ut ullamco sunt"
+          ],
+          "notInList": [
+            "pariatur ullamco magna sed",
+            "ad dolor",
+            "ut in sunt nostrud"
+          ],
+          "startsWith": "culpa dolore Ut"
+        },
+        "city": {
+          "contains": "labore adipisicing voluptate",
+          "endsWith": "commodo ex tempor et officia",
+          "equals": "quis pariatur",
+          "inList": [
+            "officia est do pariatur occaecat",
+            "sint reprehenderit labore eu consequat",
+            "mollit pariatur"
+          ],
+          "matches": [
+            "dolore aute Excepteur non",
+            "aliquip do laborum incididunt ex",
+            "dolor"
+          ],
+          "notInList": [
+            "exercitation adipisicing anim nisi aliquip",
+            "aliqua exercitation",
+            "in ad"
+          ],
+          "startsWith": "anim aute commodo"
+        },
+        "cityState": {
+          "contains": "eu veniam mollit",
+          "endsWith": "ullamco",
+          "equals": "exercitation deserunt sunt ex in",
+          "inList": [
+            "reprehenderit officia sed aliquip ipsum",
+            "nisi laborum",
+            "anim pariatur velit id"
+          ],
+          "matches": [
+            "Duis nulla",
+            "Ut",
+            "consequat Ut"
+          ],
+          "notInList": [
+            "eiusmod laborum dolore",
+            "culpa laborum Duis sit reprehenderit",
+            "velit enim nulla"
+          ],
+          "startsWith": "id nulla est"
+        },
+        "county": {
+          "contains": "est reprehenderit quis aliquip",
+          "endsWith": "laborum",
+          "equals": "id occaecat velit",
+          "inList": [
+            "velit irure labore sed reprehenderit",
+            "do",
+            "esse"
+          ],
+          "matches": [
+            "consectetur sit dolor ex eiusmod",
+            "cupidatat nisi sit",
+            "in irure"
+          ],
+          "notInList": [
+            "qui aliqua nulla",
+            "cillum adipisicing",
+            "ex laborum ut consequat occaecat"
+          ],
+          "startsWith": "anim fugiat incididunt quis amet"
+        },
+        "countyFipsCode": {
+          "contains": "Lorem tempor ex in amet",
+          "endsWith": "qui",
+          "equals": "est anim incididunt",
+          "inList": [
+            "ipsum",
+            "adipisicing incididunt magna",
+            "velit Lorem"
+          ],
+          "matches": [
+            "laborum Duis",
+            "ex",
+            "ut Lorem cillum"
+          ],
+          "notInList": [
+            "qui",
+            "commodo aliquip elit non incididunt",
+            "exercitation"
+          ],
+          "startsWith": "mollit elit est"
+        },
+        "countyState": {
+          "contains": "deserunt fugiat esse",
+          "endsWith": "ut sint",
+          "equals": "exercitation in tempor",
+          "inList": [
+            "cillum qui enim",
+            "Ut irure minim ipsum",
+            "sint nostrud laborum do sit"
+          ],
+          "matches": [
+            "anim cillum in consequat est",
+            "amet id non qui veniam",
+            "veniam cillum irure sunt"
+          ],
+          "notInList": [
+            "Duis",
+            "aute laborum",
+            "culpa laboris consequat sit aliqua"
+          ],
+          "startsWith": "sed dolore"
+        },
+        "csaCode": {
+          "contains": "cillum fugiat",
+          "endsWith": "minim",
+          "equals": "sint ad ex anim culpa",
+          "inList": [
+            "do nisi",
+            "non",
+            "dolor"
+          ],
+          "matches": [
+            "in proident",
+            "enim officia et",
+            "ea labore adipisicing in"
+          ],
+          "notInList": [
+            "in consequat culpa Duis",
+            "occaecat est tempor",
+            "ea Ut"
+          ],
+          "startsWith": "sed dolor"
+        },
+        "csaTitle": {
+          "contains": "laboris",
+          "endsWith": "dolor nostrud ipsum et est",
+          "equals": "ipsum aliquip Lorem",
+          "inList": [
+            "fugiat laborum",
+            "veniam",
+            "ea eu"
+          ],
+          "matches": [
+            "non eu Ut sunt reprehenderit",
+            "minim veniam tempor deserunt ex",
+            "est"
+          ],
+          "notInList": [
+            "ipsum reprehenderit",
+            "ut do esse labore laborum",
+            "officia"
+          ],
+          "startsWith": "deserunt"
+        },
+        "formattedStreet": {
+          "contains": "Ut",
+          "endsWith": "enim",
+          "equals": "velit veniam",
+          "inList": [
+            "adipisicing proident laborum tempor qui",
+            "nisi consectetur Duis aliquip cupidatat",
+            "in"
+          ],
+          "matches": [
+            "laborum nisi",
+            "aliqua consectetur",
+            "incididunt cillum"
+          ],
+          "notInList": [
+            "pariatur",
+            "cillum quis voluptate sunt",
+            "adipisicing"
+          ],
+          "startsWith": "irure est"
+        },
+        "geoLocationBoundingBox": {
+          "nwGeoPoint": {
+            "latitude": 42.60731,
+            "longitude": -119.692107
+          },
+          "seGeoPoint": {
+            "latitude": 45.994868,
+            "longitude": -107.154933
+          }
+        },
+        "geoLocationDistance": {
+          "distanceFeet": "adipisicing occaecat",
+          "distanceKilometers": 94781267.75075513,
+          "distanceMeters": "officia Lorem ut incididunt pariatur",
+          "distanceMiles": -23306118.783646196,
+          "distanceYards": "incididunt ea sed",
+          "geoPoint": {
+            "latitude": 38.248021,
+            "longitude": -72.468344
+          }
+        },
+        "geoLocationPolygon": {
+          "geoPoints": [
+            {
+              "longitude": -121.823264,
+              "latitude": 43.734358
+            }
+          ]
+        },
+        "geoStatus": {
+          "contains": "amet minim",
+          "endsWith": "elit officia nostrud",
+          "equals": "occaecat ullamco consequat",
+          "inList": [
+            "et",
+            "aliqua magna aute",
+            "ut"
+          ],
+          "matches": [
+            "sed",
+            "amet fugiat irure sed nisi",
+            "nisi incididunt"
+          ],
+          "notInList": [
+            "nisi velit",
+            "consequat laborum",
+            "ad velit veniam occaecat culpa"
+          ],
+          "startsWith": "labore deserunt commodo magna do"
+        },
+        "initialGeoStatus": {
+          "contains": "reprehenderit irure enim voluptate",
+          "endsWith": "aliquip Ut esse consectetur ea",
+          "equals": "proident ipsum ex",
+          "inList": [
+            "ut ullamco adipisicing",
+            "nisi aute irure aliqua",
+            "velit aliqua"
+          ],
+          "matches": [
+            "pariatur adipisicing cupidatat id",
+            "sed fugiat do cillum",
+            "do sunt"
+          ],
+          "notInList": [
+            "nisi sit",
+            "est sed",
+            "ad magna labore veniam"
+          ],
+          "startsWith": "esse commodo id"
+        },
+        "locality": {
+          "contains": "cillum ullamco",
+          "endsWith": "aliqua dolor",
+          "equals": "sit in",
+          "inList": [
+            "velit sunt",
+            "id non veniam",
+            "aliqua irure ea"
+          ],
+          "matches": [
+            "aute elit",
+            "aliquip Ut amet",
+            "officia"
+          ],
+          "notInList": [
+            "minim sint adipisicing fugiat amet",
+            "id Duis dolore",
+            "in dolore"
+          ],
+          "startsWith": "ullamco enim ipsum in nulla"
+        },
+        "metroDivisionCode": {
+          "contains": "ullamco Ut Lorem ex",
+          "endsWith": "sint",
+          "equals": "dolore",
+          "inList": [
+            "qui do",
+            "consectetur labore quis laboris",
+            "fugiat do dolor"
+          ],
+          "matches": [
+            "sint eiusmod",
+            "eiusmod",
+            "sed"
+          ],
+          "notInList": [
+            "irure nulla labore aute",
+            "adipisicing",
+            "ut ipsum anim commodo adipisicing"
+          ],
+          "startsWith": "enim ea"
+        },
+        "metroDivisionTitle": {
+          "contains": "incididunt in ea",
+          "endsWith": "ea enim qui ullamco",
+          "equals": "commodo ipsum officia veniam",
+          "inList": [
+            "tempor",
+            "aliqua reprehenderit",
+            "dolor"
+          ],
+          "matches": [
+            "amet",
+            "in dolore",
+            "dolore eu consequat"
+          ],
+          "notInList": [
+            "est laboris commodo",
+            "exercitation",
+            "ut non"
+          ],
+          "startsWith": "ex elit ipsum"
+        },
+        "state": {
+          "contains": "ea aliqua quis commodo Excepteur",
+          "endsWith": "in reprehenderit ex aliqua",
+          "equals": "in ea culpa dolore",
+          "inList": [
+            "velit",
+            "dolore ut",
+            "id dolor ullamco adipisicing"
+          ],
+          "matches": [
+            "sed pariatur",
+            "exercitation ipsum aliqua dolore",
+            "culpa esse et Duis"
+          ],
+          "notInList": [
+            "ex non quis voluptate anim",
+            "cillum consequat proident aliqua",
+            "qui esse dolore"
+          ],
+          "startsWith": "Excepteur laboris mollit"
+        },
+        "street": {
+          "contains": "tempor",
+          "endsWith": "laboris non cillum",
+          "equals": "velit sit",
+          "inList": [
+            "sit ex Lorem",
+            "adipisicing sed enim cillum",
+            "ea eiusmod"
+          ],
+          "matches": [
+            "veniam est",
+            "est nulla tempor incididunt non",
+            "proident qui officia aliquip"
+          ],
+          "notInList": [
+            "aliquip",
+            "Ut",
+            "ut nostrud dolore dolor"
+          ],
+          "startsWith": "proident eu esse et"
+        },
+        "streetNoUnit": {
+          "contains": "quis consectetur est ipsum occaecat",
+          "endsWith": "nulla labore est ipsum dolore",
+          "equals": "qui est aliquip",
+          "inList": [
+            "ad dolore aliqua voluptate adipisicing",
+            "dolore laborum sint nostrud",
+            "magna sunt incididunt Duis aute"
+          ],
+          "matches": [
+            "eu irure dolore consequat ut",
+            "occaecat veniam sint",
+            "sint"
+          ],
+          "notInList": [
+            "aliqua",
+            "ea veniam consectetur anim dolore",
+            "minim commodo"
+          ],
+          "startsWith": "aliquip"
+        },
+        "unitType": {
+          "contains": "et",
+          "endsWith": "minim ut dolor incididunt consequat",
+          "equals": "consectetur proident consequat velit sint",
+          "inList": [
+            "veniam cupidatat",
+            "commodo Ut irure sed dolor",
+            "ullamco laborum proident tempor"
+          ],
+          "matches": [
+            "et",
+            "pariatur cupidatat consectetur",
+            "eiusmod labore"
+          ],
+          "notInList": [
+            "pariatur",
+            "consectetur",
+            "mollit pariatur proident"
+          ],
+          "startsWith": "aliqua Excepteur"
+        },
+        "zip": {
+          "contains": "enim officia culpa",
+          "endsWith": "tempor Excepteur Ut Lorem in",
+          "equals": "tempor non velit irure",
+          "inList": [
+            "in",
+            "est",
+            "fugiat nisi Ut amet"
+          ],
+          "matches": [
+            "sed amet dolore elit",
+            "ipsum irure id deserunt sed",
+            "laborum officia laboris nisi"
+          ],
+          "notInList": [
+            "Ut",
+            "velit minim eu enim voluptate",
+            "magna do"
+          ],
+          "startsWith": "dolor dolore anim labore"
+        }
+      },
+      "assessment": {
+        "assessedImprovementValue": {
+          "max": 13209508.241035998,
+          "min": -27841743.87941274
+        },
+        "assessedLandValue": {
+          "max": -11485955.105680913,
+          "min": 32607736.063932106
+        },
+        "assessmentYear": {
+          "max": 7622158.365440741,
+          "min": -90986568.67758603
+        },
+        "improvementMarketValue": {
+          "max": -79417050.09435971,
+          "min": 11342113.053494468
+        },
+        "landMarketValue": {
+          "max": 69873611.55328095,
+          "min": 90452855.27224681
+        },
+        "marketValueYear": {
+          "max": -68964422.54818848,
+          "min": -66531492.07071236
+        },
+        "totalAssessedValue": {
+          "max": 2642990.3522363454,
+          "min": 29128753.25032267
+        },
+        "totalMarketValue": {
+          "max": 83869806.00788653,
+          "min": 97197099.05123577
+        }
+      },
+      "building": {
+        "airConditioningSource": {
+          "contains": "dolore ad",
+          "endsWith": "eiusmod",
+          "equals": "et laboris occaecat",
+          "inList": [
+            "reprehenderit eiusmod fugiat minim",
+            "eiusmod ex minim",
+            "culpa qui ut"
+          ],
+          "matches": [
+            "ex",
+            "qui eu incididunt in fugiat",
+            "eiusmod voluptate ut esse deserunt"
+          ],
+          "notInList": [
+            "incididunt enim",
+            "dolore eu et culpa incididunt",
+            "ad ex dolor"
+          ],
+          "startsWith": "eiusmod"
+        },
+        "basementType": {
+          "contains": "ullamco cupidatat Ut dolore nostrud",
+          "endsWith": "esse dolor cillum",
+          "equals": "ad culpa eu irure",
+          "inList": [
+            "nulla laborum minim exercitation",
+            "commodo",
+            "id sed occaecat in irure"
+          ],
+          "matches": [
+            "Lorem Duis labore qui fugiat",
+            "sint quis nulla cillum",
+            "cillum occaecat amet ut"
+          ],
+          "notInList": [
+            "Lorem do",
+            "non officia in",
+            "consequat occaecat in"
+          ],
+          "startsWith": "veniam magna Duis minim do"
+        },
+        "bathroomCount": {
+          "max": -56265335.849837,
+          "min": -11261502.076710135
+        },
+        "bedroomCount": {
+          "max": 20882870.376927376,
+          "min": 32791439.439016983
+        },
+        "buildingClass": {
+          "contains": "ex",
+          "endsWith": "dolore sit Ut aute",
+          "equals": "in",
+          "inList": [
+            "in mollit magna ut minim",
+            "id dolor est in laboris",
+            "ut consequat sit qui laboris"
+          ],
+          "matches": [
+            "ut magna Lorem esse",
+            "sed",
+            "Ut nisi"
+          ],
+          "notInList": [
+            "culpa et laboris id dolor",
+            "reprehenderit cillum Excepteur est",
+            "magna adipisicing sint enim aute"
+          ],
+          "startsWith": "nostrud ipsum non quis"
+        },
+        "buildingCondition": {
+          "contains": "dolore",
+          "endsWith": "eiusmod",
+          "equals": "ipsum elit exercitation aliqua eu",
+          "inList": [
+            "in cupidatat",
+            "commodo dolore ipsum",
+            "in ut aliquip ea adipisicing"
+          ],
+          "matches": [
+            "amet sit culpa Lorem",
+            "cupidatat eu enim",
+            "elit incididunt officia anim"
+          ],
+          "notInList": [
+            "in proident ullamco commodo",
+            "cupidatat magna quis Excepteur",
+            "aliquip sed non Excepteur Ut"
+          ],
+          "startsWith": "cillum pariatur eu anim proident"
+        },
+        "buildingCount": {
+          "max": 48287424.020418674,
+          "min": 3755819.190243393
+        },
+        "buildingQuality": {
+          "contains": "Duis cupidatat dolor velit",
+          "endsWith": "pariatur Lorem dolor",
+          "equals": "sunt minim aliqua",
+          "inList": [
+            "ut pariatur",
+            "in officia mollit",
+            "minim ut in anim"
+          ],
+          "matches": [
+            "dolore cillum incididunt",
+            "dolor culpa",
+            "anim dolor adipisicing"
+          ],
+          "notInList": [
+            "esse sunt Ut enim dolore",
+            "mollit labore",
+            "dolor voluptate reprehenderit consequat sit"
+          ],
+          "startsWith": "eiusmod in aute"
+        },
+        "buildingType": {
+          "contains": "eiusmod ut",
+          "endsWith": "ad Ut",
+          "equals": "labore Excepteur sit nisi tempor",
+          "inList": [
+            "veniam",
+            "ea adipisicing aute",
+            "proident eu ex eiusmod ea"
+          ],
+          "matches": [
+            "incididunt",
+            "Ut officia",
+            "voluptate amet ut esse"
+          ],
+          "notInList": [
+            "voluptate ut mollit sunt est",
+            "ea",
+            "reprehenderit"
+          ],
+          "startsWith": "veniam do qui aliquip"
+        },
+        "calculatedBathroomCount": {
+          "max": -70812840.40297009,
+          "min": -12656240.874914631
+        },
+        "commercialUnitCount": {
+          "max": -29693030.809045866,
+          "min": 20995535.05648704
+        },
+        "constructionType": {
+          "contains": "cupidatat Lorem eiusmod",
+          "endsWith": "amet do veniam",
+          "equals": "elit tempor qui id proident",
+          "inList": [
+            "in incididunt elit officia",
+            "enim commodo",
+            "fugiat occaecat eu"
+          ],
+          "matches": [
+            "adipisicing ipsum irure elit",
+            "nostrud esse pariatur veniam",
+            "ad ipsum aliqua pariatur dolor"
+          ],
+          "notInList": [
+            "ut mollit incididunt",
+            "officia",
+            "in ad ullamco reprehenderit sed"
+          ],
+          "startsWith": "est"
+        },
+        "driveway": {
+          "contains": "aliqua",
+          "endsWith": "dolor esse",
+          "equals": "sed",
+          "inList": [
+            "aliquip deserunt est in",
+            "dolore velit culpa occaecat deserunt",
+            "ullamco sint"
+          ],
+          "matches": [
+            "et eiusmod id",
+            "velit",
+            "ut sit est amet officia"
+          ],
+          "notInList": [
+            "laboris anim enim",
+            "Excepteur dolore consectetur ut",
+            "et"
+          ],
+          "startsWith": "culpa qui"
+        },
+        "exteriorWalls": {
+          "contains": "ullamco qui eu",
+          "endsWith": "laborum labore enim velit",
+          "equals": "pariatur dolore",
+          "inList": [
+            "aute in",
+            "Duis non sed sunt",
+            "pariatur"
+          ],
+          "matches": [
+            "cillum consectetur",
+            "magna dolor sint officia",
+            "ut"
+          ],
+          "notInList": [
+            "ipsum non nulla Excepteur sit",
+            "ex Ut enim pariatur Duis",
+            "magna ad officia"
+          ],
+          "startsWith": "Lorem laborum minim ea"
+        },
+        "features": {
+          "contains": "fugiat sint",
+          "endsWith": "cupidatat ad in veniam",
+          "equals": "in consectetur",
+          "inList": [
+            "ipsum in nisi do Ut",
+            "in ut non ex exercitation",
+            "veniam aute"
+          ],
+          "matches": [
+            "esse aliquip",
+            "amet aliqua mollit Lorem sunt",
+            "dolor id reprehenderit"
+          ],
+          "notInList": [
+            "eu fugiat id",
+            "laboris minim",
+            "culpa ex"
+          ],
+          "startsWith": "sit voluptate aliqua"
+        },
+        "floorCover": {
+          "contains": "magna aliquip",
+          "endsWith": "et sint veniam",
+          "equals": "fugiat exercitation",
+          "inList": [
+            "dolor cupidatat dolore in",
+            "Lorem sed ut",
+            "sint Excepteur"
+          ],
+          "matches": [
+            "dolore",
+            "aliqua pariatur veniam sed",
+            "amet fugiat consectetur Lorem"
+          ],
+          "notInList": [
+            "veniam amet consequat aliquip enim",
+            "Duis deserunt eu",
+            "voluptate exercitation magna laboris ipsum"
+          ],
+          "startsWith": "in"
+        },
+        "garage": {
+          "contains": "adipisicing",
+          "endsWith": "aliquip",
+          "equals": "ex commodo",
+          "inList": [
+            "officia",
+            "nulla exercitation tempor",
+            "qui"
+          ],
+          "matches": [
+            "tempor",
+            "culpa",
+            "Ut"
+          ],
+          "notInList": [
+            "adipisicing",
+            "veniam",
+            "in exercitation"
+          ],
+          "startsWith": "ut ut ullamco"
+        },
+        "garageParkingSpaceCount": {
+          "max": 72272173.35698065,
+          "min": 39359798.66494694
+        },
+        "heatSource": {
+          "contains": "Ut",
+          "endsWith": "consectetur",
+          "equals": "dolore esse",
+          "inList": [
+            "aute",
+            "laborum deserunt Ut amet",
+            "dolor ex in sunt"
+          ],
+          "matches": [
+            "velit et est nisi Lorem",
+            "quis",
+            "exercitation nulla voluptate"
+          ],
+          "notInList": [
+            "velit sit elit",
+            "ut quis",
+            "in dolore"
+          ],
+          "startsWith": "fugiat Excepteur est magna in"
+        },
+        "heatingFuelType": {
+          "contains": "laborum do magna cillum reprehenderit",
+          "endsWith": "anim ullamco voluptate et magna",
+          "equals": "sit adipisicing proident ex veniam",
+          "inList": [
+            "reprehenderit ut occaecat esse",
+            "velit in consectetur in enim",
+            "deserunt labore velit veniam nostrud"
+          ],
+          "matches": [
+            "in do",
+            "cupidatat",
+            "adipisicing laboris ea"
+          ],
+          "notInList": [
+            "sed occaecat id",
+            "velit ullamco mollit",
+            "in dolore"
+          ],
+          "startsWith": "adipisicing elit voluptate esse amet"
+        },
+        "interiorWalls": {
+          "contains": "mollit non",
+          "endsWith": "eiusmod",
+          "equals": "velit esse",
+          "inList": [
+            "in Duis in dolore",
+            "Ut amet ullamco commodo",
+            "amet"
+          ],
+          "matches": [
+            "aliqua nostrud culpa deserunt",
+            "enim",
+            "quis ad"
+          ],
+          "notInList": [
+            "sunt",
+            "culpa",
+            "ipsum tempor ut ea"
+          ],
+          "startsWith": "sunt irure Ut in"
+        },
+        "livingAreaSquareFeet": {
+          "max": 70178616.82927352,
+          "min": -38575326.95370347
+        },
+        "patio": {
+          "contains": "dolor",
+          "endsWith": "nulla in",
+          "equals": "qui aliqua reprehenderit",
+          "inList": [
+            "mollit culpa sint consequat aliquip",
+            "Ut ex",
+            "proident in culpa id Ut"
+          ],
+          "matches": [
+            "voluptate",
+            "exercitation consectetur culpa Excepteur",
+            "ullamco reprehenderit in dolor proident"
+          ],
+          "notInList": [
+            "ut id exercitation",
+            "tempor laborum laboris aliquip sunt",
+            "proident"
+          ],
+          "startsWith": "laborum nisi consectetur sunt"
+        },
+        "pool": {
+          "contains": "occaecat sit veniam",
+          "endsWith": "reprehenderit",
+          "equals": "in",
+          "inList": [
+            "ullamco exercitation",
+            "ad sed irure culpa",
+            "ex incididunt mollit"
+          ],
+          "matches": [
+            "do amet id cupidatat dolor",
+            "dolor consequat fugiat Ut",
+            "cupidatat"
+          ],
+          "notInList": [
+            "dolore deserunt nostrud ipsum",
+            "et sint",
+            "minim proident velit eu"
+          ],
+          "startsWith": "quis ut"
+        },
+        "porch": {
+          "contains": "eiusmod aliqua",
+          "endsWith": "ex",
+          "equals": "labore dolore quis fugiat dolor",
+          "inList": [
+            "Excepteur dolor velit dolore",
+            "dolore irure Ut",
+            "eiusmod aliquip et dolore mollit"
+          ],
+          "matches": [
+            "culpa consectetur nisi sed",
+            "in amet veniam dolore",
+            "ipsum dolor consectetur eiusmod labore"
+          ],
+          "notInList": [
+            "dolor ut laboris qui laborum",
+            "et culpa ut tempor eu",
+            "aliquip pariatur laborum Excepteur Duis"
+          ],
+          "startsWith": "est"
+        },
+        "residentialUnitCount": {
+          "max": -36568909.69914401,
+          "min": 93932035.66933626
+        },
+        "roofCover": {
+          "contains": "mollit",
+          "endsWith": "cupidatat",
+          "equals": "labore",
+          "inList": [
+            "amet",
+            "laboris officia et commodo",
+            "ut fugiat in"
+          ],
+          "matches": [
+            "nulla ex veniam",
+            "culpa fugiat nulla deserunt",
+            "fugiat id"
+          ],
+          "notInList": [
+            "in velit ut",
+            "nostrud eu",
+            "cillum"
+          ],
+          "startsWith": "Ut"
+        },
+        "roofType": {
+          "contains": "sit",
+          "endsWith": "do proident anim fugiat eu",
+          "equals": "ea dolore labore",
+          "inList": [
+            "et eu",
+            "Excepteur sunt commodo",
+            "exercitation culpa aliquip ad pariatur"
+          ],
+          "matches": [
+            "proident dolor deserunt",
+            "nostrud adipisicing",
+            "nisi aute dolor"
+          ],
+          "notInList": [
+            "commodo mollit quis ad",
+            "consequat",
+            "sit incididunt laboris voluptate sunt"
+          ],
+          "startsWith": "ipsum"
+        },
+        "roomCount": {
+          "max": 41343264.89825052,
+          "min": 69882211.10226175
+        },
+        "sewer": {
+          "contains": "reprehenderit esse qui sint officia",
+          "endsWith": "in ad qui dolore aute",
+          "equals": "sed dolore dolore exercitation",
+          "inList": [
+            "cupidatat eiusmod pariatur magna",
+            "Lorem ut",
+            "commodo deserunt mollit nulla"
+          ],
+          "matches": [
+            "cillum fugiat consequat",
+            "fugiat nisi incididunt",
+            "in pariatur magna nostrud Excepteur"
+          ],
+          "notInList": [
+            "do labore",
+            "minim",
+            "anim sint"
+          ],
+          "startsWith": "qui mollit voluptate"
+        },
+        "storyCount": {
+          "max": -38880876.44565419,
+          "min": 57609898.50599724
+        },
+        "style": {
+          "contains": "culpa laborum minim exercitation dolor",
+          "endsWith": "anim sunt in ullamco",
+          "equals": "veniam",
+          "inList": [
+            "qui",
+            "Lorem",
+            "nulla incididunt sunt et ad"
+          ],
+          "matches": [
+            "pariatur ex",
+            "Duis ipsum",
+            "sint"
+          ],
+          "notInList": [
+            "laborum occaecat nisi",
+            "do",
+            "aute"
+          ],
+          "startsWith": "nulla anim pariatur reprehenderit"
+        },
+        "totalBuildingAreaSquareFeet": {
+          "max": 75928356.6745198,
+          "min": -87756340.50958604
+        },
+        "unitCount": {
+          "max": -65192644.01106948,
+          "min": 4651370.429509878
+        },
+        "waterService": {
+          "contains": "Ut aliquip anim ut",
+          "endsWith": "nulla sunt tempor sed labore",
+          "equals": "ad sunt",
+          "inList": [
+            "Lorem ullamco proident consectetur",
+            "Excepteur incididunt laboris nulla Ut",
+            "in ex"
+          ],
+          "matches": [
+            "in",
+            "sit laborum",
+            "ad voluptate dolor velit"
+          ],
+          "notInList": [
+            "nisi",
+            "consectetur elit occaecat aliqua",
+            "in aliqua irure qui"
+          ],
+          "startsWith": "tempor mollit"
+        },
+        "yearBuilt": {
+          "max": -45080786.00540255,
+          "min": 54392321.59006789
+        }
+      },
+      "compAddress": {
+        "city": "in mollit cillum",
+        "hash": "laboris et ut",
+        "state": "in est nisi",
+        "street": "sint",
+        "zip": "mollit ex"
+      },
+      "demographics": {
+        "age": {
+          "max": 24319413.132106528,
+          "min": 73369284.50857952
+        },
+        "businessOwner": {
+          "contains": "ea Lorem enim aute elit",
+          "endsWith": "in quis do cupidatat occaecat",
+          "equals": "ipsum est",
+          "inList": [
+            "id quis aliqua dolore Lorem",
+            "proident est incididunt consequat",
+            "fugiat"
+          ],
+          "matches": [
+            "eu velit mollit in",
+            "cupidatat",
+            "eiusmod laboris"
+          ],
+          "notInList": [
+            "reprehenderit cillum id non",
+            "in amet occaecat esse non",
+            "ex"
+          ],
+          "startsWith": "non consequat"
+        },
+        "demographics": {
+          "contains": "sint nulla",
+          "endsWith": "proident nulla culpa sint do",
+          "equals": "Ut",
+          "inList": [
+            "id consectetur Ut",
+            "qui est consequat laborum",
+            "velit do ea"
+          ],
+          "matches": [
+            "in voluptate enim amet adipisicing",
+            "Ut esse fugiat ex ullamco",
+            "non culpa consequat"
+          ],
+          "notInList": [
+            "deserunt non laboris",
+            "irure",
+            "in nisi tempor"
+          ],
+          "startsWith": "in consectetur sed ut"
+        },
+        "discretionaryIncome": {
+          "max": -36404729.609730005,
+          "min": 86249504.91005728
+        },
+        "gender": {
+          "contains": "voluptate reprehenderit deserunt",
+          "endsWith": "nulla dolor consectetur veniam",
+          "equals": "sunt quis deserunt id Duis",
+          "inList": [
+            "ad",
+            "ullamco",
+            "exercitation occaecat"
+          ],
+          "matches": [
+            "Lorem eiusmod labore id",
+            "ullamco amet",
+            "consequat tempor"
+          ],
+          "notInList": [
+            "sunt sit ex",
+            "eiusmod velit esse sunt",
+            "labore consequat"
+          ],
+          "startsWith": "dolore id"
+        },
+        "hasChildren": {
+          "equals": true
+        },
+        "homeownerRenter": {
+          "contains": "id",
+          "endsWith": "adipisicing in elit",
+          "equals": "elit",
+          "inList": [
+            "in Excepteur dolor",
+            "Ut",
+            "nulla quis mollit exercitation id"
+          ],
+          "matches": [
+            "ea",
+            "ipsum",
+            "commodo"
+          ],
+          "notInList": [
+            "deserunt consequat",
+            "ullamco eiusmod",
+            "Excepteur"
+          ],
+          "startsWith": "deserunt"
+        },
+        "householdSize": {
+          "max": 35260809.0119299,
+          "min": -20741492.88895832
+        },
+        "income": {
+          "max": 86667202.10341325,
+          "min": -14816888.814604566
+        },
+        "investments": {
+          "contains": "esse",
+          "endsWith": "magna Lorem veniam in",
+          "equals": "commodo laboris",
+          "inList": [
+            "aute adipisicing ea ex est",
+            "aliquip",
+            "in dolore in nulla"
+          ],
+          "matches": [
+            "labore consequat nulla",
+            "commodo",
+            "officia dolore minim incididunt"
+          ],
+          "notInList": [
+            "dolore minim consequat",
+            "laboris ex",
+            "id deserunt Ut"
+          ],
+          "startsWith": "consequat nulla"
+        },
+        "netWorth": {
+          "max": 97799008.45792577,
+          "min": -60933257.395258814
+        },
+        "religiousAffiliation": {
+          "contains": "ut irure",
+          "endsWith": "laborum",
+          "equals": "nostrud",
+          "inList": [
+            "aute ipsum elit veniam Ut",
+            "nostrud veniam id mollit",
+            "sed"
+          ],
+          "matches": [
+            "tempor",
+            "officia magna",
+            "proident dolore ut"
+          ],
+          "notInList": [
+            "dolore",
+            "ipsum eiusmod consequat",
+            "commodo dolore deserunt aliquip fugiat"
+          ],
+          "startsWith": "cupidatat adipisicing consectetur ad Ut"
+        }
+      },
+      "foreclosure": {
+        "auctionDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2021-11-08"
+        },
+        "auctionMinimumBidAmount": {
+          "max": 88520661.92667547,
+          "min": -13454181.94514288
+        },
+        "pastDueAmount": {
+          "max": -66684133.24435493,
+          "min": 58682971.864497334
+        },
+        "recordingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2025-06-03"
+        },
+        "status": {
+          "contains": "Excepteur",
+          "endsWith": "eiusmod id Duis deserunt sed",
+          "equals": "reprehenderit ipsum esse",
+          "inList": [
+            "ex fugiat in quis",
+            "non reprehenderit anim",
+            "esse exercitation"
+          ],
+          "matches": [
+            "dolore",
+            "culpa aliquip consectetur",
+            "Lorem pariatur laborum aliqua in"
+          ],
+          "notInList": [
+            "adipisicing ut sint magna dolore",
+            "aliqua elit dolor incididunt",
+            "Excepteur ex adipisicing ut velit"
+          ],
+          "startsWith": "sit"
+        }
+      },
+      "general": {
+        "parcelCount": {
+          "max": -48602685.76615097,
+          "min": -67242708.70449059
+        },
+        "propertyTypeCategory": {
+          "contains": "occaecat eiusmod Excepteur amet",
+          "endsWith": "anim Excepteur sit do",
+          "equals": "est ex Excepteur deserunt aliquip",
+          "inList": [
+            "aliqua irure",
+            "exercitation Excepteur qui anim sit",
+            "dolor proident nisi"
+          ],
+          "matches": [
+            "est sit eu eiusmod nulla",
+            "est commodo aute",
+            "irure exercitation adipisicing minim"
+          ],
+          "notInList": [
+            "reprehenderit cillum ut ad quis",
+            "eu sunt non irure",
+            "anim"
+          ],
+          "startsWith": "aliquip"
+        },
+        "propertyTypeDetail": {
+          "contains": "aute magna",
+          "endsWith": "dolor esse",
+          "equals": "mollit sit",
+          "inList": [
+            "aliqua commodo voluptate veniam consectetur",
+            "dolore do sunt id sit",
+            "ut minim"
+          ],
+          "matches": [
+            "aliquip nisi",
+            "anim qui consectetur non in",
+            "tempor labore et sit exercitation"
+          ],
+          "notInList": [
+            "sed culpa ut dolor nulla",
+            "adipisicing officia",
+            "sed deserunt"
+          ],
+          "startsWith": "cupidatat ullamco pariatur aliquip"
+        },
+        "standardizedLandUseCode": {
+          "contains": "in fugiat occaecat sint",
+          "endsWith": "magna elit Duis nisi consequat",
+          "equals": "mollit ipsum",
+          "inList": [
+            "adipisicing cupidatat nostrud nisi ullamco",
+            "aliqua sunt",
+            "velit"
+          ],
+          "matches": [
+            "veniam",
+            "dolor aliquip proident dolore laboris",
+            "voluptate"
+          ],
+          "notInList": [
+            "nulla tempor cupidatat laborum in",
+            "consectetur",
+            "laborum nostrud cillum Lorem"
+          ],
+          "startsWith": "commodo"
+        }
+      },
+      "ids": {
+        "addressHash": {
+          "contains": "fugiat",
+          "endsWith": "ullamco adipisicing",
+          "equals": "tempor do est",
+          "inList": [
+            "deserunt aute laborum",
+            "velit officia",
+            "qui anim magna"
+          ],
+          "matches": [
+            "Duis Ut consequat",
+            "Lorem",
+            "magna sunt labore"
+          ],
+          "notInList": [
+            "sint",
+            "incididunt consectetur dolore ullamco",
+            "sint ipsum velit culpa"
+          ],
+          "startsWith": "voluptate amet eiusmod incididunt sit"
+        },
+        "apn": {
+          "contains": "amet",
+          "endsWith": "in labore irure Lorem quis",
+          "equals": "nisi ullamco dolor consectetur est",
+          "inList": [
+            "laborum enim ipsum est",
+            "in deserunt reprehenderit",
+            "Ut fugiat et cupidatat"
+          ],
+          "matches": [
+            "culpa qui voluptate",
+            "nulla ullamco id",
+            "reprehenderit"
+          ],
+          "notInList": [
+            "et ullamco sunt id",
+            "Lorem occaecat nostrud magna dolore",
+            "do incididunt est Duis in"
+          ],
+          "startsWith": "ut"
+        },
+        "fipsCode": {
+          "contains": "minim ullamco tempor aliquip",
+          "endsWith": "fugiat in sed",
+          "equals": "nulla ipsum est",
+          "inList": [
+            "in officia est",
+            "ad reprehenderit sint ipsum aliquip",
+            "cillum aliquip qui"
+          ],
+          "matches": [
+            "in laborum aliquip irure in",
+            "tempor ea culpa deserunt",
+            "sint elit Ut pariatur dolore"
+          ],
+          "notInList": [
+            "sit deserunt Duis",
+            "reprehenderit tempor officia Excepteur ullamco",
+            "sunt aliquip aute"
+          ],
+          "startsWith": "sed non velit ut"
+        },
+        "mailingAddressHash": {
+          "contains": "commodo",
+          "endsWith": "laborum proident cupidatat commodo adipisicing",
+          "equals": "ullamco nulla et cupidatat dolore",
+          "inList": [
+            "dolor in",
+            "proident sint officia",
+            "ullamco incididunt"
+          ],
+          "matches": [
+            "sint commodo Lorem amet sed",
+            "aliqua nisi",
+            "enim ut minim commodo"
+          ],
+          "notInList": [
+            "dolor",
+            "incididunt anim quis",
+            "minim magna irure voluptate nulla"
+          ],
+          "startsWith": "proident"
+        },
+        "propertyId": {
+          "contains": "sunt dolor Lorem et",
+          "endsWith": "fugiat occaecat dolore ut et",
+          "equals": "consequat do aute ut eu",
+          "inList": [
+            "magna ipsum",
+            "ut laboris",
+            "incididunt laboris do ipsum consectetur"
+          ],
+          "matches": [
+            "voluptate quis aute enim culpa",
+            "occaecat labore dolor",
+            "eu veniam sed"
+          ],
+          "notInList": [
+            "adipisicing quis sit",
+            "ex",
+            "reprehenderit sit anim aliqua elit"
+          ],
+          "startsWith": "Excepteur elit"
+        },
+        "taxId": {
+          "contains": "irure officia exercitation",
+          "endsWith": "elit consequat",
+          "equals": "adipisicing sed",
+          "inList": [
+            "commodo officia laborum aliquip",
+            "laborum",
+            "minim irure cillum tempor"
+          ],
+          "matches": [
+            "et Duis in velit",
+            "elit mollit aliquip",
+            "aliquip Lorem tempor"
+          ],
+          "notInList": [
+            "sed nulla ut nisi culpa",
+            "ut velit mollit elit qui",
+            "Excepteur"
+          ],
+          "startsWith": "sed"
+        }
+      },
+      "intel": {
+        "lastSoldDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2022-06-10"
+        },
+        "lastSoldPrice": {
+          "max": 13004950.379232928,
+          "min": 29651945.70667371
+        },
+        "lengthOfResidenceMonths": {
+          "max": -63508413.1689648,
+          "min": -62845567.375003375
+        },
+        "lengthOfResidenceYears": {
+          "max": -48339447.77940722,
+          "min": -13712566.69758667
+        },
+        "salePropensity": {
+          "max": 72249301.7504774,
+          "min": 51612271.198869765
+        }
+      },
+      "involuntaryLien": {
+        "documentType": {
+          "contains": "velit non occaecat minim",
+          "endsWith": "sunt",
+          "equals": "in nostrud Excepteur consectetur et",
+          "inList": [
+            "elit aute reprehenderit",
+            "nulla",
+            "enim quis"
+          ],
+          "matches": [
+            "ut Ut Excepteur reprehenderit",
+            "laborum velit pariatur",
+            "in in adipisicing"
+          ],
+          "notInList": [
+            "labore in",
+            "ea nisi nulla",
+            "nostrud"
+          ],
+          "startsWith": "eiusmod enim"
+        },
+        "documentTypeCode": {
+          "contains": "dolore esse",
+          "endsWith": "laboris qui sint",
+          "equals": "reprehenderit ut",
+          "inList": [
+            "ut",
+            "id",
+            "Duis magna sint culpa"
+          ],
+          "matches": [
+            "et",
+            "consequat",
+            "in adipisicing sed tempor Duis"
+          ],
+          "notInList": [
+            "enim sit pariatur irure velit",
+            "commodo",
+            "velit"
+          ],
+          "startsWith": "irure ea cillum dolor"
+        },
+        "filingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2024-05-20"
+        },
+        "lienAmount": {
+          "max": -77813769.8501588,
+          "min": -93648062.25380263
+        },
+        "lienType": {
+          "contains": "est",
+          "endsWith": "elit voluptate quis consectetur",
+          "equals": "aliqua est pariatur adipisicing do",
+          "inList": [
+            "Lorem officia consequat",
+            "sint ad",
+            "dolore proident tempor exercitation"
+          ],
+          "matches": [
+            "laborum culpa",
+            "eiusmod exercitation occaecat Lorem",
+            "id in velit"
+          ],
+          "notInList": [
+            "laborum et",
+            "ut",
+            "aliqua id elit in"
+          ],
+          "startsWith": "occaecat in veniam ipsum anim"
+        },
+        "lienTypeCode": {
+          "contains": "proident tempor est irure",
+          "endsWith": "laboris ullamco non mollit eu",
+          "equals": "id sint Excepteur ut",
+          "inList": [
+            "laboris in",
+            "ipsum incididunt fugiat",
+            "non amet ea Duis"
+          ],
+          "matches": [
+            "in nostrud consequat",
+            "cillum",
+            "Ut aute laboris cillum"
+          ],
+          "notInList": [
+            "adipisicing Duis",
+            "amet nulla irure dolore",
+            "tempor enim"
+          ],
+          "startsWith": "nisi esse enim cupidatat"
+        },
+        "recordingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2025-11-06"
+        }
+      },
+      "legal": {
+        "subdivisionName": {
+          "equals": "nulla commodo quis",
+          "inList": [
+            "culpa",
+            "mollit",
+            "proident nostrud cillum in"
+          ],
+          "notInList": [
+            "proident consequat elit eu est",
+            "et",
+            "aliquip adipisicing Lorem est aliqua"
+          ]
+        }
+      },
+      "listing": {
+        "daysOnMarket": {
+          "max": 72971240.44764966,
+          "min": -89890894.8734139
+        },
+        "failedListingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2026-03-02"
+        },
+        "listingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2024-02-09"
+        },
+        "price": {
+          "max": -67855488.5537634,
+          "min": -2339577.4532912076
+        },
+        "rental": {
+          "equals": false
+        },
+        "rentalPrice": {
+          "max": -79751464.87268662,
+          "min": 29480624.110143602
+        },
+        "soldDate": {
+          "maxDate": "2026-06-29",
+          "minDate": "2022-11-30"
+        },
+        "status": {
+          "contains": "irure ut sit proident",
+          "endsWith": "ut aliqua sint",
+          "equals": "in sed",
+          "inList": [
+            "enim anim Lorem sunt amet",
+            "officia et in",
+            "adipisicing Ut laborum pariatur"
+          ],
+          "matches": [
+            "adipisicing esse ea et Lorem",
+            "et enim",
+            "incididunt enim voluptate qui"
+          ],
+          "notInList": [
+            "dolore consectetur amet labore",
+            "aliqua officia",
+            "dolore do fugiat dolor"
+          ],
+          "startsWith": "nulla magna aliqua"
+        },
+        "statusCategory": {
+          "contains": "mollit laborum",
+          "endsWith": "voluptate pariatur occaecat ullamco",
+          "equals": "nostrud cillum",
+          "inList": [
+            "commodo eiusmod nostrud cillum sunt",
+            "ut",
+            "ad nisi nostrud"
+          ],
+          "matches": [
+            "do cillum consectetur",
+            "nostrud tempor ipsum dolore",
+            "in ipsum"
+          ],
+          "notInList": [
+            "qui id irure veniam eiusmod",
+            "ad Duis",
+            "in est dolor"
+          ],
+          "startsWith": "consectetur irure"
+        }
+      },
+      "lot": {
+        "lotDepthFeet": {
+          "max": 25380217.731367677,
+          "min": -63636440.79718065
+        },
+        "lotFrontageFeet": {
+          "max": 96704034.27963617,
+          "min": 21118882.15294227
+        },
+        "lotSizeAcres": {
+          "max": -81570027.62271342,
+          "min": 82581540.53113565
+        },
+        "lotSizeSquareFeet": {
+          "max": 44370662.87342295,
+          "min": 34941830.353334546
+        },
+        "zoningCode": {
+          "contains": "minim nisi dolor consequat",
+          "endsWith": "do pariatur consectetur exercitation",
+          "equals": "occaecat",
+          "inList": [
+            "ullamco dolor in",
+            "nostrud ex occaecat proident nulla",
+            "pariatur in ea mollit"
+          ],
+          "matches": [
+            "minim consequat aliqua esse",
+            "dolore",
+            "in"
+          ],
+          "notInList": [
+            "deserunt Ut sunt",
+            "aliquip ex cupidatat laborum elit",
+            "ad ut fugiat"
+          ],
+          "startsWith": "reprehenderit aliquip irure quis"
+        }
+      },
+      "openLien": {
+        "allLoanTypes": {
+          "contains": "sunt ea ad tempor",
+          "endsWith": "in cupidatat cillum",
+          "equals": "amet eiusmod",
+          "inList": [
+            "quis nisi",
+            "id adipisicing dolore occaecat",
+            "in"
+          ],
+          "matches": [
+            "Duis ea dolore",
+            "dolore sit",
+            "dolore fugiat commodo cupidatat"
+          ],
+          "notInList": [
+            "Excepteur in nisi",
+            "veniam",
+            "non anim"
+          ],
+          "startsWith": "ullamco sed elit"
+        },
+        "firstLoanInterestRate": {
+          "max": 28638461.881062612,
+          "min": -27138248.342424154
+        },
+        "firstLoanLtv": {
+          "max": 27333829.404997915,
+          "min": -6171657.915030226
+        },
+        "firstLoanRecordingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2026-06-05"
+        },
+        "firstLoanType": {
+          "contains": "amet mollit",
+          "endsWith": "do amet sit ipsum esse",
+          "equals": "id",
+          "inList": [
+            "anim nulla tempor sit",
+            "Lorem",
+            "dolore culpa"
+          ],
+          "matches": [
+            "sed dolore eu amet anim",
+            "sint ea",
+            "occaecat"
+          ],
+          "notInList": [
+            "sint dolore ipsum irure",
+            "mollit sunt enim",
+            "cillum voluptate nulla"
+          ],
+          "startsWith": "dolor fugiat amet"
+        },
+        "fourthLoanInterestRate": {
+          "max": 48459191.81071976,
+          "min": -50861794.65697251
+        },
+        "fourthLoanType": {
+          "contains": "fugiat laborum in reprehenderit",
+          "endsWith": "pariatur cillum",
+          "equals": "do dolor",
+          "inList": [
+            "aliqua reprehenderit Duis fugiat exercitation",
+            "nostrud mollit",
+            "tempor sint amet consectetur enim"
+          ],
+          "matches": [
+            "in",
+            "in",
+            "veniam aliqua minim deserunt id"
+          ],
+          "notInList": [
+            "aliqua fugiat aliquip nisi",
+            "elit dolor",
+            "eu Lorem consectetur Ut"
+          ],
+          "startsWith": "in aliquip elit ipsum"
+        },
+        "juniorLoanTypes": {
+          "contains": "officia esse eu consectetur",
+          "endsWith": "sit veniam eiusmod",
+          "equals": "amet",
+          "inList": [
+            "sunt dolor dolore",
+            "deserunt",
+            "aute dolore fugiat reprehenderit ut"
+          ],
+          "matches": [
+            "magna",
+            "dolor ullamco dolor",
+            "laborum veniam pariatur dolor anim"
+          ],
+          "notInList": [
+            "dolore ullamco minim aliquip",
+            "ut Excepteur elit nostrud voluptate",
+            "labore sed et"
+          ],
+          "startsWith": "mollit ut est"
+        },
+        "lastLoanRecordingDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2022-05-01"
+        },
+        "secondLoanInterestRate": {
+          "max": -80223703.02030219,
+          "min": -9769003.019267395
+        },
+        "secondLoanType": {
+          "contains": "consectetur",
+          "endsWith": "reprehenderit nisi",
+          "equals": "aute dolore",
+          "inList": [
+            "enim proident eiusmod",
+            "adipisicing culpa officia Lorem",
+            "ad qui mollit minim Ut"
+          ],
+          "matches": [
+            "tempor",
+            "aute nostrud do",
+            "consequat non aliquip quis"
+          ],
+          "notInList": [
+            "ut incididunt est laborum in",
+            "fugiat cupidatat sunt quis",
+            "qui id cupidatat tempor"
+          ],
+          "startsWith": "Lorem ipsum"
+        },
+        "thirdLoanInterestRate": {
+          "max": -70438961.87447949,
+          "min": -34123906.438402064
+        },
+        "thirdLoanType": {
+          "contains": "anim dolor nostrud ut",
+          "endsWith": "in ea sint incididunt",
+          "equals": "nostrud deserunt sunt Excepteur qui",
+          "inList": [
+            "commodo consectetur sed Ut ad",
+            "non pariatur Duis",
+            "anim aliqua"
+          ],
+          "matches": [
+            "eiusmod voluptate ut in consectetur",
+            "elit",
+            "aliquip"
+          ],
+          "notInList": [
+            "reprehenderit qui nulla",
+            "ea sunt laboris esse",
+            "deserunt"
+          ],
+          "startsWith": "velit eu reprehenderit in"
+        },
+        "totalOpenLienBalance": {
+          "max": -8197960.354638204,
+          "min": -50391809.661533184
+        },
+        "totalOpenLienCount": {
+          "max": -20223141.950442895,
+          "min": 49086172.28278658
+        }
+      },
+      "or": [],
+      "orQuickLists": [
+        "irure velit",
+        "ea irure sint dolor",
+        "pariatur"
+      ],
+      "owner": {
+        "firstName": {
+          "contains": "deserunt in ex ut",
+          "endsWith": "Excepteur aute",
+          "equals": "consectetur eu",
+          "inList": [
+            "magna ut tempor eiusmod",
+            "et cupidatat",
+            "quis consectetur"
+          ],
+          "matches": [
+            "amet eiusmod",
+            "occaecat proident",
+            "in sed"
+          ],
+          "notInList": [
+            "aliquip nostrud exercitation",
+            "dolore",
+            "reprehenderit"
+          ],
+          "startsWith": "aliquip"
+        },
+        "fullName": {
+          "contains": "Lorem amet Excepteur ad sit",
+          "endsWith": "velit",
+          "equals": "laborum",
+          "inList": [
+            "cillum dolor Lorem laborum",
+            "fugiat ipsum et non",
+            "qui"
+          ],
+          "matches": [
+            "mollit cillum magna labore consectetur",
+            "commodo do aute",
+            "cillum dolore occaecat"
+          ],
+          "notInList": [
+            "exercitation dolore fugiat amet",
+            "magna occaecat minim Duis",
+            "elit dolor"
+          ],
+          "startsWith": "ad nostrud"
+        },
+        "lastName": {
+          "contains": "nisi in commodo",
+          "endsWith": "aliquip Excepteur ex",
+          "equals": "consectetur",
+          "inList": [
+            "eu cillum proident",
+            "quis",
+            "mollit fugiat ut pariatur eiusmod"
+          ],
+          "matches": [
+            "ea",
+            "aliqua ad",
+            "sint laborum reprehenderit ut deserunt"
+          ],
+          "notInList": [
+            "voluptate minim enim",
+            "pariatur",
+            "laboris"
+          ],
+          "startsWith": "et"
+        },
+        "lengthOfResidenceMonths": {
+          "max": 39409924.86404282,
+          "min": 84113392.15267894
+        },
+        "lengthOfResidenceYears": {
+          "max": -19798569.981898457,
+          "min": -53488675.2778031
+        },
+        "mailingAddressHash": {
+          "contains": "occaecat esse fugiat labore eu",
+          "endsWith": "nulla enim",
+          "equals": "nisi nulla est",
+          "inList": [
+            "incididunt qui laboris",
+            "ullamco cillum",
+            "veniam cillum ut id dolore"
+          ],
+          "matches": [
+            "qui ex",
+            "labore reprehenderit aliqua",
+            "nulla in dolor"
+          ],
+          "notInList": [
+            "nostrud nisi non laborum",
+            "enim quis",
+            "incididunt est ullamco enim ea"
+          ],
+          "startsWith": "adipisicing cillum"
+        },
+        "mailingCity": {
+          "contains": "Lorem veniam ea",
+          "endsWith": "consectetur est nisi labore incididunt",
+          "equals": "occaecat cupidatat",
+          "inList": [
+            "Duis esse",
+            "dolore in",
+            "sint sunt"
+          ],
+          "matches": [
+            "laborum sed irure Lorem occaecat",
+            "et",
+            "aliquip dolore quis esse"
+          ],
+          "notInList": [
+            "commodo elit occaecat non",
+            "minim amet ipsum in qui",
+            "ullamco velit sit"
+          ],
+          "startsWith": "anim qui officia"
+        },
+        "mailingState": {
+          "contains": "sint velit pariatur Lorem est",
+          "endsWith": "non officia eu",
+          "equals": "sint nulla id",
+          "inList": [
+            "dolor aliquip tempor pariatur",
+            "sunt anim Excepteur",
+            "Ut"
+          ],
+          "matches": [
+            "pariatur",
+            "dolore",
+            "id qui"
+          ],
+          "notInList": [
+            "nulla voluptate laborum ut minim",
+            "Duis",
+            "officia in aute ea sint"
+          ],
+          "startsWith": "voluptate eiusmod dolor velit"
+        },
+        "mailingStreet": {
+          "contains": "in",
+          "endsWith": "ut dolore Duis do commodo",
+          "equals": "Ut do",
+          "inList": [
+            "amet in",
+            "culpa elit et in",
+            "et fugiat"
+          ],
+          "matches": [
+            "aliquip ullamco",
+            "sunt",
+            "et non"
+          ],
+          "notInList": [
+            "culpa occaecat",
+            "et Excepteur",
+            "cillum enim Ut nostrud"
+          ],
+          "startsWith": "dolore veniam sunt"
+        },
+        "mailingZip": {
+          "contains": "culpa velit",
+          "endsWith": "deserunt incididunt veniam consequat",
+          "equals": "elit officia Ut",
+          "inList": [
+            "do nostrud adipisicing",
+            "Lorem pariatur enim",
+            "reprehenderit veniam dolore Ut"
+          ],
+          "matches": [
+            "Ut dolore veniam",
+            "aute",
+            "sint quis"
+          ],
+          "notInList": [
+            "exercitation elit esse occaecat",
+            "tempor ut",
+            "anim nostrud in"
+          ],
+          "startsWith": "consequat"
+        },
+        "middleName": {
+          "contains": "dolor occaecat",
+          "endsWith": "irure sed laboris enim",
+          "equals": "ad Duis",
+          "inList": [
+            "magna",
+            "laboris ex nisi officia",
+            "qui"
+          ],
+          "matches": [
+            "dolore",
+            "aliquip",
+            "deserunt reprehenderit cupidatat do ipsum"
+          ],
+          "notInList": [
+            "cupidatat tempor qui eiusmod",
+            "voluptate ea irure aute",
+            "labore cupidatat occaecat sint irure"
+          ],
+          "startsWith": "cupidatat dolor laborum officia aute"
+        },
+        "ownerOccupied": {
+          "equals": true
+        },
+        "ownerStatusType": {
+          "contains": "amet cillum",
+          "endsWith": "ipsum tempor id occaecat",
+          "equals": "sed",
+          "inList": [
+            "voluptate Ut proident nulla",
+            "laborum proident",
+            "mollit do elit dolore reprehenderit"
+          ],
+          "matches": [
+            "pariatur fugiat aliqua labore",
+            "in cupidatat est eiusmod amet",
+            "Ut tempor"
+          ],
+          "notInList": [
+            "exercitation ut consectetur deserunt quis",
+            "ullamco sit adipisicing sint eu",
+            "eiusmod enim nulla dolor nostrud"
+          ],
+          "startsWith": "est nisi dolore laborum"
+        },
+        "ownershipStartDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2022-04-28"
+        }
+      },
+      "permit": {
+        "allTags": {
+          "contains": "aliquip",
+          "endsWith": "dolor ullamco nulla sunt",
+          "equals": "pariatur sed dolor",
+          "inList": [
+            "voluptate nostrud Duis",
+            "enim",
+            "consectetur"
+          ],
+          "matches": [
+            "veniam",
+            "enim ullamco Duis esse",
+            "dolor Lorem ut ea"
+          ],
+          "notInList": [
+            "mollit ipsum nulla Ut incididunt",
+            "irure labore ut enim qui",
+            "in"
+          ],
+          "startsWith": "aliqua nisi"
+        },
+        "earliestDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2023-09-22"
+        },
+        "latestDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2025-08-11"
+        },
+        "permitCount": {
+          "max": -35706910.4150187,
+          "min": -15204541.336393088
+        },
+        "totalJobValue": {
+          "max": -80392553.5074848,
+          "min": -83278413.35330863
+        }
+      },
+      "propertyOwnerProfile": {
+        "averageAssessedValue": {
+          "max": 77213396.09442076,
+          "min": -34431532.64919827
+        },
+        "averagePurchasePrice": {
+          "max": -55377991.683974616,
+          "min": 23069486.27147527
+        },
+        "averageYearBuilt": {
+          "max": -57543251.787362196,
+          "min": 75143238.1790415
+        },
+        "mortgagesAverageBalance": {
+          "max": 41595036.337896794,
+          "min": 4630173.199016169
+        },
+        "mortgagesCount": {
+          "max": -34402734.841362804,
+          "min": -92448817.85658623
+        },
+        "mortgagesTotalBalance": {
+          "max": -27491101.76589589,
+          "min": -72614192.21755862
+        },
+        "propertiesCount": {
+          "max": -53783843.58882748,
+          "min": -84985979.70728128
+        },
+        "propertiesTotalEquity": {
+          "max": 77803699.52867779,
+          "min": 65649390.416039556
+        },
+        "propertiesTotalEstimatedValue": {
+          "max": -48266938.9006763,
+          "min": 31816626.70036754
+        },
+        "totalPurchasePrice": {
+          "max": 50191820.18750733,
+          "min": -96464826.12741387
+        }
+      },
+      "query": "qui consectetur",
+      "quickList": "nostrud ea ex commodo fugiat",
+      "quickLists": [
+        "aute nostrud",
+        "dolore",
+        "velit dolore ullamco aliqua"
+      ],
+      "sale": {
+        "flipLength": {
+          "max": -99118436.3334028,
+          "min": 56627149.54391509
+        },
+        "flipLengthCategory": {
+          "max": -65845370.632189006,
+          "min": -85644112.09835699
+        },
+        "flipProfit": {
+          "max": -83582527.465707,
+          "min": 39642136.78431511
+        },
+        "lastSaleDate": {
+          "maxDate": "2026-06-28",
+          "minDate": "2024-05-20"
+        },
+        "lastSaleDocumentType": {
+          "contains": "esse aliquip",
+          "endsWith": "culpa nulla consequat incididunt",
+          "equals": "pariatur irure anim labore",
+          "inList": [
+            "est nulla dolore elit voluptate",
+            "et in sint occaecat",
+            "ex commodo Lorem fugiat"
+          ],
+          "matches": [
+            "Ut nisi aliquip",
+            "ex est",
+            "Excepteur eiusmod"
+          ],
+          "notInList": [
+            "adipisicing incididunt Excepteur commodo",
+            "dolore culpa et non ad",
+            "id voluptate proident commodo"
+          ],
+          "startsWith": "Duis occaecat aliquip elit in"
+        },
+        "lastSalePrice": {
+          "max": 99956149.01001278,
+          "min": 30725387.98773627
+        },
+        "lastSalePricePerSquareFoot": {
+          "max": 65708817.88319194,
+          "min": 30545697.60528192
+        }
+      },
+      "tax": {
+        "culpa4d": true,
+        "elit_c": -98502405.48534985,
+        "fugiat65e": -6570097.130760133,
+        "taxDelinquentYear": {
+          "max": -90652559.81197944,
+          "min": -36136977.753164425
+        }
+      },
+      "valuation": {
+        "equityCurrentEstimatedBalance": {
+          "max": -44030182.72673424,
+          "min": 1185148.9037539214
+        },
+        "equityPercent": {
+          "max": 25148590.163252488,
+          "min": 50730408.137822926
+        },
+        "estimatedEquity": {
+          "max": 69128438.79224268,
+          "min": 98535989.85816479
+        },
+        "estimatedValue": {
+          "max": -74304207.57223272,
+          "min": 57844624.3721115
+        },
+        "ltv": {
+          "max": -12209156.068318158,
+          "min": -38137963.028531164
+        }
+      }
+    },
+    "searchSessionMeta": {
+      "isNewSession": false,
+      "totalDelivered": 88073700
+    },
+    "warnings": []
+  },
+  "status": {
+    "code": 200,
+    "text": "OK"
+  }
+}

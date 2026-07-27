@@ -62,14 +62,20 @@ def distribute_contacts():
 
     try:
         # Get contacts from the source location using the agency's main API key
-        contacts = get_contacts_by_tag(tag, source_location_id)
+        contacts = get_contacts_by_tag(tag, source_location_id, api_key=AGENCY_API_KEY)
         
+        # Fields returned by the search API that the upsert endpoint rejects
+        _SEARCH_ONLY_FIELDS = {
+            'id', 'locationId', 'lastUpdated', 'dateAdded', 'dateUpdated',
+            'address', 'businessName', 'additionalEmails', 'additionalPhones',
+            'firstNameLowerCase', 'lastNameLowerCase', 'contactName',
+            'businessId', 'searchAfter', 'phoneLabel', 'followers',
+            'validEmail', 'dndSettings',
+        }
+
         for contact in contacts:
-            # Remove fields that shouldn't be copied to the new location
-            contact.pop('id', None)
-            contact.pop('locationId', None)
-            contact.pop('lastUpdated', None)
-            contact.pop('dateAdded', None)
+            for field in _SEARCH_ONLY_FIELDS:
+                contact.pop(field, None)
 
             # Set the new location id
             contact['locationId'] = location_id
