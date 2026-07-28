@@ -6,9 +6,8 @@ sudo apt-get update
 # Install Python, Pip, venv, and Nginx
 sudo apt-get install -y python3 python3-pip python3-venv nginx
 
-# Navigate to the project directory (assuming you clone it into /srv)
-# You might need to change this path
-PROJECT_DIR="/srv/ZillowGHLIntegration"
+# Navigate to the project directory
+PROJECT_DIR="/var/www/html"
 cd $PROJECT_DIR
 
 # Create a Python virtual environment

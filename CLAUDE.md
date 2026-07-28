@@ -37,7 +37,7 @@ Served via **Gunicorn** behind **Nginx** on a Linux host. Key files:
 - `nginx.conf` — proxies HTTP → the socket, serves `/static` directly
 - `deploy.sh` — bootstraps Python/Nginx and installs dependencies into `venv/`
 
-Project path on server: `/home/johnborelli/srv/ZillowGHLIntegration`
+Project path on server: `/var/www/html`
 
 ## Architecture
 

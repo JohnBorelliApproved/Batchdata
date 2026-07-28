@@ -3,12 +3,11 @@ Description=Gunicorn instance to serve ZillowGHLIntegration
 After=network.target
 
 [Service]
-User=www-data
-Group=www-data
-# You may need to change the working directory
-WorkingDirectory=/home/johnborelli/srv/ZillowGHLIntegration
-Environment="PATH=/home/johnborelli/srv/ZillowGHLIntegration/venv/bin"
-ExecStart=/home/johnborelli/srv/ZillowGHLIntegration/venv/bin/gunicorn --workers 3 --bind unix:/home/johnborelli/srv/ZillowGHLIntegration/zillow-ghl.sock -m 007 main:app
+User=johnborelli
+Group=johnborelli
+WorkingDirectory=/var/www/html
+Environment="PATH=/var/www/html/venv/bin"
+ExecStart=/var/www/html/venv/bin/gunicorn --workers 3 --bind unix:zillow-ghl.sock -m 000 main:app
 
 [Install]
 WantedBy=multi-user.target
