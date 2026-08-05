@@ -65,9 +65,9 @@ address rather than a guaranteed single listing page.
    `customFields: [{"id": field_id, "value": amenities_string}]` to each contact dict
    when `field_id` is set and amenities is non-empty.
 3. After `upsert_contact(...)` succeeds, read the contact `id` from the response and
-   call `create_note(contact_id, f"Zillow: {zillow_url}", api_key=AGENCY_API_KEY)`.
-   GHL renders plain URLs in note bodies as clickable links automatically, so no HTML
-   formatting is needed.
+   call `create_note(contact_id, f'<a href="{zillow_url}">Zillow Property Page</a>',
+   api_key=AGENCY_API_KEY)`. GHL note bodies render HTML, so the link shows as
+   "Zillow Property Page" text rather than the raw URL.
 
 ## New GHL API Functions (`ghl_api.py`)
 

@@ -68,6 +68,42 @@ def get_contacts_by_tag(tag, location_id, api_key=None):
     return all_contacts
 
 
+def get_custom_fields(location_id, api_key=None):
+    """
+    Retrieves all custom field definitions for a location.
+    """
+    key_to_use = api_key if api_key else LEGACY_API_KEY
+    headers = {
+        "Authorization": f"Bearer {key_to_use}",
+        "Version": API_VERSION,
+        "Accept": "application/json"
+    }
+
+    url = f"{GOHIGHLEVEL_API_URL}locations/{location_id}/customFields"
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()
+    return response.json().get('customFields', [])
+
+
+def create_note(contact_id, body, api_key=None):
+    """
+    Adds a note to a contact.
+    """
+    key_to_use = api_key if api_key else LEGACY_API_KEY
+    headers = {
+        "Authorization": f"Bearer {key_to_use}",
+        "Version": API_VERSION,
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+
+    url = f"{GOHIGHLEVEL_API_URL}contacts/{contact_id}/notes"
+    response = requests.post(url, json={"body": body}, headers=headers)
+    if not response.ok:
+        raise Exception(f"GHL note creation failed {response.status_code}: {response.text}")
+    return response.json()
+
+
 def get_tags():
     """
     Retrieves all tags for the agency location defined in .env.

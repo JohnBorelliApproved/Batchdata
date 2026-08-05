@@ -1,9 +1,10 @@
 import json
 import os
+import re
 import logging
 from flask import Flask, request, jsonify, render_template
 from batchdata_api import search_properties
-from ghl_api import get_contacts_by_tag, upsert_contact, get_tags
+from ghl_api import get_contacts_by_tag, upsert_contact, get_tags, get_custom_fields, create_note
 from config import AGENCY_LOCATION_ID, AGENCY_API_KEY
 
 logging.basicConfig(level=logging.INFO)
@@ -95,13 +96,63 @@ def job_status(job_id):
     return jsonify({"job_id": job_id, **job})
 
 
-def _build_contacts_from_property(prop):
+AMENITIES_CUSTOM_FIELD_NAME = "Property Amenities"
+
+
+def _slugify_address_part(value):
+    return re.sub(r'[^a-zA-Z0-9]+', '-', value.strip()).strip('-')
+
+
+def _build_zillow_url(prop):
+    """Builds a Zillow address-search URL from the property's address components."""
+    address = prop.get('address', {})
+    parts = [
+        address.get('street', ''),
+        address.get('city', ''),
+        address.get('state', ''),
+        address.get('zip', ''),
+    ]
+    slug = '-'.join(_slugify_address_part(p) for p in parts if p.strip())
+    return f"https://www.zillow.com/homes/{slug}_rb/"
+
+
+def _build_amenities(prop):
+    """Returns a newline-joined string of amenity lines extracted from a property dict."""
+    building = prop.get('building', {})
+    lot = prop.get('lot', {})
+    quick_lists = prop.get('quickLists', {})
+
+    lines = []
+
+    if building.get('bedroomCount'):
+        lines.append(f"{building['bedroomCount']} bedrooms")
+    if building.get('bathroomCount'):
+        lines.append(f"{building['bathroomCount']} bathrooms")
+    if building.get('livingAreaSquareFeet'):
+        lines.append(f"{building['livingAreaSquareFeet']} sq ft")
+    if lot.get('lotSizeAcres'):
+        lines.append(f"{lot['lotSizeAcres']} acre lot")
+    if building.get('garageParkingSpaceCount'):
+        lines.append(f"{building['garageParkingSpaceCount']}-car garage")
+    if building.get('pool') and building.get('poolCode', 'N') != 'N':
+        lines.append("Pool")
+    if quick_lists.get('hasHoa'):
+        lines.append("HOA")
+    for feature in building.get('features', []) or []:
+        lines.append(feature)
+
+    return '\n'.join(lines)
+
+
+def _build_contacts_from_property(prop, amenities_field_id=None):
     """Returns a list of GHL contact dicts, one per owner on the property."""
     owner = prop.get('owner', {})
     address = prop.get('address', {})
     names = owner.get('names', [])
     emails = owner.get('emails', [])
     phones = owner.get('phoneNumbers', [])
+
+    amenities = _build_amenities(prop)
 
     contacts = []
     for index, name in enumerate(names):
@@ -125,6 +176,9 @@ def _build_contacts_from_property(prop):
             if raw_phone and all(c in '0123456789 ()-+.' for c in raw_phone):
                 contact['phone'] = raw_phone
 
+        if amenities_field_id and amenities:
+            contact['customFields'] = [{"id": amenities_field_id, "value": amenities}]
+
         contacts.append(contact)
 
     return contacts
@@ -144,11 +198,26 @@ def batchdata_webhook(job_id):
     created = 0
     errors = 0
 
+    amenities_field_id = None
+    try:
+        fields = get_custom_fields(AGENCY_LOCATION_ID, api_key=AGENCY_API_KEY)
+        match = next((f for f in fields if f.get('name') == AMENITIES_CUSTOM_FIELD_NAME), None)
+        if match:
+            amenities_field_id = match.get('id')
+        else:
+            logger.warning(f"Custom field '{AMENITIES_CUSTOM_FIELD_NAME}' not found; contacts will be created without it.")
+    except Exception as e:
+        logger.warning(f"Failed to look up custom fields: {e}")
+
     for prop in properties:
-        for contact in _build_contacts_from_property(prop):
+        zillow_url = _build_zillow_url(prop)
+        for contact in _build_contacts_from_property(prop, amenities_field_id):
             try:
-                upsert_contact(contact, api_key=AGENCY_API_KEY)
+                result = upsert_contact(contact, api_key=AGENCY_API_KEY)
                 created += 1
+                contact_id = result.get('contact', {}).get('id') or result.get('id')
+                if contact_id:
+                    create_note(contact_id, f'<a href="{zillow_url}">Zillow Property Page</a>', api_key=AGENCY_API_KEY)
             except Exception as e:
                 logger.error(f"Failed to upsert contact {contact.get('firstName')} {contact.get('lastName')}: {e}")
                 errors += 1
