@@ -1,0 +1,18 @@
+0H2DA8hP4KVitXovylAL
+u9lXkl6hAFlBkHKLuJSU
+pit-cc34fe88-e88d-4d6d-9cc9-817eb6989a06
+batchdata-import
+
+run commands below over ssh
+
+Command 1 — dumps the actual live Nginx config for this domain (not just the repo's nginx.conf, which may be stale):
+
+  sudo nginx -T | grep -A 20 "server_name abeapi.com"
+
+  Command 2 — searches for a stray static index.html file that might be shadowing the Flask route:
+
+  sudo find / -maxdepth 6 -iname "index.html" -newer /etc/hostname 2>/dev/null
+
+  Run both on the server and paste the output back here.
+
+✻ Baked for 10s                        

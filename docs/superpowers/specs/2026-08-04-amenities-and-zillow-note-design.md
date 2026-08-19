@@ -1,6 +1,6 @@
 # Amenities Custom Field + Zillow Link Note — Design
 
-## Purpose
+## Purpose 
 
 When a BatchData webhook creates GHL contacts from FSBO property search results, each
 contact should also get:

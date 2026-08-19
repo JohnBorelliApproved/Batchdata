@@ -1,9 +1,6 @@
 import uuid
 import requests
-from config import BATCHDATA_SANDBOX_API_KEY, BATCHDATA_API_KEY, APP_BASE_URL
-
-# Use sandbox key for testing; fall back to legacy key if not set
-_ACTIVE_KEY = BATCHDATA_SANDBOX_API_KEY or BATCHDATA_API_KEY
+from config import BATCHDATA_API_KEY, APP_BASE_URL
 
 BATCHDATA_API_URL = "https://api.batchdata.com/api/v1"
 
@@ -16,7 +13,7 @@ def search_properties(zip_codes=None, city=None, state=None):
     job_id = str(uuid.uuid4())
 
     headers = {
-        "Authorization": f"Bearer {_ACTIVE_KEY}",
+        "Authorization": f"Bearer {BATCHDATA_API_KEY}",
         "Content-Type": "application/json"
     }
 

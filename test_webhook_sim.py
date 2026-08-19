@@ -10,7 +10,7 @@ import os
 
 load_dotenv()
 
-BATCHDATA_KEY = os.getenv('BATCHDATA_SANDBOX_API_KEY')
+BATCHDATA_KEY = os.getenv('BATCHDATA_API_KEY')
 LOCAL_BASE = 'http://localhost:5002'
 
 def fetch_batchdata_sample(zip_code='90210', take=2):

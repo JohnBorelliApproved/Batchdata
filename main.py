@@ -2,7 +2,7 @@ import json
 import os
 import re
 import logging
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, abort
 from batchdata_api import search_properties
 from ghl_api import get_contacts_by_tag, upsert_contact, get_tags, get_custom_fields, create_note
 from config import AGENCY_LOCATION_ID, AGENCY_API_KEY
@@ -19,8 +19,21 @@ job_store = {}
 
 app = Flask(__name__)
 
+GHL_FRAME_ANCESTOR = "https://app.gohighlevel.com"
+
+@app.after_request
+def set_frame_ancestors(response):
+    # Only GHL is allowed to iframe this app
+    response.headers['Content-Security-Policy'] = f"frame-ancestors {GHL_FRAME_ANCESTOR}"
+    return response
+
 @app.route('/')
 def home():
+    # GHL iframes send the parent dashboard as Referer on the initial load;
+    # a direct browser visit has no referer (or a different one) and gets blocked.
+    referrer = request.referrer or ""
+    if not referrer.startswith(GHL_FRAME_ANCESTOR):
+        abort(403)
     return render_template('index.html')
 
 @app.route('/get-tags', methods=['GET'])
