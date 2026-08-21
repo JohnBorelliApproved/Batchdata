@@ -1,6 +1,9 @@
+import logging
 import uuid
 import requests
 from config import BATCHDATA_API_KEY, APP_BASE_URL
+
+logger = logging.getLogger(__name__)
 
 BATCHDATA_API_URL = "https://api.batchdata.com/api/v1"
 
@@ -35,6 +38,8 @@ def search_properties(zip_codes=None, city=None, state=None):
     }
 
     response = requests.post(f"{BATCHDATA_API_URL}/property/search/async", json=payload, headers=headers)
+    if not response.ok:
+        logger.error(f"BatchData search failed {response.status_code}: {response.text}")
     response.raise_for_status()
     result = response.json()
     batchdata_request_id = result.get('requestId')
