@@ -1,0 +1,1203 @@
+{
+  "status": {
+    "code": 200,
+    "text": "OK"
+  },
+  "results": {
+    "properties": [
+      {
+        "_id": "0e3367583a71cac723416b6abf90ca6f",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "50",
+          "street": "50 Cedar Rd",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "8323",
+          "latitude": 29.114439,
+          "longitude": -82.030564,
+          "countyFipsCode": "12083",
+          "hash": "98af4b8fe7e5251035d663933baf36d4"
+        },
+        "ids": {
+          "apn": "9009-0058-21"
+        },
+        "owner": {
+          "fullName": "50 CEDAR ROAD LLC",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "25 SE 2nd Ave Ste 550",
+            "city": "Miami",
+            "county": "Miami-Dade",
+            "state": "FL",
+            "zip": "33131",
+            "zipPlus4": "1601",
+            "hash": "5d740c87ffaffb5ef7a2af4f6274ecb3",
+            "deliveryPointCode": "254",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "last": "50 CEDAR ROAD LLC",
+              "full": "50 CEDAR ROAD LLC"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "9c12cdf3b64516343f100f9f1c7cec37",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "2",
+          "street": "2 Mulligan Ct",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5011",
+          "latitude": 29.120303,
+          "longitude": -82.005549,
+          "countyFipsCode": "12083",
+          "hash": "bc2a796d754908dfd8c782187414a5c2"
+        },
+        "ids": {
+          "apn": "9071-0012-07"
+        },
+        "owner": {
+          "fullName": "Monica R Drawdy; Branson L Grant",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "2 Mulligan Ct",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5011",
+            "hash": "bc2a796d754908dfd8c782187414a5c2",
+            "deliveryPointCode": "021",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Monica R",
+              "last": "Drawdy",
+              "full": "Monica R Drawdy"
+            },
+            {
+              "first": "Branson L",
+              "last": "Grant",
+              "full": "Branson L Grant"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "08c08d8023db1602d39c3c1f94bbf8f7",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "30",
+          "street": "30 Emerald Run",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2330",
+          "latitude": 29.100952,
+          "longitude": -82.003976,
+          "countyFipsCode": "12083",
+          "hash": "fe906f88a8dbedee1133642065ee0839"
+        },
+        "ids": {
+          "apn": "9011-0193-30"
+        },
+        "owner": {
+          "fullName": "Samantha Ferguson; Cassidy Hurst",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "30 Emerald Run",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2330",
+            "hash": "fe906f88a8dbedee1133642065ee0839",
+            "deliveryPointCode": "309",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Samantha",
+              "last": "Ferguson",
+              "full": "Samantha Ferguson"
+            },
+            {
+              "first": "Cassidy",
+              "last": "Hurst",
+              "full": "Cassidy Hurst"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "f777bae022f5edd865f90d7721b72179",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "33",
+          "street": "33 Pine Trace Crse",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2802",
+          "latitude": 29.130013,
+          "longitude": -82.049079,
+          "countyFipsCode": "12083",
+          "hash": "67964e389c268862658bc71702e72262"
+        },
+        "ids": {
+          "apn": "37471-000-01"
+        },
+        "owner": {
+          "fullName": "David R Vangorp; Joyce A Vangorp",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "33 Pine Trace Crse",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2802",
+            "hash": "67964e389c268862658bc71702e72262",
+            "deliveryPointCode": "332",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "David R",
+              "last": "Vangorp",
+              "full": "David R Vangorp"
+            },
+            {
+              "first": "Joyce A",
+              "last": "Vangorp",
+              "full": "Joyce A Vangorp"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "3a81c01ddebcaff3db875731d42e3371",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "567",
+          "street": "567 Silver Course Run",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2270",
+          "latitude": 29.115877,
+          "longitude": -82.009387,
+          "countyFipsCode": "12083",
+          "hash": "9da4ad7a14951fd776edef2305b38bab"
+        },
+        "ids": {
+          "apn": "9040-1780-14"
+        },
+        "owner": {
+          "fullName": "Lazch Michael Martinez",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "567 Silver Course Run",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2270",
+            "hash": "9da4ad7a14951fd776edef2305b38bab",
+            "deliveryPointCode": "676",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Lazch Michael",
+              "last": "Martinez",
+              "full": "Lazch Michael Martinez"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "8f295dc10b8a123584c06f148919bed8",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "4",
+          "street": "4 Locust Run Ln",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2567",
+          "latitude": 29.063656,
+          "longitude": -81.954169,
+          "countyFipsCode": "12083",
+          "hash": "db773219ddb9e381c305d9eaf6adfc83"
+        },
+        "ids": {
+          "apn": "9034-1056-02"
+        },
+        "owner": {
+          "fullName": "George Bruce Johnston; Windy Marie Johnston",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "3516 S MacDill Ave",
+            "city": "Tampa",
+            "county": "Hillsborough",
+            "state": "FL",
+            "zip": "33629",
+            "zipPlus4": "8906",
+            "hash": "21095d266414880c64af44ee301f2354",
+            "deliveryPointCode": "167",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "George",
+              "middle": "Bruce",
+              "last": "Johnston",
+              "full": "George Bruce Johnston"
+            },
+            {
+              "first": "Windy",
+              "middle": "Marie",
+              "last": "Johnston",
+              "full": "Windy Marie Johnston"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "4d4f1c5f5319a40ccfa05e123e35754b",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "71",
+          "street": "71 Golf View Dr",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5002",
+          "latitude": 29.127688,
+          "longitude": -82.01248,
+          "countyFipsCode": "12083",
+          "hash": "e84ffb06c8c35daaf890bfe985a2d35c"
+        },
+        "ids": {
+          "apn": "9071-0001-15"
+        },
+        "owner": {
+          "fullName": "Jaquavis Woods; Artavis Lamont Woods",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "71 Golf View Dr",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5002",
+            "hash": "e84ffb06c8c35daaf890bfe985a2d35c",
+            "deliveryPointCode": "715",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Jaquavis",
+              "last": "Woods",
+              "full": "Jaquavis Woods"
+            },
+            {
+              "first": "Artavis",
+              "middle": "Lamont",
+              "last": "Woods",
+              "full": "Artavis Lamont Woods"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "4682a0bd511e66b1c8e80129ab0ddbd6",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "30",
+          "street": "30 Lake Diamond Ave",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5041",
+          "latitude": 29.12264,
+          "longitude": -82.012789,
+          "countyFipsCode": "12083",
+          "hash": "c7ac6dfafb4ff2b46d767e9638d8994c"
+        },
+        "ids": {
+          "apn": "9071-0007-01"
+        },
+        "owner": {
+          "fullName": "Raul Alexis Morales-castro; Arianette Baguez-rios",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "30 Lake Diamond Ave",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5041",
+            "hash": "c7ac6dfafb4ff2b46d767e9638d8994c",
+            "deliveryPointCode": "307",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Raul",
+              "middle": "Alexis",
+              "last": "Morales-castro",
+              "full": "Raul Alexis Morales-castro"
+            },
+            {
+              "first": "Arianette",
+              "last": "Baguez-rios",
+              "full": "Arianette Baguez-rios"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "8c14fa75b8d7877460758bdff8dcf8fa",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "14",
+          "street": "14 Diamond Island Ave",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5008",
+          "latitude": 29.125901,
+          "longitude": -82.009605,
+          "countyFipsCode": "12083",
+          "hash": "8626b5f6c8a5a966cb7ff76aca561f0f"
+        },
+        "ids": {
+          "apn": "9071-0009-05"
+        },
+        "owner": {
+          "fullName": "Jessica Pruitt; Patrick Pruitt",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "14 Diamond Island Ave",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5008",
+            "hash": "8626b5f6c8a5a966cb7ff76aca561f0f",
+            "deliveryPointCode": "142",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Jessica",
+              "last": "Pruitt",
+              "full": "Jessica Pruitt"
+            },
+            {
+              "first": "Patrick",
+              "last": "Pruitt",
+              "full": "Patrick Pruitt"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "f2017a7821234175fa90df8a3080743e",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "301",
+          "street": "301 Emerald Rd",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2487",
+          "latitude": 29.087477,
+          "longitude": -81.979335,
+          "countyFipsCode": "12083",
+          "hash": "2387e7d1e4dfbadf04d8c4b16f690b37"
+        },
+        "ids": {
+          "apn": "9032-0000-05"
+        },
+        "owner": {
+          "fullName": "Eshwerdatt Victor Puran; Seema Puran",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "301 Emerald Rd",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2487",
+            "hash": "2387e7d1e4dfbadf04d8c4b16f690b37",
+            "deliveryPointCode": "018",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Eshwerdatt Victor",
+              "last": "Puran",
+              "full": "Eshwerdatt Victor Puran"
+            },
+            {
+              "first": "Seema",
+              "last": "Puran",
+              "full": "Seema Puran"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "341d17f1946b0e1b0b2f7e8554f8d987",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "27",
+          "street": "27 Almond Drive Run",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "9030",
+          "latitude": 29.148546,
+          "longitude": -82.052644,
+          "countyFipsCode": "12083",
+          "hash": "88d0af51de8233d975e3d67de45cd986"
+        },
+        "ids": {
+          "apn": "9022-0472-02"
+        },
+        "owner": {
+          "fullName": "John James Henderson; Faith Elaine Henderson",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "27 Almond Dr",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "9009",
+            "hash": "ca3bf447aa130392e9554b59f2dd911b",
+            "deliveryPointCode": "273",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "John James",
+              "last": "Henderson",
+              "full": "John James Henderson"
+            },
+            {
+              "first": "Faith Elaine",
+              "last": "Henderson",
+              "full": "Faith Elaine Henderson"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "76020f4eb90e3290ebebe00ff4d1fac1",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "302",
+          "street": "302 Oak Track Crse",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "9310",
+          "latitude": 29.082059,
+          "longitude": -81.979157,
+          "countyFipsCode": "12083",
+          "hash": "e3891181a630de2b09e1efb8f5c363c3"
+        },
+        "ids": {
+          "apn": "9028-0840-08"
+        },
+        "owner": {
+          "fullName": "Julie N Anderson; Wayne A Anderson",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "302 Oak Track Crse",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "9310",
+            "hash": "e3891181a630de2b09e1efb8f5c363c3",
+            "deliveryPointCode": "025",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Julie",
+              "middle": "N",
+              "last": "Anderson",
+              "full": "Julie N Anderson"
+            },
+            {
+              "first": "Wayne",
+              "middle": "A",
+              "last": "Anderson",
+              "full": "Wayne A Anderson"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "56f6bb611b8389f02cdff8e2101bc55e",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "6930",
+          "street": "6930 Cherry Pass",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "3251",
+          "latitude": 29.167781,
+          "longitude": -82.037971,
+          "countyFipsCode": "12083",
+          "hash": "2ab4b1214c2dcb46c44aceba219eb91b"
+        },
+        "ids": {
+          "apn": "9023-0510-11"
+        },
+        "owner": {
+          "fullName": "Devin G Winton",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "4415 Tuna Dr",
+            "city": "Tampa",
+            "county": "Hillsborough",
+            "state": "FL",
+            "zip": "33617",
+            "zipPlus4": "8325",
+            "hash": "324065c5268198f3fa7fa3d8495b9ba1",
+            "deliveryPointCode": "156",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Devin G",
+              "last": "Winton",
+              "full": "Devin G Winton"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "6a4c46894aecc7ab01a888cd7e1c6f8f",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "10",
+          "street": "10 Silver Dr",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2303",
+          "latitude": 29.101557,
+          "longitude": -82.000263,
+          "countyFipsCode": "12083",
+          "hash": "3b8dbdb6bb98cfd4be359e21c0325aa2"
+        },
+        "ids": {
+          "apn": "9001-0032-18"
+        },
+        "owner": {
+          "fullName": "Lawrence Bunce; Marcia Bunce",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "10 Silver Dr",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2303",
+            "hash": "3b8dbdb6bb98cfd4be359e21c0325aa2",
+            "deliveryPointCode": "101",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Lawrence",
+              "last": "Bunce",
+              "full": "Lawrence Bunce"
+            },
+            {
+              "first": "Marcia",
+              "last": "Bunce",
+              "full": "Marcia Bunce"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "453989611c2b7d7b5c7d699d5ddcc98d",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "44",
+          "street": "44 Lake Diamond Blvd",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5003",
+          "latitude": 29.125632,
+          "longitude": -82.013684,
+          "countyFipsCode": "12083",
+          "hash": "bf263db1564645131adbfab9a3aa5733"
+        },
+        "ids": {
+          "apn": "9071-0002-07"
+        },
+        "owner": {
+          "fullName": "Harold Eugene Loflin; Barbara Joan Loflin",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "44 Lake Diamond Blvd",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5003",
+            "hash": "bf263db1564645131adbfab9a3aa5733",
+            "deliveryPointCode": "444",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Harold Eugene",
+              "last": "Loflin",
+              "full": "Harold Eugene Loflin"
+            },
+            {
+              "first": "Barbara Joan",
+              "last": "Loflin",
+              "full": "Barbara Joan Loflin"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "133b9bb9e7a92e95b1ade7866ecf2eaa",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "13",
+          "street": "13 Hemlock Trace Run",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "4308",
+          "latitude": 29.129167,
+          "longitude": -82.021726,
+          "countyFipsCode": "12083",
+          "hash": "c711fe841192b01c68c55a5d3a5e75d7"
+        },
+        "ids": {
+          "apn": "9007-0117-24"
+        },
+        "owner": {
+          "fullName": "Alice R Murtha",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "13 Hemlock Trace Run",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "4308",
+            "hash": "c711fe841192b01c68c55a5d3a5e75d7",
+            "deliveryPointCode": "131",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Alice R",
+              "last": "Murtha",
+              "full": "Alice R Murtha"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "3e5493684237f4f9587a202d22cb699c",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "25",
+          "street": "25 Emerald Dr",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2316",
+          "latitude": 29.100782,
+          "longitude": -82.004914,
+          "countyFipsCode": "12083",
+          "hash": "3c12b28e150e9c4b7abeb0615ff31ef1"
+        },
+        "ids": {
+          "apn": "9011-0193-25"
+        },
+        "owner": {
+          "fullName": "Judith A Foreman; Stanley D Foreman",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "25 Emerald Dr",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2316",
+            "hash": "3c12b28e150e9c4b7abeb0615ff31ef1",
+            "deliveryPointCode": "251",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Judith",
+              "middle": "A",
+              "last": "Foreman",
+              "full": "Judith A Foreman"
+            },
+            {
+              "first": "Stanley",
+              "middle": "D",
+              "last": "Foreman",
+              "full": "Stanley D Foreman"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "796cf1ea51dc4c06cacc343b36dc69d4",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "9348",
+          "street": "9348 SE Maricamp Rd",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2391",
+          "latitude": 29.1036,
+          "longitude": -82.012495,
+          "countyFipsCode": "12083",
+          "hash": "9451f934d788d7d8f3509688c498fcf3"
+        },
+        "ids": {
+          "apn": "9047-1524-18"
+        },
+        "owner": {
+          "fullName": "Lydia Maharaj; Sham D Maharaj",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "9348 SE Maricamp Rd",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2391",
+            "hash": "9451f934d788d7d8f3509688c498fcf3",
+            "deliveryPointCode": "483",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Lydia",
+              "last": "Maharaj",
+              "full": "Lydia Maharaj"
+            },
+            {
+              "first": "Sham D",
+              "last": "Maharaj",
+              "full": "Sham D Maharaj"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "287c4f696cd54f3124b1f30486b04dfd",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "6081",
+          "street": "6081 SE 4th Pl",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "7916",
+          "latitude": 29.182414,
+          "longitude": -82.049936,
+          "countyFipsCode": "12083",
+          "hash": "ef535aa78ef65d4ca7545398e842fd02"
+        },
+        "ids": {
+          "apn": "31856-007-09"
+        },
+        "owner": {
+          "fullName": "James M Potts; Lindsey M Potts",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "6081 SE 4th Pl",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "7916",
+            "hash": "ef535aa78ef65d4ca7545398e842fd02",
+            "deliveryPointCode": "818",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "James M",
+              "last": "Potts",
+              "full": "James M Potts"
+            },
+            {
+              "first": "Lindsey M",
+              "last": "Potts",
+              "full": "Lindsey M Potts"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "98ee41eaa263b932f54a5c046194c21e",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "706",
+          "street": "706 Lake Diamond Ave",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5014",
+          "latitude": 29.120574,
+          "longitude": -82.006619,
+          "countyFipsCode": "12083",
+          "hash": "f9239fbfe4775ecc9bff687d44163e31"
+        },
+        "ids": {
+          "apn": "9071-0011-03"
+        },
+        "owner": {
+          "fullName": "Christopher Newcombe; Julie A Newcombe",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "706 Lake Diamond Ave",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5014",
+            "hash": "f9239fbfe4775ecc9bff687d44163e31",
+            "deliveryPointCode": "064",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Christopher",
+              "last": "Newcombe",
+              "full": "Christopher Newcombe"
+            },
+            {
+              "first": "Julie A",
+              "last": "Newcombe",
+              "full": "Julie A Newcombe"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "11e2d078c26d734546142c75a85a8a4a",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "234",
+          "street": "234 Locust Pass Loop",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "9387",
+          "latitude": 29.08641,
+          "longitude": -81.972552,
+          "countyFipsCode": "12083",
+          "hash": "01ad0bbe29b1fe66ef637b849ee38d23"
+        },
+        "ids": {
+          "apn": "9032-0870-19"
+        },
+        "owner": {
+          "fullName": "Jeffrey John Humphrey; Shanna Humphrey",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "234 Locust Pass Loop",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "9387",
+            "hash": "01ad0bbe29b1fe66ef637b849ee38d23",
+            "deliveryPointCode": "346",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Jeffrey John",
+              "last": "Humphrey",
+              "full": "Jeffrey John Humphrey"
+            },
+            {
+              "first": "Shanna",
+              "last": "Humphrey",
+              "full": "Shanna Humphrey"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "ddc89d38b796f21ba6274ab903a6afd6",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "15",
+          "street": "15 Hemlock Pl",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "4127",
+          "latitude": 29.127783,
+          "longitude": -82.024574,
+          "countyFipsCode": "12083",
+          "hash": "5df4fddf0ddc375d2d066b18d87fad15"
+        },
+        "ids": {
+          "apn": "9007-0114-01"
+        },
+        "owner": {
+          "fullName": "Jeanne Channell",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "15 Hemlock Pl",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "4127",
+            "hash": "5df4fddf0ddc375d2d066b18d87fad15",
+            "deliveryPointCode": "150",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Jeanne",
+              "last": "Channell",
+              "full": "Jeanne Channell"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "56309020ae9c5810ee4d8e80b08b1b1c",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "19",
+          "street": "19 Greenway Plantation",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5026",
+          "latitude": 29.121385,
+          "longitude": -82.003816,
+          "countyFipsCode": "12083",
+          "hash": "b4f3d2f351c0d83e409ed1605088cebb"
+        },
+        "ids": {
+          "apn": "9071-0014-03"
+        },
+        "owner": {
+          "fullName": "Marshall L Milam; Mary Jane Milam",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "19 Greenway Plantation",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5026",
+            "hash": "b4f3d2f351c0d83e409ed1605088cebb",
+            "deliveryPointCode": "197",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Marshall L",
+              "last": "Milam",
+              "full": "Marshall L Milam"
+            },
+            {
+              "first": "Mary Jane",
+              "last": "Milam",
+              "full": "Mary Jane Milam"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "60da6ccd66c6f1ded0abd69320cfe248",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "5",
+          "street": "5 Olive Ln",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "5514",
+          "latitude": 29.073524,
+          "longitude": -82.011344,
+          "countyFipsCode": "12083",
+          "hash": "26af61b9fcaa81ed7cdce863c41ae1a8"
+        },
+        "ids": {
+          "apn": "9012-0191-03"
+        },
+        "owner": {
+          "fullName": "Michael R Harris; Mary C Harris",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "5 Olive Ln",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "5514",
+            "hash": "26af61b9fcaa81ed7cdce863c41ae1a8",
+            "deliveryPointCode": "050",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Michael R",
+              "last": "Harris",
+              "full": "Michael R Harris"
+            },
+            {
+              "first": "Mary C",
+              "last": "Harris",
+              "full": "Mary C Harris"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "71c7eaed68631dc98e38b5e12574bed1",
+        "address": {
+          "addressValidity": "Valid",
+          "houseNumber": "2",
+          "street": "2 Hickory Track Ter",
+          "city": "Ocala",
+          "county": "Marion",
+          "state": "FL",
+          "zip": "34472",
+          "zipPlus4": "2459",
+          "latitude": 29.085642,
+          "longitude": -81.989183,
+          "countyFipsCode": "12083",
+          "hash": "1e17dd9ccfcdf89a42e77fa29e53fd9e"
+        },
+        "ids": {
+          "apn": "9028-0857-42"
+        },
+        "owner": {
+          "fullName": "Olivia Dorely Cantu",
+          "mailingAddress": {
+            "addressValidity": "Valid",
+            "street": "2 Hickory Track Ter",
+            "city": "Ocala",
+            "county": "Marion",
+            "state": "FL",
+            "zip": "34472",
+            "zipPlus4": "2459",
+            "hash": "1e17dd9ccfcdf89a42e77fa29e53fd9e",
+            "deliveryPointCode": "028",
+            "dpvMatchCode": "Y",
+            "dpvFootnotes": "AABB"
+          },
+          "names": [
+            {
+              "first": "Olivia Dorely",
+              "last": "Cantu",
+              "full": "Olivia Dorely Cantu"
+            }
+          ]
+        }
+      }
+    ],
+    "searchCriteria": {
+      "query": "34472"
+    },
+    "meta": {
+      "performance": {
+        "totalRequestTime": 753,
+        "startTime": "2026-08-22T01:21:24.848Z",
+        "endTime": "2026-08-22T01:21:24.931Z"
+      },
+      "results": {
+        "resultCount": 25,
+        "resultsFound": 15686
+      },
+      "apiVersion": "6.91.0",
+      "requestId": "01M0KGXV6TS323A1Z3KHRER7HJ"
+    }
+  }
+}

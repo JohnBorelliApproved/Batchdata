@@ -32,6 +32,7 @@ def search_properties(zip_codes=None, city=None, state=None):
         "options": {
             "skip": 0,
             "take": 25,
+            "skipTrace": True,
             "webhookUrl": f"{APP_BASE_URL}/batchdata-webhook/{job_id}",
             "errorWebhookUrl": f"{APP_BASE_URL}/batchdata-webhook-error/{job_id}"
         }

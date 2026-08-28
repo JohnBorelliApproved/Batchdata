@@ -225,6 +225,9 @@ def batchdata_webhook(job_id):
     for prop in properties:
         zillow_url = _build_zillow_url(prop)
         for contact in _build_contacts_from_property(prop, amenities_field_id):
+            if 'email' not in contact and 'phone' not in contact:
+                logger.info(f"Skipping contact {contact.get('firstName')} {contact.get('lastName')}: no email or phone from skip trace")
+                continue
             try:
                 result = upsert_contact(contact, api_key=AGENCY_API_KEY)
                 created += 1
