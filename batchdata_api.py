@@ -38,7 +38,7 @@ def search_properties(zip_codes=None, city=None, state=None):
         }
     }
 
-    response = requests.post(f"{BATCHDATA_API_URL}/property/search/async", json=payload, headers=headers)
+    response = requests.post(f"{BATCHDATA_API_URL}/property/search/async", json=payload, headers=headers, timeout=30)
     if not response.ok:
         logger.error(f"BatchData search failed {response.status_code}: {response.text}")
     response.raise_for_status()

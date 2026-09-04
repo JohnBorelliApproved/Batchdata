@@ -4,6 +4,10 @@ from config import GOHIGHLEVEL_API_KEY as LEGACY_API_KEY, AGENCY_API_KEY, AGENCY
 GOHIGHLEVEL_API_URL = "https://services.leadconnectorhq.com/"
 API_VERSION = "2021-07-28"
 
+# Cap every GHL call so one stalled request can't pin a worker/thread forever
+# (this is what let the BatchData webhook hang past its 30s limit).
+REQUEST_TIMEOUT = 15
+
 def upsert_contact(contact_data, api_key=None):
     """
     Creates or updates a contact in GoHighLevel.
@@ -18,7 +22,7 @@ def upsert_contact(contact_data, api_key=None):
     }
 
     url = f"{GOHIGHLEVEL_API_URL}contacts/upsert"
-    response = requests.post(url, json=contact_data, headers=headers)
+    response = requests.post(url, json=contact_data, headers=headers, timeout=REQUEST_TIMEOUT)
     if not response.ok:
         raise Exception(f"GHL upsert failed {response.status_code}: {response.text}")
     return response.json()
@@ -50,7 +54,7 @@ def get_contacts_by_tag(tag, location_id, api_key=None):
         if search_after is not None:
             payload["searchAfter"] = search_after
 
-        response = requests.post(url, json=payload, headers=headers)
+        response = requests.post(url, json=payload, headers=headers, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         body = response.json()
 
@@ -80,7 +84,7 @@ def get_custom_fields(location_id, api_key=None):
     }
 
     url = f"{GOHIGHLEVEL_API_URL}locations/{location_id}/customFields"
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
     response.raise_for_status()
     return response.json().get('customFields', [])
 
@@ -98,7 +102,7 @@ def create_note(contact_id, body, api_key=None):
     }
 
     url = f"{GOHIGHLEVEL_API_URL}contacts/{contact_id}/notes"
-    response = requests.post(url, json={"body": body}, headers=headers)
+    response = requests.post(url, json={"body": body}, headers=headers, timeout=REQUEST_TIMEOUT)
     if not response.ok:
         raise Exception(f"GHL note creation failed {response.status_code}: {response.text}")
     return response.json()
@@ -116,6 +120,6 @@ def get_tags():
     }
 
     url = f"{GOHIGHLEVEL_API_URL}locations/{AGENCY_LOCATION_ID}/tags"
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
     response.raise_for_status()
     return response.json().get('tags', [])

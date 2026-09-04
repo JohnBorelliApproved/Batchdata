@@ -2,6 +2,7 @@ import json
 import os
 import re
 import logging
+import threading
 from flask import Flask, request, jsonify, render_template, abort
 from batchdata_api import search_properties
 from ghl_api import get_contacts_by_tag, upsert_contact, get_tags, get_custom_fields, create_note
@@ -157,13 +158,40 @@ def _build_amenities(prop):
     return '\n'.join(lines)
 
 
+def _rank_phone_numbers(phone_entries):
+    """Ranks a property's skip-traced phone numbers best-first.
+
+    Skip trace returns a household pool of numbers, not one per owner, so we
+    rank the whole list once instead of trusting array position. Preference:
+    reachable first, then mobile over landline, then BatchData's confidence
+    score. DNC numbers are kept here — filtering those for call compliance is
+    a separate decision.
+    """
+    ranked = []
+    for entry in phone_entries or []:
+        raw_phone = (entry.get('number') or '').strip()
+        digits = re.sub(r'\D', '', raw_phone)
+        # US numbers are 10 digits, 11 with country code; allow a little slack.
+        if not (10 <= len(digits) <= 15):
+            continue
+        sort_key = (
+            0 if entry.get('reachable') else 1,
+            0 if (entry.get('type') or '').lower() == 'mobile' else 1,
+            -(entry.get('score') or 0),
+        )
+        ranked.append((sort_key, raw_phone))
+
+    ranked.sort(key=lambda item: item[0])
+    return [raw_phone for _sort_key, raw_phone in ranked]
+
+
 def _build_contacts_from_property(prop, amenities_field_id=None):
     """Returns a list of GHL contact dicts, one per owner on the property."""
     owner = prop.get('owner', {})
     address = prop.get('address', {})
     names = owner.get('names', [])
     emails = owner.get('emails', [])
-    phones = owner.get('phoneNumbers', [])
+    ranked_phones = _rank_phone_numbers(owner.get('phoneNumbers', []))
 
     amenities = _build_amenities(prop)
 
@@ -183,11 +211,11 @@ def _build_contacts_from_property(prop, amenities_field_id=None):
         if index < len(emails):
             contact['email'] = emails[index]
 
-        if index < len(phones):
-            raw_phone = phones[index].get('number', '')
-            # Only set phone if it looks like an actual number (digits, spaces, dashes, parens, plus)
-            if raw_phone and all(c in '0123456789 ()-+.' for c in raw_phone):
-                contact['phone'] = raw_phone
+        if ranked_phones:
+            # Give each owner a distinct number when the pool is deep enough;
+            # otherwise fall back to the best one so the contact still has a
+            # phone (a shared number may get merged by GHL's upsert dedupe).
+            contact['phone'] = ranked_phones[index] if index < len(ranked_phones) else ranked_phones[0]
 
         if amenities_field_id and amenities:
             contact['customFields'] = [{"id": amenities_field_id, "value": amenities}]
@@ -207,9 +235,19 @@ def batchdata_webhook(job_id):
         json.dump(data, f, indent=2)
     logger.info(f"Webhook payload saved to {log_path}")
 
+    # BatchData drops the webhook (cURL 28) if we don't answer within 30s, and a
+    # full result set is dozens of sequential GHL calls. Ack immediately, then
+    # process on a background thread.
+    job_store[job_id] = {"status": "processing", "created": 0, "errors": 0, "skipped_no_phone": 0}
+    threading.Thread(target=_process_webhook, args=(job_id, data), daemon=True).start()
+    return jsonify({"status": "accepted"}), 202
+
+
+def _process_webhook(job_id, data):
     properties = data.get('results', {}).get('properties', [])
     created = 0
     errors = 0
+    skipped_no_phone = 0
 
     amenities_field_id = None
     try:
@@ -225,8 +263,11 @@ def batchdata_webhook(job_id):
     for prop in properties:
         zillow_url = _build_zillow_url(prop)
         for contact in _build_contacts_from_property(prop, amenities_field_id):
-            if 'email' not in contact and 'phone' not in contact:
-                logger.info(f"Skipping contact {contact.get('firstName')} {contact.get('lastName')}: no email or phone from skip trace")
+            # Client requirement: only import contacts with a phone number.
+            # Contacts with no phone (email-only or no contact info at all) are dropped.
+            if 'phone' not in contact:
+                logger.info(f"Skipping contact {contact.get('firstName')} {contact.get('lastName')}: no phone number from skip trace")
+                skipped_no_phone += 1
                 continue
             try:
                 result = upsert_contact(contact, api_key=AGENCY_API_KEY)
@@ -238,9 +279,8 @@ def batchdata_webhook(job_id):
                 logger.error(f"Failed to upsert contact {contact.get('firstName')} {contact.get('lastName')}: {e}")
                 errors += 1
 
-    logger.info(f"BatchData webhook processed. job_id={job_id} created={created} errors={errors}")
-    job_store[job_id] = {"status": "complete", "created": created, "errors": errors}
-    return jsonify({"status": "processed", "created": created, "errors": errors})
+    logger.info(f"BatchData webhook processed. job_id={job_id} created={created} errors={errors} skipped_no_phone={skipped_no_phone}")
+    job_store[job_id] = {"status": "complete", "created": created, "errors": errors, "skipped_no_phone": skipped_no_phone}
 
 
 @app.route('/batchdata-webhook-error/<job_id>', methods=['POST'])
