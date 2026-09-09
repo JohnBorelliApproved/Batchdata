@@ -26,7 +26,7 @@ def _load(path):
 
 def test_full_property_maps_all_fields():
     prop = _load(REAL_PAYLOAD)[0]  # 50 Cedar Rd: 3bd/2ba, 1641 sqft, 1 story, HOA, 0.36ac, 1989
-    fields = {e['id']: e['value'] for e in _build_property_custom_fields(prop, FIELD_MAP)}
+    fields = {e['id']: e['field_value'] for e in _build_property_custom_fields(prop, FIELD_MAP)}
 
     assert fields['id::Square Footage'] == '1641'
     assert fields['id::Bathrooms'] == 2
@@ -54,7 +54,7 @@ def test_missing_field_in_map_is_skipped_not_errored():
     prop = _load(REAL_PAYLOAD)[0]
     partial = {'Bathrooms': 'id::Bathrooms'}
     result = _build_property_custom_fields(prop, partial)
-    assert result == [{'id': 'id::Bathrooms', 'value': 2}]
+    assert result == [{'id': 'id::Bathrooms', 'field_value': 2}]
 
 
 def test_translate_custom_fields_remaps_by_fieldkey():
@@ -63,6 +63,7 @@ def test_translate_custom_fields_remaps_by_fieldkey():
     # Destination location: different ids for the same fieldKeys, plus one extra
     dst_key_to_id = {'contact.local_ammenities': 'dst_amen', 'contact.bathrooms': 'dst_bath'}
 
+    # Input entries mimic a GET /contacts response, which uses the `value` key.
     entries = [
         {'id': 'src_amen', 'value': 'Pool\nHOA'},
         {'id': 'src_bath', 'value': 2},
@@ -70,9 +71,10 @@ def test_translate_custom_fields_remaps_by_fieldkey():
         {'id': 'src_amen2', 'value': ''},       # empty value -> dropped
     ]
     out = _translate_custom_fields(entries, src_id_to_key, dst_key_to_id)
+    # Output is a write payload, which uses the `field_value` key.
     assert out == [
-        {'id': 'dst_amen', 'value': 'Pool\nHOA'},
-        {'id': 'dst_bath', 'value': 2},
+        {'id': 'dst_amen', 'field_value': 'Pool\nHOA'},
+        {'id': 'dst_bath', 'field_value': 2},
     ]
 
 

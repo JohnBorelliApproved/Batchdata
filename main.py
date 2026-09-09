@@ -164,7 +164,9 @@ def _translate_custom_fields(entries, src_id_to_key, dst_key_to_id):
         dest_id = dst_key_to_id.get(field_key)
         value = entry.get('value')
         if dest_id and value not in (None, ''):
-            translated.append({"id": dest_id, "value": value})
+            # GHL's write API keys the value as `field_value`; `value` is only
+            # the read/webhook shape. Sending `value` here is silently ignored.
+            translated.append({"id": dest_id, "field_value": value})
     return translated
 
 
@@ -254,7 +256,9 @@ def _build_property_custom_fields(prop, field_map):
     for name, value in values_by_name.items():
         field_id = field_map.get(name)
         if field_id and value not in (None, ''):
-            custom_fields.append({"id": field_id, "value": value})
+            # GHL write API expects `field_value`, not `value` (see note in
+            # _translate_custom_fields).
+            custom_fields.append({"id": field_id, "field_value": value})
     return custom_fields
 
 

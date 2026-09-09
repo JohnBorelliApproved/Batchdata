@@ -2,8 +2,16 @@
 
 > **Updated 2026-09-09:** the original single "Property Amenities" field was
 > never populated in production — the agency location has no field by that name.
-> Reworked into five real fields (see below), the Zillow note link now opens in
-> a new tab, and `/distribute-contacts` carries the fields across locations.
+> Reworked into five real fields (see below), and `/distribute-contacts` carries
+> the fields across locations.
+>
+> **Updated 2026-09-09 (later):** the five fields still didn't populate — the
+> webhook was sending `customFields` items as `{id, value}`, but GHL's write API
+> expects `{id, field_value}` (`value` is the read/webhook shape only) and
+> silently drops the unrecognized key. Fixed in `_build_property_custom_fields`
+> and `_translate_custom_fields`. The Zillow note link opens in a new tab because
+> GHL's note viewer forces that on rendered links — **not** because of a
+> `target="_blank"` attribute; GHL strips `target`/`rel` from stored note HTML.
 
 ## Purpose 
 
@@ -56,6 +64,9 @@ note "Local Ammenities" is spelled that way in GHL:
   for that run; the others still populate.
 - Per contact, only fields with a resolved ID **and** a non-empty value are sent.
   If none qualify, `customFields` is omitted from the payload entirely.
+- Each `customFields` item is sent as `{"id": <fieldId>, "field_value": <value>}`.
+  GHL's write API ignores the `{"id", "value"}` shape (that shape is read-only —
+  it's what `GET /contacts` and webhook events return).
 
 ### `Local Ammenities` contents
 
@@ -83,8 +94,10 @@ line, `"\n"`-joined; absent items are skipped (no placeholders):
 3. After `upsert_contact(...)` succeeds, `create_note(contact_id,
    f'<a href="{zillow_url}" target="_blank" rel="noopener">Zillow Property Page</a>',
    api_key=AGENCY_API_KEY)`. GHL note bodies render the anchor as clickable
-   "Zillow Property Page" text; `target="_blank"` opens it in a new tab so it
-   doesn't navigate the GHL iframe away.
+   "Zillow Property Page" text. GHL strips `target`/`rel` from the stored HTML,
+   but its note viewer opens rendered links in a new tab anyway, so the link
+   doesn't navigate the GHL iframe away. The `target="_blank"` in the source is
+   left in as intent/documentation; it has no effect on its own.
 
 ## Data Flow — distribution (`distribute_contacts` in `main.py`)
 
@@ -132,8 +145,11 @@ verbatim. For each contact the route:
   and `_build_zillow_url` against saved payloads in `webhook_logs/`.
 - Manual end-to-end (webhook): POST a property payload to the local
   `/batchdata-webhook/<job_id>`, then `get_contact` the created record and confirm
-  all five fields are set and the note anchor carries `target="_blank"`. Verified
-  2026-09-09 against the agency location.
+  all five fields are set. `replay_webhook.py` does this against a saved payload
+  without a Flask server or a BatchData call; `ghl_diagnostics.py` inspects the
+  resulting contacts. Verified 2026-09-09 against the agency location: five
+  fields populate with the `field_value` fix; the note link opens in a new tab
+  in the GHL UI (the stored anchor has no `target`).
 - Distribution end-to-end is **not yet verified** — the `TEST_SUBACCOUNT_API_KEY`
   in `.env` is an expired token. Needs a valid destination sub-account key to
   confirm the fieldKey remap round-trips.
