@@ -1,19 +1,24 @@
 # Amenities Custom Field + Zillow Link Note — Design
 
+> **Updated 2026-09-09:** the original single "Property Amenities" field was
+> never populated in production — the agency location has no field by that name.
+> Reworked into five real fields (see below), the Zillow note link now opens in
+> a new tab, and `/distribute-contacts` carries the fields across locations.
+
 ## Purpose 
 
 When a BatchData webhook creates GHL contacts from FSBO property search results, each
 contact should also get:
 
-1. A multi-line custom field listing the property's amenities/benefits (bed/bath count,
-   sqft, lot size, garage, pool, HOA, and any free-text building features like fireplace
-   or solar panels).
+1. Property detail custom fields — `Square Footage`, `Bathrooms`, `Floors`,
+   `Number of Rooms`, and a multi-line `Local Ammenities` field for the remaining
+   signals (pool, HOA, lot size, year built, garage, free-text features).
 2. A note on the contact containing a clickable Zillow link for the property.
 
-This applies only to contacts created via the BatchData webhook flow
-(`batchdata_webhook` in `main.py`). It does not apply to `/distribute-contacts` —
-notes are separate GHL objects and are not currently copied during distribution;
-extending distribution to carry notes is out of scope and can be a follow-up if wanted.
+The custom fields (item 1) are set on the webhook flow **and** carried across by
+`/distribute-contacts`. The Zillow note (item 2) is webhook-only — notes are
+separate GHL objects and are not copied during distribution; adding that is a
+possible follow-up.
 
 ## Zillow Link
 
@@ -32,54 +37,87 @@ Address components are taken from `prop['address']` (`street`, `city`, `state`,
 always produces a usable link; it lands on Zillow's search results for that
 address rather than a guaranteed single listing page.
 
-## Amenities Custom Field
+## Property Custom Fields
 
-- Field name in GHL: **"Property Amenities"**, type multi-line text. Must already
-  exist on the agency location — this is a manual one-time setup step in the GHL UI,
-  not created by the app.
-- The app looks up the field's ID at runtime via `GET /locations/{id}/customFields`,
-  matching by name. Looked up once per webhook invocation (not once per contact) and
-  cached in memory for that call.
-- Amenities are extracted from the BatchData property payload:
-  - `building.bedroomCount` → "X bedrooms"
-  - `building.bathroomCount` → "X bathrooms"
-  - `building.livingAreaSquareFeet` → "X sq ft"
-  - `lot.lotSizeAcres` → "X acre lot"
-  - `building.garageParkingSpaceCount` → "X-car garage"
-  - `building.pool` (present and not "N"/falsy pool code) → "Pool"
-  - `quickLists.hasHoa` → "HOA"
-  - `building.features` (list of free-text strings, e.g. "Fireplace", "Solar Panel",
-    "Wine Cellar") → each appended as its own line
-- Each present amenity becomes one line in the multi-line field value (`"\n"`-joined).
-  Missing/absent fields are simply skipped — no placeholder text.
-- If the resulting amenities list is empty, `customFields` is omitted from the
-  contact payload entirely (not sent as an empty string).
+Five custom fields must already exist on the agency location (manual one-time
+setup in the GHL UI, not created by the app). Names are matched **exactly** —
+note "Local Ammenities" is spelled that way in GHL:
 
-## Data Flow Changes (`batchdata_webhook` in `main.py`)
+| GHL field | GHL type | BatchData source |
+|---|---|---|
+| `Local Ammenities` | multi-line text | see amenities list below |
+| `Square Footage` | text | `building.livingAreaSquareFeet`, else `building.totalBuildingAreaSquareFeet` (sent as a string) |
+| `Bathrooms` | number | `building.bathroomCount` |
+| `Floors` | number | `building.storyCount` |
+| `Number of Rooms` | number | `building.bedroomCount` — BatchData returns no total room count for these FSBO records; bedroom count is the client-agreed stand-in |
 
-1. Before the per-property loop: resolve the "Property Amenities" field ID once via
-   `get_custom_fields(AGENCY_LOCATION_ID, AGENCY_API_KEY)`. If not found or the call
-   fails, log a warning once and proceed with `field_id = None` for the rest of the
-   webhook call (contacts still get created, just without the custom field).
-2. `_build_contacts_from_property(prop, field_id)` is extended to attach
-   `customFields: [{"id": field_id, "value": amenities_string}]` to each contact dict
-   when `field_id` is set and amenities is non-empty.
-3. After `upsert_contact(...)` succeeds, read the contact `id` from the response and
-   call `create_note(contact_id, f'<a href="{zillow_url}">Zillow Property Page</a>',
-   api_key=AGENCY_API_KEY)`. GHL note bodies render HTML, so the link shows as
-   "Zillow Property Page" text rather than the raw URL.
+- Field IDs are resolved by name at runtime via `GET /locations/{id}/customFields`,
+  once per webhook invocation. Any field not found is logged by name and skipped
+  for that run; the others still populate.
+- Per contact, only fields with a resolved ID **and** a non-empty value are sent.
+  If none qualify, `customFields` is omitted from the payload entirely.
+
+### `Local Ammenities` contents
+
+Covers only signals that don't have their own field. Each present item is one
+line, `"\n"`-joined; absent items are skipped (no placeholders):
+
+- `building.pool` — BatchData sends this as free text (e.g. `"Pool - Yes"`), no
+  `poolCode` key. Any value that isn't an explicit "no" → `"Pool"`.
+- `quickLists.hasHoa` → `"HOA"`
+- `lot.lotSizeAcres` → `"X acre lot"`
+- `building.yearBuilt` → `"Built YYYY"`
+- `building.garageParkingSpaceCount` → `"X-car garage"` (not seen in current
+  sandbox payloads, kept for when it appears)
+- `building.features` (free-text list) → each string on its own line
+
+## Data Flow — webhook (`_process_webhook` in `main.py`)
+
+1. Before the per-property loop: `_resolve_custom_field_ids(AGENCY_LOCATION_ID,
+   AGENCY_API_KEY, PROPERTY_CUSTOM_FIELD_NAMES)` returns `{name: id}` for the
+   fields that exist. Missing names are logged; a total failure logs a warning
+   and proceeds with an empty map (contacts still get created, without fields).
+2. `_build_property_custom_fields(prop, field_map)` builds the `customFields`
+   list; `_build_contacts_from_property(prop, field_map)` attaches it when
+   non-empty.
+3. After `upsert_contact(...)` succeeds, `create_note(contact_id,
+   f'<a href="{zillow_url}" target="_blank" rel="noopener">Zillow Property Page</a>',
+   api_key=AGENCY_API_KEY)`. GHL note bodies render the anchor as clickable
+   "Zillow Property Page" text; `target="_blank"` opens it in a new tab so it
+   doesn't navigate the GHL iframe away.
+
+## Data Flow — distribution (`distribute_contacts` in `main.py`)
+
+Custom-field IDs are per-location, so source `customFields` can't be copied
+verbatim. For each contact the route:
+
+1. Builds `{source id → fieldKey}` and `{fieldKey → dest id}` maps once, from
+   `get_custom_fields` on the source (agency key) and destination (sub-account
+   key) locations.
+2. Calls `get_contact(source_id, AGENCY_API_KEY)` — `/contacts/search` doesn't
+   reliably hydrate `customFields` values, but the single-contact GET does.
+3. `_translate_custom_fields(...)` rewrites each entry to the destination's ID
+   via the shared fieldKey; entries with no destination counterpart or an empty
+   value are dropped.
+
+> Distribution is synchronous and makes ~2 sequential GHL calls per contact
+> (GET + upsert). Acceptable for current batch sizes; revisit (e.g. background
+> thread, as the webhook already does) if large tag lists become common.
 
 ## New GHL API Functions (`ghl_api.py`)
 
 - `get_custom_fields(location_id, api_key=None)` — `GET /locations/{location_id}/customFields`,
-  returns the list of custom field objects (each with `id`, `name`, etc.).
+  returns the list of custom field objects (each with `id`, `name`, `fieldKey`, etc.).
 - `create_note(contact_id, body, api_key=None)` — `POST /contacts/{contact_id}/notes`
   with `{"body": body}`.
+- `get_contact(contact_id, api_key=None)` — `GET /contacts/{contact_id}`, returns
+  the full contact including populated `customFields`.
 
 ## Error Handling
 
-- Custom field lookup failure → log warning, proceed without `customFields` for the
-  whole webhook call (not per-contact retried).
+- Custom field lookup failure → log warning, proceed with an empty field map for
+  the whole webhook call (not per-contact retried). Individual fields missing by
+  name are logged and skipped; the rest still populate.
 - Note creation failure → caught per-contact alongside the existing upsert
   try/except in the loop, logged, and counted toward the existing `errors` counter.
   A failed note does not block other contacts in the batch or fail the whole webhook
@@ -89,9 +127,13 @@ address rather than a guaranteed single listing page.
 
 ## Testing
 
-- Unit-style manual check: run `_build_zillow_url` and `_build_amenities` against a
-  sample property dict from `webhook_logs/webhook_2a07cc58-3edc-4c53-a125-394431f3a40b.json`
-  and inspect output.
-- Manual end-to-end: trigger a real webhook against the BatchData sandbox (per
-  existing project practice) and verify in GHL that the created contact has the
-  "Property Amenities" custom field populated and a note with a working Zillow link.
+- `test_property_fields.py` — offline assertions (no network) for
+  `_build_amenities`, `_build_property_custom_fields`, `_translate_custom_fields`,
+  and `_build_zillow_url` against saved payloads in `webhook_logs/`.
+- Manual end-to-end (webhook): POST a property payload to the local
+  `/batchdata-webhook/<job_id>`, then `get_contact` the created record and confirm
+  all five fields are set and the note anchor carries `target="_blank"`. Verified
+  2026-09-09 against the agency location.
+- Distribution end-to-end is **not yet verified** — the `TEST_SUBACCOUNT_API_KEY`
+  in `.env` is an expired token. Needs a valid destination sub-account key to
+  confirm the fieldKey remap round-trips.

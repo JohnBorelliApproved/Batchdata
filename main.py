@@ -5,7 +5,7 @@ import logging
 import threading
 from flask import Flask, request, jsonify, render_template, abort
 from batchdata_api import search_properties
-from ghl_api import get_contacts_by_tag, upsert_contact, get_tags, get_custom_fields, create_note
+from ghl_api import get_contacts_by_tag, get_contact, upsert_contact, get_tags, get_custom_fields, create_note
 from config import AGENCY_LOCATION_ID, AGENCY_API_KEY
 
 logging.basicConfig(level=logging.INFO)
@@ -88,12 +88,40 @@ def distribute_contacts():
             'validEmail', 'dndSettings',
         }
 
+        # Custom field ids differ per location, so translate them via the shared
+        # fieldKey (e.g. "contact.local_ammenities"). Built once for the batch.
+        src_id_to_key = {
+            f['id']: f['fieldKey']
+            for f in get_custom_fields(source_location_id, api_key=AGENCY_API_KEY)
+            if f.get('id') and f.get('fieldKey')
+        }
+        dst_key_to_id = {
+            f['fieldKey']: f['id']
+            for f in get_custom_fields(location_id, api_key=sub_account_api_key)
+            if f.get('id') and f.get('fieldKey')
+        }
+
         for contact in contacts:
+            source_contact_id = contact.get('id')
+
             for field in _SEARCH_ONLY_FIELDS:
                 contact.pop(field, None)
 
             # Set the new location id
             contact['locationId'] = location_id
+
+            # The search response doesn't reliably hydrate customFields values, so
+            # pull the full contact and remap each field to the destination's id.
+            remapped = []
+            if source_contact_id:
+                full = get_contact(source_contact_id, api_key=AGENCY_API_KEY)
+                remapped = _translate_custom_fields(
+                    full.get('customFields'), src_id_to_key, dst_key_to_id
+                )
+            if remapped:
+                contact['customFields'] = remapped
+            else:
+                contact.pop('customFields', None)
 
             # Upsert contact to the destination location using the provided sub-account API key
             upsert_contact(contact, api_key=sub_account_api_key)
@@ -110,7 +138,44 @@ def job_status(job_id):
     return jsonify({"job_id": job_id, **job})
 
 
-AMENITIES_CUSTOM_FIELD_NAME = "Property Amenities"
+# GHL custom fields on the agency location that we populate from the BatchData
+# payload. Keyed by the exact field name in GHL (resolved to an id at runtime so
+# the same code works across sub-accounts). "Local Ammenities" is spelled that
+# way in GHL — do not "fix" it here or the lookup silently misses.
+AMENITIES_CUSTOM_FIELD_NAME = "Local Ammenities"
+PROPERTY_CUSTOM_FIELD_NAMES = [
+    AMENITIES_CUSTOM_FIELD_NAME,
+    "Square Footage",
+    "Bathrooms",
+    "Floors",
+    "Number of Rooms",
+]
+
+
+def _translate_custom_fields(entries, src_id_to_key, dst_key_to_id):
+    """Rewrites a contact's customFields from source ids to destination ids.
+
+    Entries whose field has no counterpart in the destination location (or no
+    value) are dropped rather than sent with a foreign id.
+    """
+    translated = []
+    for entry in entries or []:
+        field_key = src_id_to_key.get(entry.get('id'))
+        dest_id = dst_key_to_id.get(field_key)
+        value = entry.get('value')
+        if dest_id and value not in (None, ''):
+            translated.append({"id": dest_id, "value": value})
+    return translated
+
+
+def _resolve_custom_field_ids(location_id, api_key, names):
+    """Returns {field name: id} for the requested names present on `location_id`.
+
+    Names with no matching GHL field are simply absent from the result.
+    """
+    fields = get_custom_fields(location_id, api_key=api_key)
+    by_name = {f.get('name'): f.get('id') for f in fields if f.get('name') and f.get('id')}
+    return {name: by_name[name] for name in names if name in by_name}
 
 
 def _slugify_address_part(value):
@@ -131,31 +196,66 @@ def _build_zillow_url(prop):
 
 
 def _build_amenities(prop):
-    """Returns a newline-joined string of amenity lines extracted from a property dict."""
+    """Returns a newline-joined "Local Ammenities" value for a property.
+
+    Bed/bath/sqft/floors each have their own GHL field now, so this covers only
+    the extra signals that don't: pool, HOA, lot size, year built, garage.
+    Returns '' when none are present so the caller can omit the field entirely.
+    """
     building = prop.get('building', {})
     lot = prop.get('lot', {})
     quick_lists = prop.get('quickLists', {})
 
     lines = []
 
-    if building.get('bedroomCount'):
-        lines.append(f"{building['bedroomCount']} bedrooms")
-    if building.get('bathroomCount'):
-        lines.append(f"{building['bathroomCount']} bathrooms")
-    if building.get('livingAreaSquareFeet'):
-        lines.append(f"{building['livingAreaSquareFeet']} sq ft")
-    if lot.get('lotSizeAcres'):
-        lines.append(f"{lot['lotSizeAcres']} acre lot")
-    if building.get('garageParkingSpaceCount'):
-        lines.append(f"{building['garageParkingSpaceCount']}-car garage")
-    if building.get('pool') and building.get('poolCode', 'N') != 'N':
+    # BatchData sends `pool` as a free-text string like "Pool - Yes" (no poolCode
+    # key), so any truthy value that isn't an explicit "no" means there's a pool.
+    pool = str(building.get('pool') or '').strip()
+    if pool and 'no' not in pool.lower():
         lines.append("Pool")
     if quick_lists.get('hasHoa'):
         lines.append("HOA")
+    if lot.get('lotSizeAcres'):
+        lines.append(f"{lot['lotSizeAcres']} acre lot")
+    if building.get('yearBuilt'):
+        lines.append(f"Built {building['yearBuilt']}")
+    if building.get('garageParkingSpaceCount'):
+        lines.append(f"{building['garageParkingSpaceCount']}-car garage")
     for feature in building.get('features', []) or []:
         lines.append(feature)
 
     return '\n'.join(lines)
+
+
+def _build_property_custom_fields(prop, field_map):
+    """Maps a BatchData property to GHL customFields entries.
+
+    `field_map` is {field name: id}; only names present in it are emitted, so a
+    missing GHL field just means that value is skipped, not an error.
+    """
+    building = prop.get('building', {})
+
+    square_footage = (
+        building.get('livingAreaSquareFeet')
+        or building.get('totalBuildingAreaSquareFeet')
+    )
+    values_by_name = {
+        AMENITIES_CUSTOM_FIELD_NAME: _build_amenities(prop) or None,
+        # Field type is TEXT in GHL, so send a string.
+        "Square Footage": str(square_footage) if square_footage else None,
+        "Bathrooms": building.get('bathroomCount'),
+        "Floors": building.get('storyCount'),
+        # BatchData has no total room count for these records; bedroom count is
+        # the client-agreed stand-in.
+        "Number of Rooms": building.get('bedroomCount'),
+    }
+
+    custom_fields = []
+    for name, value in values_by_name.items():
+        field_id = field_map.get(name)
+        if field_id and value not in (None, ''):
+            custom_fields.append({"id": field_id, "value": value})
+    return custom_fields
 
 
 def _rank_phone_numbers(phone_entries):
@@ -185,7 +285,7 @@ def _rank_phone_numbers(phone_entries):
     return [raw_phone for _sort_key, raw_phone in ranked]
 
 
-def _build_contacts_from_property(prop, amenities_field_id=None):
+def _build_contacts_from_property(prop, field_map=None):
     """Returns a list of GHL contact dicts, one per owner on the property."""
     owner = prop.get('owner', {})
     address = prop.get('address', {})
@@ -193,7 +293,7 @@ def _build_contacts_from_property(prop, amenities_field_id=None):
     emails = owner.get('emails', [])
     ranked_phones = _rank_phone_numbers(owner.get('phoneNumbers', []))
 
-    amenities = _build_amenities(prop)
+    custom_fields = _build_property_custom_fields(prop, field_map or {})
 
     contacts = []
     for index, name in enumerate(names):
@@ -217,8 +317,8 @@ def _build_contacts_from_property(prop, amenities_field_id=None):
             # phone (a shared number may get merged by GHL's upsert dedupe).
             contact['phone'] = ranked_phones[index] if index < len(ranked_phones) else ranked_phones[0]
 
-        if amenities_field_id and amenities:
-            contact['customFields'] = [{"id": amenities_field_id, "value": amenities}]
+        if custom_fields:
+            contact['customFields'] = custom_fields
 
         contacts.append(contact)
 
@@ -249,20 +349,20 @@ def _process_webhook(job_id, data):
     errors = 0
     skipped_no_phone = 0
 
-    amenities_field_id = None
+    field_map = {}
     try:
-        fields = get_custom_fields(AGENCY_LOCATION_ID, api_key=AGENCY_API_KEY)
-        match = next((f for f in fields if f.get('name') == AMENITIES_CUSTOM_FIELD_NAME), None)
-        if match:
-            amenities_field_id = match.get('id')
-        else:
-            logger.warning(f"Custom field '{AMENITIES_CUSTOM_FIELD_NAME}' not found; contacts will be created without it.")
+        field_map = _resolve_custom_field_ids(
+            AGENCY_LOCATION_ID, AGENCY_API_KEY, PROPERTY_CUSTOM_FIELD_NAMES
+        )
+        missing = [n for n in PROPERTY_CUSTOM_FIELD_NAMES if n not in field_map]
+        if missing:
+            logger.warning(f"Custom fields not found on agency location, will be skipped: {missing}")
     except Exception as e:
         logger.warning(f"Failed to look up custom fields: {e}")
 
     for prop in properties:
         zillow_url = _build_zillow_url(prop)
-        for contact in _build_contacts_from_property(prop, amenities_field_id):
+        for contact in _build_contacts_from_property(prop, field_map):
             # Client requirement: only import contacts with a phone number.
             # Contacts with no phone (email-only or no contact info at all) are dropped.
             if 'phone' not in contact:
@@ -274,7 +374,13 @@ def _process_webhook(job_id, data):
                 created += 1
                 contact_id = result.get('contact', {}).get('id') or result.get('id')
                 if contact_id:
-                    create_note(contact_id, f'<a href="{zillow_url}">Zillow Property Page</a>', api_key=AGENCY_API_KEY)
+                    # target=_blank so the link opens a new tab — the note is
+                    # viewed inside the GHL iframe and must not navigate it away.
+                    create_note(
+                        contact_id,
+                        f'<a href="{zillow_url}" target="_blank" rel="noopener">Zillow Property Page</a>',
+                        api_key=AGENCY_API_KEY,
+                    )
             except Exception as e:
                 logger.error(f"Failed to upsert contact {contact.get('firstName')} {contact.get('lastName')}: {e}")
                 errors += 1

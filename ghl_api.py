@@ -28,6 +28,24 @@ def upsert_contact(contact_data, api_key=None):
     return response.json()
 
 
+def get_contact(contact_id, api_key=None):
+    """
+    Fetches a single contact by id. Unlike the search endpoint, this reliably
+    returns the contact's full customFields (with values).
+    """
+    key_to_use = api_key if api_key else LEGACY_API_KEY
+    headers = {
+        "Authorization": f"Bearer {key_to_use}",
+        "Version": API_VERSION,
+        "Accept": "application/json"
+    }
+
+    url = f"{GOHIGHLEVEL_API_URL}contacts/{contact_id}"
+    response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+    response.raise_for_status()
+    return response.json().get('contact', {})
+
+
 def get_contacts_by_tag(tag, location_id, api_key=None):
     """
     Retrieves all contacts from GoHighLevel that have a specific tag.
