@@ -58,8 +58,11 @@ def test_missing_field_in_map_is_skipped_not_errored():
 
 
 def test_translate_custom_fields_remaps_by_fieldkey():
-    # Source location ids -> shared fieldKey
-    src_id_to_key = {'src_amen': 'contact.local_ammenities', 'src_bath': 'contact.bathrooms'}
+    # Source location ids -> field metadata (as returned by get_custom_fields)
+    src_id_to_key = {
+        'src_amen': {'fieldKey': 'contact.local_ammenities'},
+        'src_bath': {'fieldKey': 'contact.bathrooms'},
+    }
     # Destination location: different ids for the same fieldKeys, plus one extra
     dst_key_to_id = {'contact.local_ammenities': 'dst_amen', 'contact.bathrooms': 'dst_bath'}
 
@@ -70,7 +73,9 @@ def test_translate_custom_fields_remaps_by_fieldkey():
         {'id': 'src_unknown', 'value': 'x'},   # no fieldKey mapping -> dropped
         {'id': 'src_amen2', 'value': ''},       # empty value -> dropped
     ]
-    out = _translate_custom_fields(entries, src_id_to_key, dst_key_to_id)
+    # No dest_id is missing for these fieldKeys, so the auto-create path
+    # (which needs a real location/api key) is never hit — dummies are safe.
+    out = _translate_custom_fields(entries, src_id_to_key, dst_key_to_id, 'dst_loc', 'dst_key')
     # Output is a write payload, which uses the `field_value` key.
     assert out == [
         {'id': 'dst_amen', 'field_value': 'Pool\nHOA'},
@@ -79,7 +84,7 @@ def test_translate_custom_fields_remaps_by_fieldkey():
 
 
 def test_translate_custom_fields_handles_none():
-    assert _translate_custom_fields(None, {}, {}) == []
+    assert _translate_custom_fields(None, {}, {}, 'dst_loc', 'dst_key') == []
 
 
 def test_zillow_url_slug():
@@ -94,7 +99,9 @@ if __name__ == '__main__':
         try:
             t()
             print(f'PASS {t.__name__}')
-        except AssertionError as e:
+        except Exception as e:
+            # Catch everything, not just AssertionError — a signature mismatch
+            # or other bug shouldn't crash the script and hide every test after it.
             failed += 1
             print(f'FAIL {t.__name__}: {e}')
     raise SystemExit(failed)
