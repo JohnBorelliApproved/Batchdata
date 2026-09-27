@@ -10,12 +10,23 @@ from ghl_api import (
     create_custom_field, create_note, get_notes,
 )
 from config import AGENCY_LOCATION_ID, AGENCY_API_KEY
+import ledger
+import entitlements
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 WEBHOOK_LOG_DIR = os.path.join(os.path.dirname(__file__), 'webhook_logs')
 os.makedirs(WEBHOOK_LOG_DIR, exist_ok=True)
+
+ledger.init_db()
+try:
+    entitlements.ensure_entitlement_fields(AGENCY_LOCATION_ID, AGENCY_API_KEY)
+except Exception as e:
+    # Don't let a GHL hiccup (bad token scope, transient outage) crash every
+    # Gunicorn worker at boot. Later phases that need these fields will fail
+    # loudly on their own when they look them up.
+    logger.error(f"Failed to ensure entitlement custom fields on startup: {e}")
 
 # In-memory job state — keyed by job_id, values: pending | complete | error
 # Resets on server restart; fine for single-worker use

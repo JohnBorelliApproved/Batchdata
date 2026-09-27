@@ -5,6 +5,9 @@ venv/
 __pycache__/
 *.pyc
 
+# Local zip ledger DB (backend bookkeeping, never checked in)
+ledger.db
+
 # IDE
 .idea/
 .vscode/

@@ -2,7 +2,7 @@
 
 > Living document. Update this as tasks in `plan` below are completed. Don't let `todo.md` be the source of truth going forward — it's stale as of 2026-09-24 (see "Superseded" note).
 
-Last updated: 2026-09-27
+Last updated: 2026-09-27 (zip ledger foundation)
 
 ## Where we are
 
@@ -25,6 +25,16 @@ The **next phase is an approved architecture change** (`docs/superpowers/specs/2
 - `test_property_fields.py` — all 9 offline unit tests pass (custom-field mapping, amenities detection, field auto-creation).
 - **`/distribute-contacts` now auto-creates missing custom fields on the destination location** instead of silently dropping them (`_translate_custom_fields` in `main.py`, `create_custom_field` in `ghl_api.py`). Only recreates safe scalar dataTypes (`TEXT`, `LARGE_TEXT`, `NUMERICAL`, `PHONE`, `MONETORY`, `DATE`); picklist/option types (`SINGLE_OPTIONS`, etc.) are still skipped and logged since we don't replicate their option lists.
 - **`/distribute-contacts` now copies the Zillow property-link note** to the destination contact when the source contact has one (`get_notes` in `ghl_api.py`). Best-effort — failures are logged, not fatal to the distribution run.
+
+## Zip ledger foundation (2026-09-27)
+
+Per the approved 2026-09-13 zip-dedup redesign spec, agency has signed off — this is Stage 1 (data model foundation) only. Plan: `docs/superpowers/plans/2026-09-27-zip-ledger-foundation.md`.
+
+- **SQLite ledger** (`ledger.py`) — `zip_ledger`, `delivered_properties`, `activity_log` tables per the spec, verbatim schema. All read/write helpers offline-tested (`test_ledger.py`, 11 tests): same-day zip re-search overwrites instead of erroring, cross-day property dedup is a safe no-op on retry, activity logging accepts optional fields.
+- **Entitlement custom fields** (`entitlements.py`) — `ensure_entitlement_fields()` idempotently creates the 4 client-entitlement fields (`subscribed_zipcodes`, `zip_quota`, `sub_account_location_id`, `sub_account_api_key`) on the agency's own GHL location, skipping ones that already exist. Offline-tested with mocked GHL calls (`test_entitlements.py`, 3 tests).
+- Both are wired into `main.py` startup: `ledger.init_db()` unconditionally, `entitlements.ensure_entitlement_fields()` wrapped in try/except so a GHL failure (bad token scope, outage) logs an error instead of crashing every Gunicorn worker at boot.
+- **Known issue found during this work**: `AGENCY_API_KEY` currently returns 401 "not authorized for this scope" when creating a custom field — it can read custom fields but not create them. The entitlement fields have **not actually been created** in the real agency GHL location yet. Needs a token with `customFields.write` scope (or equivalent) before this phase can do anything real. This also means every local run of `main.py` (including running `test_property_fields.py`, which imports from `main`) now makes a live GET call to the agency's GHL location at import time — harmless, but no longer purely offline.
+- **Not started**: entitlement contact lookup/update by `sub_account_location_id`, the self-serve API-key-entry and zip-subscribe UI, quota enforcement, the daily cron entrypoint, webhook fan-out delivery, reconciliation. Each is a separate subsystem per the spec and needs its own plan.
 
 ## Known issues (found while re-indexing, not yet in todo.md)
 
