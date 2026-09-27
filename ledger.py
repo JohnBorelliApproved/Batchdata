@@ -86,3 +86,38 @@ def mark_zip_searched(zipcode, batchdata_request_id, db_path=None, searched_at=N
         conn.commit()
     finally:
         conn.close()
+
+
+def is_property_delivered(zipcode, property_key, db_path=None):
+    """Returns True if this zipcode+property_key pair was already recorded
+    as delivered (any day), for cross-day dedup."""
+    conn = _connect(db_path)
+    try:
+        row = conn.execute(
+            "SELECT 1 FROM delivered_properties WHERE zipcode = ? AND property_key = ?",
+            (zipcode, property_key),
+        ).fetchone()
+    finally:
+        conn.close()
+    return row is not None
+
+
+def mark_property_delivered(zipcode, property_key, db_path=None, delivered_at=None):
+    """Records that this zipcode+property_key pair has been delivered.
+    Safe to call more than once for the same pair — a duplicate is a
+    no-op, not an error, since delivered_properties is keyed by
+    (zipcode, property_key)."""
+    delivered_at = delivered_at or date.today().isoformat()
+    conn = _connect(db_path)
+    try:
+        conn.execute(
+            """
+            INSERT INTO delivered_properties (zipcode, property_key, delivered_at)
+            VALUES (?, ?, ?)
+            ON CONFLICT(zipcode, property_key) DO NOTHING
+            """,
+            (zipcode, property_key, delivered_at),
+        )
+        conn.commit()
+    finally:
+        conn.close()

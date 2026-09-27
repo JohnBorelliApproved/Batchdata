@@ -78,6 +78,48 @@ def test_mark_zip_searched_twice_same_day_overwrites_not_errors():
         os.remove(path)
 
 
+def test_is_property_delivered_false_when_unseen():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        assert ledger.is_property_delivered("30301", "prop-1", db_path=path) is False
+    finally:
+        os.remove(path)
+
+
+def test_mark_property_delivered_then_is_property_delivered_true():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.mark_property_delivered("30301", "prop-1", db_path=path)
+        assert ledger.is_property_delivered("30301", "prop-1", db_path=path) is True
+    finally:
+        os.remove(path)
+
+
+def test_mark_property_delivered_twice_does_not_raise():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.mark_property_delivered("30301", "prop-1", db_path=path)
+        ledger.mark_property_delivered("30301", "prop-1", db_path=path)  # must not raise
+        assert ledger.is_property_delivered("30301", "prop-1", db_path=path) is True
+    finally:
+        os.remove(path)
+
+
+def test_delivered_properties_scoped_by_zipcode():
+    # Same property_key in a different zip is a separate row (e.g. a
+    # duplicate-ish address hash shouldn't cross-contaminate zips).
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.mark_property_delivered("30301", "prop-1", db_path=path)
+        assert ledger.is_property_delivered("90210", "prop-1", db_path=path) is False
+    finally:
+        os.remove(path)
+
+
 if __name__ == '__main__':
     tests = [v for k, v in sorted(globals().items()) if k.startswith('test_')]
     failed = 0
