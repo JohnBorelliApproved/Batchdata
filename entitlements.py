@@ -10,9 +10,16 @@ from ghl_api import get_custom_fields, create_custom_field
 
 logger = logging.getLogger(__name__)
 
-# Verbatim from the spec's Client entitlement table.
+# Based on the spec's Client entitlement table, with one deviation: the spec
+# named TEXTBOX_LIST for subscribed_zipcodes, but GHL's TEXTBOX_LIST is a
+# fixed set of named text-input slots (it requires a non-empty
+# textBoxListOptions list up front), not a variable-length growable list —
+# confirmed by a live 400 ("textBoxListOptions should not be empty") when
+# provisioning against the real agency location. LARGE_TEXT holding a
+# comma-separated zip list fits "however many zips a client subscribes to"
+# without a slot cap, matching how sub_account_api_key etc. are plain TEXT.
 ENTITLEMENT_FIELD_DEFS = [
-    {"name": "subscribed_zipcodes", "dataType": "TEXTBOX_LIST", "fieldKey": "contact.subscribed_zipcodes"},
+    {"name": "subscribed_zipcodes", "dataType": "LARGE_TEXT", "fieldKey": "contact.subscribed_zipcodes"},
     {"name": "zip_quota", "dataType": "NUMERICAL", "fieldKey": "contact.zip_quota"},
     {"name": "sub_account_location_id", "dataType": "TEXT", "fieldKey": "contact.sub_account_location_id"},
     {"name": "sub_account_api_key", "dataType": "TEXT", "fieldKey": "contact.sub_account_api_key"},

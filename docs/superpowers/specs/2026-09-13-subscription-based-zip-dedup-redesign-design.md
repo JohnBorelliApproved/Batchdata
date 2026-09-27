@@ -55,10 +55,17 @@ agency's own GHL location (single place the agency manages all clients):
 
 | Field | Type | Purpose |
 |---|---|---|
-| `subscribed_zipcodes` | GHL `TEXTBOX_LIST` custom field | the zips this client currently receives |
+| `subscribed_zipcodes` | GHL `LARGE_TEXT` custom field, comma-separated zips | the zips this client currently receives |
 | `zip_quota` | number custom field | max zips allowed by their subscription tier |
 | `sub_account_location_id` | text custom field | where their leads get delivered |
 | `sub_account_api_key` | text custom field (self-serve entered) | credential used to write to their sub-account |
+
+> **2026-09-27 update:** `subscribed_zipcodes` was originally specced as GHL
+> `TEXTBOX_LIST`, but implementation found that type requires a predefined,
+> fixed set of named text-input slots (`textBoxListOptions`) — it isn't a
+> variable-length growable list, and GHL rejects creating one without those
+> options. Changed to `LARGE_TEXT` holding a comma-separated zip string,
+> which has no slot cap. See `entitlements.py` and `progress.md`.
 
 **Zip ledger** — local SQLite table, backend bookkeeping only, never surfaced
 in GHL:
