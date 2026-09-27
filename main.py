@@ -5,7 +5,10 @@ import logging
 import threading
 from flask import Flask, request, jsonify, render_template, abort
 from batchdata_api import search_properties
-from ghl_api import get_contacts_by_tag, get_contact, upsert_contact, get_tags, get_custom_fields, create_note
+from ghl_api import (
+    get_contacts_by_tag, get_contact, upsert_contact, get_tags, get_custom_fields,
+    create_custom_field, create_note, get_notes,
+)
 from config import AGENCY_LOCATION_ID, AGENCY_API_KEY
 
 logging.basicConfig(level=logging.INFO)
@@ -90,8 +93,10 @@ def distribute_contacts():
 
         # Custom field ids differ per location, so translate them via the shared
         # fieldKey (e.g. "contact.local_ammenities"). Built once for the batch.
-        src_id_to_key = {
-            f['id']: f['fieldKey']
+        # Keep the full source field def (not just fieldKey) so a missing
+        # destination field can be recreated with the right name/dataType.
+        src_id_to_field = {
+            f['id']: f
             for f in get_custom_fields(source_location_id, api_key=AGENCY_API_KEY)
             if f.get('id') and f.get('fieldKey')
         }
@@ -116,7 +121,8 @@ def distribute_contacts():
             if source_contact_id:
                 full = get_contact(source_contact_id, api_key=AGENCY_API_KEY)
                 remapped = _translate_custom_fields(
-                    full.get('customFields'), src_id_to_key, dst_key_to_id
+                    full.get('customFields'), src_id_to_field, dst_key_to_id,
+                    location_id, sub_account_api_key,
                 )
             if remapped:
                 contact['customFields'] = remapped
@@ -124,7 +130,18 @@ def distribute_contacts():
                 contact.pop('customFields', None)
 
             # Upsert contact to the destination location using the provided sub-account API key
-            upsert_contact(contact, api_key=sub_account_api_key)
+            result = upsert_contact(contact, api_key=sub_account_api_key)
+
+            # Copy over the Zillow property link note, if the source contact has one.
+            dest_contact_id = result.get('contact', {}).get('id') or result.get('id')
+            if source_contact_id and dest_contact_id:
+                try:
+                    for note in get_notes(source_contact_id, api_key=AGENCY_API_KEY):
+                        body = note.get('body', '')
+                        if 'zillow.com' in body.lower():
+                            create_note(dest_contact_id, body, api_key=sub_account_api_key)
+                except Exception as e:
+                    logger.warning(f"Failed to copy Zillow note for contact {source_contact_id}: {e}")
 
         return jsonify({"message": f"{len(contacts)} contacts distributed successfully."})
     except Exception as e:
@@ -152,18 +169,55 @@ PROPERTY_CUSTOM_FIELD_NAMES = [
 ]
 
 
-def _translate_custom_fields(entries, src_id_to_key, dst_key_to_id):
+# dataTypes we can safely recreate on the destination with just name+dataType.
+# Picklist/option-based types (e.g. SINGLE_OPTIONS, RADIO) need their options
+# replicated too, which we don't attempt — those are just left dropped.
+_AUTO_CREATABLE_DATATYPES = {"TEXT", "LARGE_TEXT", "NUMERICAL", "PHONE", "MONETORY", "DATE"}
+
+
+def _translate_custom_fields(entries, src_id_to_field, dst_key_to_id, dst_location_id, dst_api_key):
     """Rewrites a contact's customFields from source ids to destination ids.
 
-    Entries whose field has no counterpart in the destination location (or no
-    value) are dropped rather than sent with a foreign id.
+    If the destination location has no field with a matching fieldKey, one is
+    created (mirroring the source field's name/dataType) so long as its
+    dataType doesn't need extra config we can't replicate. `dst_key_to_id` is
+    mutated in place so a field is only created once per distribute run.
     """
     translated = []
     for entry in entries or []:
-        field_key = src_id_to_key.get(entry.get('id'))
-        dest_id = dst_key_to_id.get(field_key)
+        field = src_id_to_field.get(entry.get('id'))
         value = entry.get('value')
-        if dest_id and value not in (None, ''):
+        if not field or value in (None, ''):
+            continue
+
+        field_key = field.get('fieldKey')
+        dest_id = dst_key_to_id.get(field_key)
+
+        if not dest_id:
+            data_type = field.get('dataType')
+            if data_type not in _AUTO_CREATABLE_DATATYPES:
+                logger.warning(
+                    f"Skipping custom field '{field.get('name')}': dataType "
+                    f"{data_type} isn't auto-creatable"
+                )
+                continue
+            try:
+                created = create_custom_field(
+                    dst_location_id, field.get('name'), data_type,
+                    model="contact", api_key=dst_api_key,
+                )
+                dest_id = created.get('id')
+                created_key = created.get('fieldKey')
+                if dest_id and created_key:
+                    dst_key_to_id[created_key] = dest_id
+            except Exception as e:
+                logger.error(
+                    f"Failed to create custom field '{field.get('name')}' on "
+                    f"{dst_location_id}: {e}"
+                )
+                continue
+
+        if dest_id:
             # GHL's write API keys the value as `field_value`; `value` is only
             # the read/webhook shape. Sending `value` here is silently ignored.
             translated.append({"id": dest_id, "field_value": value})

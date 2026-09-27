@@ -3,7 +3,9 @@ Offline test: verify BatchData -> GHL custom-field mapping against saved
 webhook payloads. No network. Run: ./venv/bin/python test_property_fields.py
 """
 import json
+from unittest.mock import patch
 
+import main
 from main import (
     _build_amenities,
     _build_property_custom_fields,
@@ -85,6 +87,41 @@ def test_translate_custom_fields_remaps_by_fieldkey():
 
 def test_translate_custom_fields_handles_none():
     assert _translate_custom_fields(None, {}, {}, 'dst_loc', 'dst_key') == []
+
+
+def test_translate_custom_fields_auto_creates_missing_field():
+    # Source field has no counterpart in dst_key_to_id, so it must be created.
+    src_id_to_field = {
+        'src_new': {'fieldKey': 'contact.new_field', 'name': 'New Field', 'dataType': 'TEXT'},
+    }
+    dst_key_to_id = {}
+    entries = [{'id': 'src_new', 'value': 'hello'}]
+
+    with patch.object(main, 'create_custom_field') as mock_create:
+        mock_create.return_value = {'id': 'dst_new', 'fieldKey': 'contact.new_field'}
+        out = _translate_custom_fields(entries, src_id_to_field, dst_key_to_id, 'dst_loc', 'dst_key')
+
+    mock_create.assert_called_once_with(
+        'dst_loc', 'New Field', 'TEXT', model='contact', api_key='dst_key'
+    )
+    assert out == [{'id': 'dst_new', 'field_value': 'hello'}]
+    # dst_key_to_id is mutated in place so a second entry for the same field
+    # reuses the created id instead of creating it again.
+    assert dst_key_to_id == {'contact.new_field': 'dst_new'}
+
+
+def test_translate_custom_fields_skips_non_autocreatable_datatype():
+    # SINGLE_OPTIONS needs its option list replicated, which we don't attempt.
+    src_id_to_field = {
+        'src_opt': {'fieldKey': 'contact.status', 'name': 'Status', 'dataType': 'SINGLE_OPTIONS'},
+    }
+    entries = [{'id': 'src_opt', 'value': 'Hot'}]
+
+    with patch.object(main, 'create_custom_field') as mock_create:
+        out = _translate_custom_fields(entries, src_id_to_field, {}, 'dst_loc', 'dst_key')
+
+    mock_create.assert_not_called()
+    assert out == []
 
 
 def test_zillow_url_slug():

@@ -107,6 +107,45 @@ def get_custom_fields(location_id, api_key=None):
     return response.json().get('customFields', [])
 
 
+def create_custom_field(location_id, name, data_type, model="contact", api_key=None):
+    """
+    Creates a custom field on a location. Returns the created field dict
+    (includes the auto-generated `id` and `fieldKey`).
+    """
+    key_to_use = api_key if api_key else LEGACY_API_KEY
+    headers = {
+        "Authorization": f"Bearer {key_to_use}",
+        "Version": API_VERSION,
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+
+    url = f"{GOHIGHLEVEL_API_URL}locations/{location_id}/customFields"
+    payload = {"name": name, "dataType": data_type, "model": model}
+    response = requests.post(url, json=payload, headers=headers, timeout=REQUEST_TIMEOUT)
+    if not response.ok:
+        raise Exception(f"GHL custom field creation failed {response.status_code}: {response.text}")
+    body = response.json()
+    return body.get('customField', body)
+
+
+def get_notes(contact_id, api_key=None):
+    """
+    Retrieves all notes for a contact.
+    """
+    key_to_use = api_key if api_key else LEGACY_API_KEY
+    headers = {
+        "Authorization": f"Bearer {key_to_use}",
+        "Version": API_VERSION,
+        "Accept": "application/json"
+    }
+
+    url = f"{GOHIGHLEVEL_API_URL}contacts/{contact_id}/notes"
+    response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+    response.raise_for_status()
+    return response.json().get('notes', [])
+
+
 def create_note(contact_id, body, api_key=None):
     """
     Adds a note to a contact.

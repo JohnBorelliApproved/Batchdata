@@ -2,7 +2,7 @@
 
 > Living document. Update this as tasks in `plan` below are completed. Don't let `todo.md` be the source of truth going forward — it's stale as of 2026-09-24 (see "Superseded" note).
 
-Last updated: 2026-09-24
+Last updated: 2026-09-27
 
 ## Where we are
 
@@ -22,7 +22,9 @@ The **next phase is an approved architecture change** (`docs/superpowers/specs/2
 - Custom field write-shape bug fixed: GHL requires `{id, field_value}` not `{id, value}` (commit `93c2c6c`; see [[reference_ghl_customfields_write_shape]] memory).
 - Amenities/Zillow-note feature reworked to 5 real custom fields and confirmed working in production as of 2026-09-09 (spec updated same date).
 - Dev tooling: `replay_webhook.py` (replay a saved payload through `_process_webhook`, `--dry-run` mode with no GHL side effects) and `ghl_diagnostics.py` (ad-hoc field/contact inspection).
-- `test_property_fields.py` — 4 of 5 offline unit tests pass (custom-field mapping, amenities detection).
+- `test_property_fields.py` — all 9 offline unit tests pass (custom-field mapping, amenities detection, field auto-creation).
+- **`/distribute-contacts` now auto-creates missing custom fields on the destination location** instead of silently dropping them (`_translate_custom_fields` in `main.py`, `create_custom_field` in `ghl_api.py`). Only recreates safe scalar dataTypes (`TEXT`, `LARGE_TEXT`, `NUMERICAL`, `PHONE`, `MONETORY`, `DATE`); picklist/option types (`SINGLE_OPTIONS`, etc.) are still skipped and logged since we don't replicate their option lists.
+- **`/distribute-contacts` now copies the Zillow property-link note** to the destination contact when the source contact has one (`get_notes` in `ghl_api.py`). Best-effort — failures are logged, not fatal to the distribution run.
 
 ## Known issues (found while re-indexing, not yet in todo.md)
 
