@@ -43,6 +43,41 @@ def test_init_db_is_idempotent():
         os.remove(path)
 
 
+def test_get_last_searched_at_returns_none_for_unknown_zip():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        assert ledger.get_last_searched_at("00000", db_path=path) is None
+    finally:
+        os.remove(path)
+
+
+def test_mark_zip_searched_then_get_last_searched_at():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.mark_zip_searched("30301", "req-abc", db_path=path, searched_at="2026-09-27")
+        assert ledger.get_last_searched_at("30301", db_path=path) == "2026-09-27"
+    finally:
+        os.remove(path)
+
+
+def test_mark_zip_searched_twice_same_day_overwrites_not_errors():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.mark_zip_searched("30301", "req-1", db_path=path, searched_at="2026-09-27")
+        ledger.mark_zip_searched("30301", "req-2", db_path=path, searched_at="2026-09-27")
+        conn = sqlite3.connect(path)
+        row = conn.execute(
+            "SELECT last_batchdata_request_id FROM zip_ledger WHERE zipcode = ?", ("30301",)
+        ).fetchone()
+        conn.close()
+        assert row == ("req-2",)
+    finally:
+        os.remove(path)
+
+
 if __name__ == '__main__':
     tests = [v for k, v in sorted(globals().items()) if k.startswith('test_')]
     failed = 0
