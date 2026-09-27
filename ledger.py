@@ -121,3 +121,25 @@ def mark_property_delivered(zipcode, property_key, db_path=None, delivered_at=No
         conn.commit()
     finally:
         conn.close()
+
+
+def log_activity(event_type, zipcode=None, client_id=None, detail=None, db_path=None, created_at=None):
+    """Appends one row to the activity log. `event_type` is a short string
+    like "zip_search_triggered", "zip_search_skipped", "contacts_delivered",
+    "quota_rejected", or "reconciliation_drift" (per the spec's Activity
+    Logging section) — callers choose the value, this function doesn't
+    validate it, since the reporting UI that would enforce a fixed set is
+    a later phase."""
+    created_at = created_at or datetime.now().isoformat()
+    conn = _connect(db_path)
+    try:
+        conn.execute(
+            """
+            INSERT INTO activity_log (client_id, event_type, zipcode, detail, created_at)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (client_id, event_type, zipcode, detail, created_at),
+        )
+        conn.commit()
+    finally:
+        conn.close()

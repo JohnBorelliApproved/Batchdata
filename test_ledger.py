@@ -120,6 +120,41 @@ def test_delivered_properties_scoped_by_zipcode():
         os.remove(path)
 
 
+def test_log_activity_writes_a_row():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.log_activity(
+            "zip_search_triggered",
+            zipcode="30301",
+            client_id="client-1",
+            detail="self-serve subscribe",
+            db_path=path,
+            created_at="2026-09-27T12:00:00",
+        )
+        conn = sqlite3.connect(path)
+        row = conn.execute(
+            "SELECT client_id, event_type, zipcode, detail, created_at FROM activity_log"
+        ).fetchone()
+        conn.close()
+        assert row == ("client-1", "zip_search_triggered", "30301", "self-serve subscribe", "2026-09-27T12:00:00")
+    finally:
+        os.remove(path)
+
+
+def test_log_activity_allows_missing_optional_fields():
+    path = _tmp_db_path()
+    try:
+        ledger.init_db(path)
+        ledger.log_activity("reconciliation_drift", db_path=path)  # no zipcode/client_id/detail
+        conn = sqlite3.connect(path)
+        row = conn.execute("SELECT event_type FROM activity_log").fetchone()
+        conn.close()
+        assert row == ("reconciliation_drift",)
+    finally:
+        os.remove(path)
+
+
 if __name__ == '__main__':
     tests = [v for k, v in sorted(globals().items()) if k.startswith('test_')]
     failed = 0
