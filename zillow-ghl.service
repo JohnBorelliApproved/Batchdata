@@ -7,7 +7,7 @@ User=johnborelli
 Group=johnborelli
 WorkingDirectory=/var/www/html
 Environment="PATH=/var/www/html/venv/bin"
-ExecStart=/var/www/html/venv/bin/gunicorn --workers 3 --bind unix:zillow-ghl.sock -m 000 main:app
+ExecStart=/var/www/html/venv/bin/gunicorn --preload --workers 3 --bind unix:zillow-ghl.sock -m 000 main:app
 
 [Install]
 WantedBy=multi-user.target

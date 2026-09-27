@@ -3,10 +3,13 @@ Offline tests for the SQLite zip ledger. No network. Uses a temp-file DB
 per test so tests never touch the real ledger.db or each other's state.
 Run: ./venv/bin/python test_ledger.py
 """
+import importlib
 import os
 import sqlite3
 import tempfile
+from unittest.mock import patch
 
+import config
 import ledger
 
 
@@ -153,6 +156,33 @@ def test_log_activity_allows_missing_optional_fields():
         assert row == ("reconciliation_drift",)
     finally:
         os.remove(path)
+
+
+def test_connect_raises_when_ledger_db_path_is_blank():
+    # A blank LEDGER_DB_PATH must not silently fall through to
+    # sqlite3.connect('') — that opens a throwaway anonymous temp DB, so
+    # every ledger read/write would silently no-op against fresh empty
+    # state instead of persisting anything.
+    with patch.object(ledger, 'LEDGER_DB_PATH', ''):
+        try:
+            ledger._connect()
+            raise AssertionError("expected ValueError, got no exception")
+        except ValueError:
+            pass
+
+
+def test_config_ledger_db_path_falls_back_when_env_var_is_blank():
+    # cp .env.example .env ships LEDGER_DB_PATH= (blank, not absent).
+    # python-dotenv sets a blank KEY= to the empty string, and
+    # os.getenv(name, default) only applies `default` when the var is
+    # ABSENT, not when it's empty — so config.py must handle this itself.
+    with patch.dict(os.environ, {"LEDGER_DB_PATH": ""}):
+        importlib.reload(config)
+        try:
+            assert config.LEDGER_DB_PATH != ""
+            assert config.LEDGER_DB_PATH.endswith("ledger.db")
+        finally:
+            importlib.reload(config)  # restore for other tests
 
 
 if __name__ == '__main__':

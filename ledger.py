@@ -38,7 +38,13 @@ CREATE TABLE IF NOT EXISTS activity_log (
 
 
 def _connect(db_path=None):
-    return sqlite3.connect(db_path or LEDGER_DB_PATH)
+    path = db_path or LEDGER_DB_PATH
+    if not path:
+        # sqlite3.connect('') silently opens an anonymous, throwaway temp DB
+        # instead of raising — every read/write would then no-op against
+        # fresh empty state on each call rather than persisting anything.
+        raise ValueError("No ledger DB path configured — LEDGER_DB_PATH is empty")
+    return sqlite3.connect(path)
 
 
 def init_db(db_path=None):

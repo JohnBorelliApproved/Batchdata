@@ -62,6 +62,27 @@ def test_ensure_entitlement_fields_noop_second_call():
     assert result["subscribed_zipcodes"] == "id-subscribed_zipcodes"
 
 
+def test_ensure_entitlement_fields_continues_after_one_field_fails():
+    # A field whose dataType needs extra GHL config (e.g. TEXTBOX_LIST) may
+    # fail creation with a bare name+dataType payload. One failure must not
+    # block provisioning of the other three fields.
+    with patch.object(entitlements, "get_custom_fields", return_value=[]), \
+         patch.object(entitlements, "create_custom_field") as mock_create:
+        mock_create.side_effect = [
+            Exception("400 dataType TEXTBOX_LIST requires options"),
+            {"id": "id-zip_quota", "fieldKey": "contact.zip_quota"},
+            {"id": "id-sub_account_location_id", "fieldKey": "contact.sub_account_location_id"},
+            {"id": "id-sub_account_api_key", "fieldKey": "contact.sub_account_api_key"},
+        ]
+        result = entitlements.ensure_entitlement_fields("agency_loc", "agency_key")
+
+    assert mock_create.call_count == 4
+    assert "subscribed_zipcodes" not in result
+    assert result["zip_quota"] == "id-zip_quota"
+    assert result["sub_account_location_id"] == "id-sub_account_location_id"
+    assert result["sub_account_api_key"] == "id-sub_account_api_key"
+
+
 if __name__ == '__main__':
     tests = [v for k, v in sorted(globals().items()) if k.startswith('test_')]
     failed = 0

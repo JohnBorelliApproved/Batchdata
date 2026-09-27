@@ -3,7 +3,12 @@ Offline test: verify BatchData -> GHL custom-field mapping against saved
 webhook payloads. No network. Run: ./venv/bin/python test_property_fields.py
 """
 import json
+import os
 from unittest.mock import patch
+
+# Set before importing main — main.py provisions entitlement custom fields
+# against live GHL at import time; this keeps this file's tests offline.
+os.environ.setdefault("SKIP_STARTUP_PROVISIONING", "1")
 
 import main
 from main import (

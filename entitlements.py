@@ -4,7 +4,11 @@ contacts live on the agency's own GHL location (one contact per client) —
 see the spec's Client entitlement table. This module only ensures the
 fields exist; entitlement contact lookup/update helpers are a later phase.
 """
+import logging
+
 from ghl_api import get_custom_fields, create_custom_field
+
+logger = logging.getLogger(__name__)
 
 # Verbatim from the spec's Client entitlement table.
 ENTITLEMENT_FIELD_DEFS = [
@@ -18,7 +22,10 @@ ENTITLEMENT_FIELD_DEFS = [
 def ensure_entitlement_fields(location_id, api_key):
     """Ensures all four entitlement custom fields exist on `location_id`,
     creating any that are missing. Idempotent — safe to call on every app
-    startup. Returns {field name: field id} for all four fields."""
+    startup. Returns {field name: field id} for fields that exist or were
+    successfully created; a field whose creation fails (e.g. TEXTBOX_LIST
+    needing extra config our bare name+dataType payload can't supply) is
+    logged and omitted rather than aborting the rest."""
     existing_by_key = {
         f['fieldKey']: f['id']
         for f in get_custom_fields(location_id, api_key=api_key)
@@ -31,9 +38,12 @@ def ensure_entitlement_fields(location_id, api_key):
         if existing_id:
             result[field_def['name']] = existing_id
             continue
-        created = create_custom_field(
-            location_id, field_def['name'], field_def['dataType'],
-            model="contact", api_key=api_key,
-        )
-        result[field_def['name']] = created['id']
+        try:
+            created = create_custom_field(
+                location_id, field_def['name'], field_def['dataType'],
+                model="contact", api_key=api_key,
+            )
+            result[field_def['name']] = created['id']
+        except Exception as e:
+            logger.error(f"Failed to create entitlement field '{field_def['name']}': {e}")
     return result
